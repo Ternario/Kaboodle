@@ -23,6 +23,13 @@
   src: url("/assets/fonts/Roboto_Condensed/RobotoCondensed-italic.ttf") format("truetype");
 }
 
+body {
+  margin: auto;
+  padding: 0;
+  max-width: 1366px;
+  overflow-x: hidden;
+}
+
 .header .header-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,7 +465,7 @@
   width: 25px;
   top: 25px;
   left: 15px;
-  background-image: url(/assets/svg/products/actions/share.svg);
+  background-image: url(/assets/svg/share.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -470,7 +477,7 @@
   width: 25px;
   top: 25px;
   right: 14px;
-  background-image: url(/assets/svg/products/actions/comment.svg);
+  background-image: url(/assets/svg/comment.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -492,7 +499,7 @@
   width: 25px;
   top: 25px;
   left: 20px;
-  background-image: url(/assets/svg/products/actions/gradeless.svg);
+  background-image: url(/assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -514,7 +521,7 @@
   width: 25px;
   top: 25px;
   left: 20px;
-  background-image: url(/assets/svg/products/actions/gradeless.svg);
+  background-image: url(/assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -536,7 +543,7 @@
   width: 25px;
   top: 25px;
   right: 16px;
-  background-image: url(/assets/svg/products/actions/heart.svg);
+  background-image: url(/assets/svg/heart.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -808,7 +815,7 @@
   width: 85px;
   margin: 73px 22px 0 22px;
   font-size: 25px;
-  background-image: url(/assets/svg/products/actions/gradeless.svg);
+  background-image: url(/assets/svg/gradeless.svg);
   background-repeat: no-repeat;
 }
 
@@ -825,6 +832,15 @@
   background-image: url(/assets/img/play.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mostPopular .mostPopular-slider__item .playMovie:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -848,7 +864,7 @@
   width: 30px;
   top: 153px;
   left: 236px;
-  background-image: url(/assets/svg/products/actions/share.svg);
+  background-image: url(/assets/svg/share.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -929,7 +945,7 @@
   width: 25px;
   top: -2px;
   left: 110px;
-  background-image: url(/assets/svg/products/actions/comment.svg);
+  background-image: url(/assets/svg/comment.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -963,7 +979,7 @@
   width: 25px;
   top: -4px;
   left: 88px;
-  background-image: url(/assets/svg/products/actions/gradeless.svg);
+  background-image: url(/assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -997,7 +1013,7 @@
   width: 25px;
   top: -4px;
   left: 88px;
-  background-image: url(/assets/svg/products/actions/gradeless.svg);
+  background-image: url(/assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -1031,7 +1047,7 @@
   width: 25px;
   top: -4px;
   right: -20px;
-  background-image: url(/assets/svg/products/actions/heart.svg);
+  background-image: url(/assets/svg/heart.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -1110,11 +1126,4 @@
   background-image: url(/assets/img/footer.png);
   background-repeat: no-repeat;
   overflow: hidden;
-}
-
-body {
-  margin: auto;
-  padding: 0;
-  max-width: 1366px;
-  overflow-x: hidden;
 }
