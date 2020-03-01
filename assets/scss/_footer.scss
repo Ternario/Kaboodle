@@ -1,4 +1,4 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 
 .footer {
     position: relative;
@@ -39,7 +39,7 @@
     }
 }
 
-.footer::before {
+.footer:before {
     content: "";
     position: absolute;
     height: 140px;
@@ -51,7 +51,7 @@
     overflow: hidden;
 }
 
-.footer::after {
+.footer:after {
     content: "";
     position: absolute;
     height: 350px;

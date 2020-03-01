@@ -23,7 +23,6 @@
   src: url("/assets/fonts/Roboto_Condensed/RobotoCondensed-italic.ttf") format("truetype");
 }
 
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 .header .header-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,7 +136,7 @@
 .header .header-bar__links .link:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
-  transform: scale(1.1);
+      transform: scale(1.1);
   cursor: pointer;
   z-index: 1000;
 }
@@ -164,8 +163,9 @@
   background-repeat: no-repeat;
 }
 
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 .comingSoon {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   height: 579px;
   overflow: hidden;
 }
@@ -305,7 +305,7 @@
   transition: background-color 0.7s;
 }
 
-.comingSoon .comingSoon-bar__item .barItem-items .item::before {
+.comingSoon .comingSoon-bar__item .barItem-items .item:before {
   content: "";
   position: absolute;
   height: 1px;
@@ -320,7 +320,7 @@
 .comingSoon .comingSoon-bar__item .barItem-items:hover {
   -webkit-transform: scale(1.4);
   -ms-transform: scale(1.4);
-  transform: scale(1.4);
+      transform: scale(1.4);
   cursor: pointer;
 }
 
@@ -330,6 +330,8 @@
 }
 
 .comingSoon .comingSoon-slider {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -339,6 +341,7 @@
 }
 
 .comingSoon .comingSoon-slider__item {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   position: relative;
   margin: 0 62px 0 62px;
 }
@@ -369,7 +372,7 @@
   cursor: pointer;
 }
 
-.comingSoon .comingSoon-slider__item .link::before {
+.comingSoon .comingSoon-slider__item .link:before {
   content: "";
   position: absolute;
   height: 20px;
@@ -410,6 +413,7 @@
   top: 226px;
   left: 73px;
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   border-radius: 50%;
   background-color: #19232A;
   background-image: url(/assets/img/play.png);
@@ -424,7 +428,7 @@
   cursor: pointer;
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
-  transform: scale(1.3);
+      transform: scale(1.3);
 }
 
 .comingSoon .comingSoon-slider__item .comingItems {
@@ -447,7 +451,7 @@
   font-weight: bold;
 }
 
-.comingSoon .comingSoon-slider__item .comingItems .commentsCount::before {
+.comingSoon .comingSoon-slider__item .comingItems .commentsCount:before {
   content: "";
   position: absolute;
   height: 18px;
@@ -459,7 +463,7 @@
   cursor: pointer;
 }
 
-.comingSoon .comingSoon-slider__item .comingItems .commentsCount::after {
+.comingSoon .comingSoon-slider__item .comingItems .commentsCount:after {
   content: "";
   position: absolute;
   height: 22px;
@@ -481,7 +485,7 @@
   font-weight: bold;
 }
 
-.comingSoon .comingSoon-slider__item .comingItems .rank::before {
+.comingSoon .comingSoon-slider__item .comingItems .rank:before {
   content: "";
   position: absolute;
   height: 22px;
@@ -503,7 +507,7 @@
   font-weight: bold;
 }
 
-.comingSoon .comingSoon-slider__item .comingItems .expectations::before {
+.comingSoon .comingSoon-slider__item .comingItems .expectations:before {
   content: "";
   position: absolute;
   height: 22px;
@@ -525,7 +529,7 @@
   font-weight: bold;
 }
 
-.comingSoon .comingSoon-slider__item .comingItems .likesCount::before {
+.comingSoon .comingSoon-slider__item .comingItems .likesCount:before {
   content: "";
   position: absolute;
   height: 25px;
@@ -537,7 +541,7 @@
   cursor: pointer;
 }
 
-.comingSoon .comingSoon-slider .comingSoon-slider__item::before {
+.comingSoon .comingSoon-slider .comingSoon-slider__item:before {
   content: '';
   position: absolute;
   top: 99px;
@@ -545,11 +549,13 @@
   right: 0;
   bottom: 80px;
   opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   border-radius: 5px;
   background-color: #010B13;
 }
 
 .mostPopular {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   position: relative;
   width: 1366px;
 }
@@ -576,7 +582,7 @@
   background-repeat: no-repeat;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+      transform: rotate(180deg);
   cursor: pointer;
   z-index: 200;
 }
@@ -706,7 +712,7 @@
   cursor: pointer;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
-  transform: scale(1.2);
+      transform: scale(1.2);
 }
 
 .mostPopular .mostPopular-bar__item .barItem-menu:hover .menu {
@@ -730,7 +736,7 @@
   transition: background-color 0.7s;
 }
 
-.mostPopular .mostPopular-bar__item .barItem-items .item::before {
+.mostPopular .mostPopular-bar__item .barItem-items .item:before {
   content: "";
   position: absolute;
   height: 1px;
@@ -743,6 +749,7 @@
 }
 
 .mostPopular .mostPopular-slider {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   height: 700px;
   width: 1386px;
   padding-left: 114px;
@@ -754,6 +761,7 @@
 }
 
 .mostPopular .mostPopular-slider__item {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -811,6 +819,7 @@
   top: 84px;
   left: 25px;
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   border-radius: 50%;
   background-color: #19232A;
   background-image: url(/assets/img/play.png);
@@ -832,7 +841,7 @@
   font-weight: bold;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .title::after {
+.mostPopular .mostPopular-slider__item .comingItems .title:after {
   content: "";
   position: absolute;
   height: 23px;
@@ -913,7 +922,7 @@
   font-weight: bold;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .commentsCount::before {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .commentsCount:before {
   content: "";
   position: absolute;
   height: 22px;
@@ -926,7 +935,7 @@
   z-index: 100;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .commentsCount::after {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .commentsCount:after {
   content: "";
   position: absolute;
   height: 13px;
@@ -947,7 +956,7 @@
   font-weight: bold;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .rank::before {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .rank:before {
   content: "";
   position: absolute;
   height: 22px;
@@ -960,7 +969,7 @@
   z-index: 100;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .rank::after {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .rank:after {
   content: "";
   position: absolute;
   height: 13px;
@@ -981,7 +990,7 @@
   font-weight: bold;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .expectations::before {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .expectations:before {
   content: "";
   position: absolute;
   height: 22px;
@@ -994,7 +1003,7 @@
   z-index: 100;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .expectations::after {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .expectations:after {
   content: "";
   position: absolute;
   height: 13px;
@@ -1015,7 +1024,7 @@
   font-weight: bold;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount::before {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount:before {
   content: "";
   position: absolute;
   height: 25px;
@@ -1028,7 +1037,7 @@
   z-index: 100;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount::after {
+.mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount:after {
   content: "";
   position: absolute;
   height: 13px;
@@ -1038,7 +1047,6 @@
   background-color: #010B13;
 }
 
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 .footer {
   position: relative;
   text-align: center;
@@ -1080,7 +1088,7 @@
   font-size: 18px;
 }
 
-.footer::before {
+.footer:before {
   content: "";
   position: absolute;
   height: 140px;
@@ -1092,7 +1100,7 @@
   overflow: hidden;
 }
 
-.footer::after {
+.footer:after {
   content: "";
   position: absolute;
   height: 350px;

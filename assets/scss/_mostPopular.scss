@@ -1,4 +1,5 @@
 .mostPopular {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     position: relative;
     width: 1366px;
 
@@ -23,7 +24,6 @@
         background-image: url(/assets/svg/verticali-slider-arrows.svg);
         background-repeat: no-repeat;
         -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
                 transform: rotate(180deg);
         cursor: pointer;
         z-index: 200;
@@ -71,7 +71,6 @@
                     border-radius: 12px;
                     background-color: $color-black;
                     -webkit-transition: background-color 0.7s, border-color 0.7s, color 0.7s;
-                    -o-transition: background-color 0.7s, border-color 0.7s, color 0.7s;
                     transition: background-color 0.7s, border-color 0.7s, color 0.7s;
                 }
                 
@@ -93,13 +92,11 @@
                 grid-template-rows: 8px 8px;
                 grid-gap: 4px;
                 -webkit-transition: 0.5s;
-                -o-transition: 0.5s;
                 transition: 0.5s;
 
                 .menu {
                     background-color: $color-gray-white;
                     -webkit-transition: background-color 0.7s;
-                    -o-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
             }
@@ -147,7 +144,6 @@
             .barItem-menu:hover {
                 cursor: pointer;
                 -webkit-transform: scale(1.2);
-                    -ms-transform: scale(1.2);
                         transform: scale(1.2);
                 .menu {
                     background-color: $color-white;
@@ -166,11 +162,10 @@
                     margin: 1px 2px 0 2px;
                     background-color: $color-white;
                     -webkit-transition: background-color 0.7s;
-                    -o-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
                 
-                .item::before {
+                .item:before {
                     content: "";
                     position: absolute;
                     height: 1px;
@@ -178,7 +173,6 @@
                     margin: 2px 0 2px 6px;
                     background-color: $color-white;
                     -webkit-transition: background-color 0.7s;
-                    -o-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
             }
@@ -186,16 +180,17 @@
     }
 
     .mostPopular-slider {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
         height: 700px;
         width: 1386px;
         padding-left: 114px;
         overflow: hidden;
         overflow-y: scroll;
         -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
         transition: 0.5s;
 
         &__item {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -248,6 +243,7 @@
                 top: 84px;
                 left: 25px;
                 opacity: 0.7;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
                 border-radius: 50%;
                 background-color: $color-gray;
                 background-image: url(/assets/img/play.png);
@@ -269,7 +265,7 @@
 
                 }
 
-                .title::after {
+                .title:after {
                     content: "";
                     position: absolute;
                     height: 23px;
@@ -347,7 +343,7 @@
                         font-weight: bold;
                     }
 
-                    .commentsCount::before {
+                    .commentsCount:before {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -360,7 +356,7 @@
                         z-index: 100;
                     }
 
-                    .commentsCount::after {
+                    .commentsCount:after {
                         content: "";
                         position: absolute;
                         height: 13px;
@@ -381,7 +377,7 @@
                         font-weight: bold;
                     }
                 
-                    .rank::before {
+                    .rank:before {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -394,7 +390,7 @@
                         z-index: 100;
                     }
 
-                    .rank::after {
+                    .rank:after {
                         content: "";
                         position: absolute;
                         height: 13px;
@@ -415,7 +411,7 @@
                         font-weight: bold;
                     }
 
-                    .expectations::before {
+                    .expectations:before {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -428,7 +424,7 @@
                         z-index: 100;
                     }
 
-                    .expectations::after {
+                    .expectations:after {
                         content: "";
                         position: absolute;
                         height: 13px;
@@ -449,7 +445,7 @@
                         font-weight: bold;
                     }
 
-                    .likesCount::before {
+                    .likesCount:before {
                         content: "";
                         position: absolute;
                         height: 25px;
@@ -462,7 +458,7 @@
                         z-index: 100;
                     }
 
-                    .likesCount::after {
+                    .likesCount:after {
                         content: "";
                         position: absolute;
                         height: 13px;

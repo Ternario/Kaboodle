@@ -1,6 +1,8 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 
 .comingSoon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     height: 579px;
     overflow: hidden;
 
@@ -46,7 +48,6 @@
                     border:1px solid $color-white;
                     border-radius: 12px;
                     -webkit-transition: background-color 0.7s, border-color 0.7s, color 0.7s;
-                    -o-transition: background-color 0.7s, border-color 0.7s, color 0.7s;
                     transition: background-color 0.7s, border-color 0.7s, color 0.7s;
                 }
                 
@@ -120,7 +121,6 @@
                 width: 40px;
                 margin: 19px 32px 0 0;
                 -webkit-transition: 0.5s;
-                -o-transition: 0.5s;
                 transition: 0.5s;
                
                 .item {
@@ -129,11 +129,10 @@
                     margin: 1px 2px 0 2px;
                     background-color: $color-gray-white;
                     -webkit-transition: background-color 0.7s;
-                    -o-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
                 
-                .item::before {
+                .item:before {
                     content: "";
                     position: absolute;
                     height: 1px;
@@ -141,14 +140,12 @@
                     margin: 2px 0 2px 6px;
                     background-color: $color-gray-white;
                     -webkit-transition: background-color 0.7s;
-                    -o-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
             }
 
             .barItem-items:hover {
                 -webkit-transform: scale(1.4);
-                    -ms-transform: scale(1.4);
                         transform: scale(1.4);
                 cursor: pointer;
                 .item,
@@ -160,6 +157,8 @@
     }
 
     .comingSoon-slider {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -167,6 +166,7 @@
         overflow-y: hidden;
 
         &__item {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
             position: relative;   
             margin: 0 62px 0 62px;
 
@@ -196,7 +196,7 @@
                 cursor: pointer;
             }
 
-            .link::before {
+            .link:before {
                 content: "";
                 position: absolute;
                 height: 20px;
@@ -237,20 +237,19 @@
                 top: 226px;
                 left: 73px;
                 opacity: 0.7;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
                 border-radius: 50%;
                 background-color: $color-gray;
                 background-image: url(/assets/img/play.png);
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 -webkit-transition: 0.5s;
-                -o-transition: 0.5s;
                 transition: 0.5s;
             }
 
             .playMovie:hover {
                 cursor: pointer;
                 -webkit-transform: scale(1.3);
-                    -ms-transform: scale(1.3);
                         transform: scale(1.3);
             }
 
@@ -272,7 +271,7 @@
                     font-weight: bold;
                 }
 
-                .commentsCount::before {
+                .commentsCount:before {
                     content: "";
                     position: absolute;
                     height: 18px;
@@ -284,7 +283,7 @@
                     cursor: pointer;
                 }
 
-                .commentsCount::after {
+                .commentsCount:after {
                     content: "";
                     position: absolute;
                     height: 22px;
@@ -306,7 +305,7 @@
                     font-weight: bold;
                 }
 
-                .rank::before {
+                .rank:before {
                     content: "";
                     position: absolute;
                     height: 22px;
@@ -328,7 +327,7 @@
                     font-weight: bold;
                 }
 
-                .expectations::before {
+                .expectations:before {
                     content: "";
                     position: absolute;
                     height: 22px;
@@ -350,7 +349,7 @@
                     font-weight: bold;
                 }
                 
-                .likesCount::before {
+                .likesCount:before {
                     content: "";
                     position: absolute;
                     height: 25px;
@@ -364,7 +363,7 @@
             }   
         }
 
-        .comingSoon-slider__item::before {
+        .comingSoon-slider__item:before {
             content: '';
             position: absolute;
             top: 99px;
@@ -372,6 +371,7 @@
             right: 0;
             bottom: 80px;
             opacity: 0.5;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
             border-radius: 5px;
             background-color: $color-black;  
         }
