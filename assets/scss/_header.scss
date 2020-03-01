@@ -1,0 +1,140 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.header {
+
+    .header-bar {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        height: 60px;
+        padding: 0 114px 0 114px;
+        background-color: $color-blue;
+
+        &__info {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 9px 0 9px 0;
+            
+            .logo {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                padding: 6px 0 6px 0;
+
+                .logo-icon {
+                    height: 33px;
+                }
+
+                .logo-text {
+                    padding: 0 12px 0 12px;
+                    font-size: 17pt;
+                    line-height: 1.2;
+                    color: $color-white;
+                    font-family: "Roboto Condensed";
+                    font-weight: bold;
+                }
+            }
+
+            .description {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+
+                .logo-icon {
+                    height: 42px;
+                }
+
+                .logo-text {
+                    padding: 14px 0 19px 12px;
+                    font-size: 10.5pt;
+                    line-height: 1.2;
+                    color: $color-white;
+                    font-family: "RobotoMedium Condensed";
+                    font-weight: bold;
+                    text-transform: uppercase; 
+                }
+            }
+        }
+
+        &__links {
+            
+            display: -webkit-box;
+            
+            display: -ms-flexbox;
+            
+            display: flex;
+
+            .link {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin-left: 49px;
+                -webkit-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
+
+                .link-icon {
+                    height: 18px;
+                    width: 24px;
+                    padding: 21px 9px 15px 0;
+                }
+
+                .link-iconFirst {
+                    height: 36px;
+                    width: 24pt;
+                    padding: 12px 10px 15px 0;
+                }
+
+                .link-iconSecond {
+                    height: 26px;
+                    width: 24pt;
+                    padding: 19px 9px 15px 0;
+                }
+    
+                .link-text {
+                    padding: 18px 0 15px 0;
+                    font-size: 16pt;
+                    color: $color-white;
+                    font-family: Gotham;
+                    line-height: 1.2;
+                    font-weight: bold; 
+                    text-decoration: none;
+                }
+            } 
+
+            .link:hover {
+                -webkit-transform: scale(1.1);
+                    -ms-transform: scale(1.1);
+                        transform: scale(1.1);
+                cursor: pointer;
+                z-index: 1000;
+            }
+        }
+    }
+
+    .header-logo {
+        position: relative;
+        height: 490px;
+        background-image: url(/assets/img/Screen_Shot.png);
+
+        &__image {
+            position: absolute;
+            left: 408px;
+            top: 100px;
+        }
+
+        &__name {
+            position: absolute;
+            height: 100px;
+            width: 500px;
+            top: 145px;
+            left: 478px;
+            background-image: url(/assets/img/Kaboodle.png);
+            background-repeat: no-repeat;
+        }
+    }
+}

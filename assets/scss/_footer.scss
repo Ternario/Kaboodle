@@ -1,0 +1,64 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.footer {
+    position: relative;
+    text-align: center;
+    background-color: $color-black;
+    overflow: hidden;
+
+    .footer-logo {
+        padding-top: 30px;
+        color: $color-white;
+        font-family: "Roboto Condensed";
+        font-size: 30px;
+        font-weight: bold;    
+    }
+
+    .footer-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 22px 0 22px 0;
+
+        &__item {
+            padding-left: 5px;
+            color: $color-white;
+            font-family: "Roboto Condensed";
+            font-size: 25px;  
+        }
+    }
+
+    .footer-copy {
+        padding-bottom: 30px;
+        color: $color-white;
+        font-family: "Roboto Condensed";
+        font-size: 18px;
+    }
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    height: 140px;
+    width: 250px;
+    top: 53px;
+    left: 0;
+    background-image: url(/assets/img/footer1.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    height: 350px;
+    width: 223px;
+    top: -170px;
+    right: 0;
+    background-image: url(/assets/img/footer.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
