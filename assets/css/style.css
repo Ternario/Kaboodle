@@ -151,7 +151,7 @@ body {
 .header .header-logo {
   position: relative;
   height: 490px;
-  background-image: url(/assets/img/screen-shot.png);
+  background-image: url(file:///D:/Andrei/vocter_test_task/assets/img/screen-shot.png);
 }
 
 .header .header-logo__image {
@@ -543,7 +543,7 @@ body {
   width: 25px;
   top: 25px;
   right: 16px;
-  background-image: url(/assets/svg/heart.svg);
+  background-image: url(file:///C:/Users/dok19/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/vocter_test_task/assets/svg/heart.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
