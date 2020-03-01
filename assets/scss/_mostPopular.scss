@@ -264,7 +264,7 @@
                 .title {
                     padding-top: 20px;
                     color: $color-blue;
-                    font-family: " RobotoRegular Condensed";
+                    font-family: RobotoRegular;
                     font-size: 14pt;
                     font-weight: bold;
 
@@ -291,7 +291,7 @@
                     .year {
                         padding-bottom: 9px;
                         color: $color-black;
-                        font-family: "RobotoRegular Condensed";
+                        font-family: RobotoRegular;
                         font-size: 20px;
                         font-weight: bold;
                     }
@@ -299,7 +299,7 @@
                     .director {
                         padding-left: 5px;
                         color: $color-gray; 
-                        font-family: "RobotoRegular Condensed";
+                        font-family: RobotoRegular;
                         font-weight: bold;
                         font-size: 14pt; 
                     }
@@ -307,7 +307,7 @@
                     .writer {
                         padding-left: 5px;
                         color: $color-gray;
-                        font-family: " RobotoRegular Condensed";
+                        font-family: RobotoRegular;
                         font-size: 14pt;
                         font-weight: bold; 
                     }
@@ -315,7 +315,7 @@
                     .genres {
                         padding-left: 5px;
                         color: $color-gray;
-                        font-family: " RobotoRegular Condensed";
+                        font-family: RobotoRegular;
                         font-weight: bold;
                         font-size: 14pt;  
                     }
@@ -326,7 +326,7 @@
                     height: 45px;
                     width: 840px;
                     color: $color-gray-white;
-                    font-family: " RobotoRegular Condensed";
+                    font-family: RobotoRegular;
                     font-size: 14pt;
                     overflow: hidden;
                 }
