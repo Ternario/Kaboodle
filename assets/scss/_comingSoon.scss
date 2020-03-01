@@ -176,7 +176,7 @@
                 width: 40px;
                 top: 112px;
                 left: 8px;
-                background-image: url(./assets/img/movie.png);
+                background-image: url(/assets/img/movie.png);
                 background-repeat: no-repeat;
                 z-index: 100;
                 cursor: pointer;
@@ -191,7 +191,7 @@
                 right: 9px;
                 color: $color-white;
                 font-size: 25px;
-                background-image: url(./assets/img/grade.png);
+                background-image: url(/assets/img/grade.png);
                 background-repeat: no-repeat;
                 cursor: pointer;
             }
@@ -203,7 +203,7 @@
                 width: 20px;
                 top: 8px;
                 left: 15px;
-                background-image: url(./assets/img/i.png);
+                background-image: url(/assets/img/i.png);
                 background-repeat: no-repeat;
             }
 
@@ -240,7 +240,7 @@
                 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
                 border-radius: 50%;
                 background-color: $color-gray;
-                background-image: url(./assets/img/play.png);
+                background-image: url(/assets/img/play.png);
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 -webkit-transition: 0.5s;
@@ -278,7 +278,7 @@
                     width: 25px;
                     top: 25px;
                     left: 15px; 
-                    background-image: url(./assets/svg/share.svg);
+                    background-image: url(/assets/svg/share.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                 }
@@ -290,7 +290,7 @@
                     width: 25px;
                     top: 25px;
                     right: 14px;
-                    background-image: url(./assets/svg/comment.svg);
+                    background-image: url(/assets/svg/comment.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                 }
@@ -312,7 +312,7 @@
                     width: 25px;
                     top: 25px;
                     left: 20px;
-                    background-image: url(./assets/svg/gradeless.svg);
+                    background-image: url(/assets/svg/gradeless.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                 }
@@ -334,7 +334,7 @@
                     width: 25px;
                     top: 25px;
                     left: 20px;
-                    background-image: url(./assets/svg/gradeless.svg);
+                    background-image: url(/assets/svg/gradeless.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                 }
@@ -356,7 +356,7 @@
                     width: 25px;
                     top: 25px;
                     right: 16px;
-                    background-image: url(./assets/svg/heart.svg);
+                    background-image: url(/assets/svg/heart.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                 }  
