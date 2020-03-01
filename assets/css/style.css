@@ -336,37 +336,6 @@ body {
   background-color: #FFFFFF;
 }
 
-.comingSoon .movies {
-  width: 100%;
-  display: none;
-}
-
-.comingSoon .movies .movies-btn {
-  height: 30px;
-  width: 100%;
-  margin: 0;
-  color: #FFFFFF;
-  background-color: #010B13;
-  border: 2px solid #FFFFFF;
-  cursor: pointer;
-}
-
-.comingSoon .movies .movies-btn:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.comingSoon .movies .player {
-  height: 479px;
-  width: 100%;
-}
-
-.comingSoon .movies .player .youtube {
-  height: 100%;
-  width: 100%;
-}
-
 .comingSoon .comingSoon-slider {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
