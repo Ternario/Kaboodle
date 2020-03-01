@@ -145,7 +145,7 @@ let renderHTML = (elem) => {
             genres.className = "genres";
             genres.innerHTML = elem[i].genres[j] + ".";
             information.append(genres);
-        }
+        }   
     }
 }
 
@@ -213,19 +213,21 @@ buttonDown.addEventListener("click", goToDown);
 
 //Attempt to insert dynamic rating
 
+
 // let grade = document.createElement("div");
-                // grade.className = "grade";
-                // grade.innerHTML = '<svg class="progress-ring">'  + '<circle class="progress-ring__circle" stroke="#22CA71" stroke-width="8" cx="40"         cy="40" r="32" fill="transparent" />' + '</svg>';
-                // clonComingSoon.append(grade);
+//         grade.className = "grade";
+//         grade.innerHTML = '<svg class="progress-ring">'  + '<circle class="progress-ring__circle" stroke="#22CA71" stroke-width="8" cx="40" cy="40" r="32" fill="transparent" />' + '</svg>';
+//         clonComingSoon.append(grade);
 
-                // let circle = document.querySelector(".progress-ring__circle");
-                // let radius = circle.r.baseVal.value;
-                // let circumference = 2 * Math.PI * radius;
+// let circle = document.querySelector(".progress-ring__circle");
+//         let radius = circle.r.baseVal.value;
+//         let circumference = 2 * Math.PI * radius;
 
-                // circle.style.strokeDasharray = `${circumference} ${circumference}`;
-                // circle.style.strokeDashoffset = circumference;
-                // let setProgress = (percent) => {
-                //     let offset = circumference - percent / 100 * circumference;
-                //     circle.style.strokeDashoffset = offset;
-                // }
-                // setProgress(elem[i].rank * 10); 
+//         circle.style.strokeDasharray = `${circumference} ${circumference}`;
+//         circle.style.strokeDashoffset = circumference;
+//         let setProgress = (percent) => {
+//             let offset = circumference - percent / 100 * circumference;
+//             circle.style.strokeDashoffset = offset;
+
+//         }
+//         setProgress(elem[i].rank * 10); 

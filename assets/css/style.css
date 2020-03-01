@@ -1,26 +1,26 @@
 @font-face {
   font-family: Proxima Nova Regular;
-  src: url("/assets/fonts/FontsFree_Net_Proxima_Nova_Bold.otf") format("opentype");
+  src: url("../../assets/fonts/FontsFree_Net_Proxima_Nova_Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: Gotham;
-  src: url("/assets/fonts/Gotham_Bold.otf") format("opentype");
+  src: url("../../assets/fonts/Gotham_Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: Roboto;
-  src: url("/assets/fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto/Roboto-Italic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: RobotoRegular;
-  src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("/assets/fonts/Roboto_Condensed/RobotoCondensed-italic.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto_Condensed/RobotoCondensed-italic.ttf") format("truetype");
 }
 
 body {
@@ -151,7 +151,7 @@ body {
 .header .header-logo {
   position: relative;
   height: 490px;
-  background-image: url(/assets/img/screen-shot.png);
+  background-image: url(../../assets/img/screen-shot.png);
 }
 
 .header .header-logo__image {
@@ -166,7 +166,7 @@ body {
   width: 500px;
   top: 145px;
   left: 478px;
-  background-image: url(/assets/img/kaboodle.png);
+  background-image: url(../../assets/img/kaboodle.png);
   background-repeat: no-repeat;
 }
 
@@ -336,6 +336,37 @@ body {
   background-color: #FFFFFF;
 }
 
+.comingSoon .movies {
+  width: 100%;
+  display: none;
+}
+
+.comingSoon .movies .movies-btn {
+  height: 30px;
+  width: 100%;
+  margin: 0;
+  color: #FFFFFF;
+  background-color: #010B13;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+
+.comingSoon .movies .movies-btn:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.comingSoon .movies .player {
+  height: 479px;
+  width: 100%;
+}
+
+.comingSoon .movies .player .youtube {
+  height: 100%;
+  width: 100%;
+}
+
 .comingSoon .comingSoon-slider {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
@@ -359,7 +390,7 @@ body {
   width: 40px;
   top: 112px;
   left: 8px;
-  background-image: url(/assets/img/movie.png);
+  background-image: url(../../assets/img/movie.png);
   background-repeat: no-repeat;
   z-index: 100;
   cursor: pointer;
@@ -374,7 +405,7 @@ body {
   right: 9px;
   color: #FFFFFF;
   font-size: 25px;
-  background-image: url(/assets/img/grade.png);
+  background-image: url(../../assets/img/grade.png);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -386,7 +417,7 @@ body {
   width: 20px;
   top: 8px;
   left: 15px;
-  background-image: url(/assets/img/i.png);
+  background-image: url(../../assets/img/i.png);
   background-repeat: no-repeat;
 }
 
@@ -423,12 +454,13 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   border-radius: 50%;
   background-color: #19232A;
-  background-image: url(/assets/img/play.png);
+  background-image: url(../../assets/img/play.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  z-index: 100;
 }
 
 .comingSoon .comingSoon-slider__item .playMovie:hover {
@@ -465,7 +497,7 @@ body {
   width: 25px;
   top: 25px;
   left: 15px;
-  background-image: url(/assets/svg/share.svg);
+  background-image: url(../../assets/svg/share.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -477,7 +509,7 @@ body {
   width: 25px;
   top: 25px;
   right: 14px;
-  background-image: url(/assets/svg/comment.svg);
+  background-image: url(../../assets/svg/comment.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -499,7 +531,7 @@ body {
   width: 25px;
   top: 25px;
   left: 20px;
-  background-image: url(/assets/svg/gradeless.svg);
+  background-image: url(../../assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -521,7 +553,7 @@ body {
   width: 25px;
   top: 25px;
   left: 20px;
-  background-image: url(/assets/svg/gradeless.svg);
+  background-image: url(../../assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -543,7 +575,7 @@ body {
   width: 25px;
   top: 25px;
   right: 16px;
-  background-image: url(/assets/svg/heart.svg);
+  background-image: url(../../assets/svg/heart.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -573,7 +605,7 @@ body {
   width: 28px;
   top: 108px;
   right: 112px;
-  background-image: url(/assets/svg/verticali-slider-arrows.svg);
+  background-image: url(../../assets/svg/verticali-slider-arrows.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 200;
@@ -585,7 +617,7 @@ body {
   width: 28px;
   bottom: 40px;
   right: 112px;
-  background-image: url(/assets/svg/verticali-slider-arrows.svg);
+  background-image: url(../../assets/svg/verticali-slider-arrows.svg);
   background-repeat: no-repeat;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -815,7 +847,7 @@ body {
   width: 85px;
   margin: 73px 22px 0 22px;
   font-size: 25px;
-  background-image: url(/assets/svg/gradeless.svg);
+  background-image: url(../../assets/svg/gradeless.svg);
   background-repeat: no-repeat;
 }
 
@@ -829,7 +861,7 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   border-radius: 50%;
   background-color: #19232A;
-  background-image: url(/assets/img/play.png);
+  background-image: url(../../assets/img/play.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   -webkit-transition: 0.5s;
@@ -864,7 +896,7 @@ body {
   width: 30px;
   top: 153px;
   left: 236px;
-  background-image: url(/assets/svg/share.svg);
+  background-image: url(../../assets/svg/share.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -945,7 +977,7 @@ body {
   width: 25px;
   top: -2px;
   left: 110px;
-  background-image: url(/assets/svg/comment.svg);
+  background-image: url(../../assets/svg/comment.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -979,7 +1011,7 @@ body {
   width: 25px;
   top: -4px;
   left: 88px;
-  background-image: url(/assets/svg/gradeless.svg);
+  background-image: url(../../assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -1013,7 +1045,7 @@ body {
   width: 25px;
   top: -4px;
   left: 88px;
-  background-image: url(/assets/svg/gradeless.svg);
+  background-image: url(../../assets/svg/gradeless.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -1047,7 +1079,7 @@ body {
   width: 25px;
   top: -4px;
   right: -20px;
-  background-image: url(/assets/svg/heart.svg);
+  background-image: url(../../assets/svg/heart.svg);
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 100;
@@ -1111,7 +1143,7 @@ body {
   width: 250px;
   top: 53px;
   left: 0;
-  background-image: url(/assets/img/footer1.png);
+  background-image: url(../../assets/img/footer1.png);
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -1123,7 +1155,7 @@ body {
   width: 223px;
   top: -170px;
   right: 0;
-  background-image: url(/assets/img/footer.png);
+  background-image: url(../../assets/img/footer.png);
   background-repeat: no-repeat;
   overflow: hidden;
 }
