@@ -9,7 +9,7 @@
         width: 28px;
         top: 108px;
         right: 112px;
-        background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/verticali-slider-arrows.svg);
+        background-image: url(/vocter_test_task/assets/svg/verticali-slider-arrows.svg);
         background-repeat: no-repeat;
         cursor: pointer;
         z-index: 200;
@@ -21,7 +21,7 @@
         width: 28px;
         bottom: 40px;
         right: 112px;
-        background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/verticali-slider-arrows.svg);
+        background-image: url(/vocter_test_task/assets/svg/verticali-slider-arrows.svg);
         background-repeat: no-repeat;
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg);
@@ -232,7 +232,7 @@
                 width: 85px;
                 margin: 73px 22px 0 22px;
                 font-size: 25px;
-                background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/gradeless.svg);
+                background-image: url(/vocter_test_task/assets/svg/gradeless.svg);
                 background-repeat: no-repeat;
             }
 
@@ -246,7 +246,7 @@
                 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
                 border-radius: 50%;
                 background-color: $color-gray;
-                background-image: url(file:///D:/Andrei/vocter_test_task/assets/img/play.png);
+                background-image: url(/vocter_test_task/assets/img/play.png);
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 transition: 0.5s;
@@ -277,7 +277,7 @@
                     width: 30px;
                     top: 153px;
                     left: 236px;
-                    background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/share.svg);
+                    background-image: url(/vocter_test_task/assets/svg/share.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                     z-index: 100;
@@ -355,7 +355,7 @@
                         width: 25px;
                         top: -2px;
                         left: 110px;
-                        background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/comment.svg);
+                        background-image: url(/vocter_test_task/assets/svg/comment.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
@@ -389,7 +389,7 @@
                         width: 25px;
                         top: -4px;
                         left: 88px;
-                        background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/gradeless.svg);
+                        background-image: url(/vocter_test_task/assets/svg/gradeless.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
@@ -423,7 +423,7 @@
                         width: 25px;
                         top: -4px;
                         left: 88px;
-                        background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/gradeless.svg);
+                        background-image: url(/vocter_test_task/assets/svg/gradeless.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
@@ -457,7 +457,7 @@
                         width: 25px;
                         top: -4px;
                         right: -20px;
-                        background-image: url(file:///D:/Andrei/vocter_test_task/assets/svg/heart.svg);
+                        background-image: url(/vocter_test_task/assets/svg/heart.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
