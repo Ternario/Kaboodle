@@ -15,5 +15,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "sort-css-media-queries": "^1.4.3"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
