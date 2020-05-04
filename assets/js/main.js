@@ -5,7 +5,7 @@ let buttonDown = document.querySelector(".scrollDown");
 
 
 let request = new XMLHttpRequest();
-request.open("Get", "https://api.myjson.com/bins/p2dnz");
+request.open("Get", "data.json");
 request.onloadend = function () {
     let data = JSON.parse(request.responseText);
     renderHTML(data);
