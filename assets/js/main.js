@@ -5,7 +5,7 @@ let buttonDown = document.querySelector(".scrollDown");
 
 
 let request = new XMLHttpRequest();
-request.open("Get", "data.json");
+request.open("Get", "https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json" );
 request.onloadend = function () {
     let data = JSON.parse(request.responseText);
     renderHTML(data);
