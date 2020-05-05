@@ -149,49 +149,6 @@ let renderHTML = (elem) => {
     }
 }
 
-function scroll(className) {
-    let comingSoonSlider = document.querySelector(className);
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    comingSoonSlider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        comingSoonSlider.classList.add('active');
-        startY = e.pageY - comingSoonSlider.offsetTop;
-        startX = e.pageX - comingSoonSlider.offsetLeft;
-        scrollTop = comingSoonSlider.scrollTop;
-        scrollLeft = comingSoonSlider.scrollLeft;
-    });
-
-    comingSoonSlider.addEventListener('mouseleave', () => {
-        isDown = false;
-        comingSoonSlider.classList.remove('active');
-    });
-
-    comingSoonSlider.addEventListener('mouseup', () => {
-        isDown = false;
-        comingSoonSlider.classList.remove('active');
-    });
-
-    comingSoonSlider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        let y = e.pageY - comingSoonSlider.offsetTop;
-        let x = e.pageX - comingSoonSlider.offsetLeft;
-        let walkY = (y - startY) * 2;
-        let walk = (x - startX) * 2;
-        comingSoonSlider.scrollTop = scrollTop - walkY;
-        comingSoonSlider.scrollLeft = scrollLeft - walk;
-    });
-};
-
-let scrollRight = "#slider"
-let scrollTop = "#verticalSlider";
-
-scroll(scrollRight);
-scroll(scrollTop);
-
 let goToTop = () => {
     verticalSlider.scrollBy({
         top: -450,
@@ -231,3 +188,49 @@ buttonDown.addEventListener("click", goToDown);
 
 //         }
 //         setProgress(elem[i].rank * 10); 
+
+
+
+
+// function scroll(className) {
+//     let comingSoonSlider = document.querySelector(className);
+//     let isDown = false;
+//     let startX;
+//     let scrollLeft;
+
+//     comingSoonSlider.addEventListener('mousedown', (e) => {
+//         isDown = true;
+//         comingSoonSlider.classList.add('active');
+//         startY = e.pageY - comingSoonSlider.offsetTop;
+//         startX = e.pageX - comingSoonSlider.offsetLeft;
+//         scrollTop = comingSoonSlider.scrollTop;
+//         scrollLeft = comingSoonSlider.scrollLeft;
+//     });
+
+//     comingSoonSlider.addEventListener('mouseleave', () => {
+//         isDown = false;
+//         comingSoonSlider.classList.remove('active');
+//     });
+
+//     comingSoonSlider.addEventListener('mouseup', () => {
+//         isDown = false;
+//         comingSoonSlider.classList.remove('active');
+//     });
+
+//     comingSoonSlider.addEventListener('mousemove', (e) => {
+//         if (!isDown) return;
+//         e.preventDefault();
+//         let y = e.pageY - comingSoonSlider.offsetTop;
+//         let x = e.pageX - comingSoonSlider.offsetLeft;
+//         let walkY = (y - startY) * 2;
+//         let walk = (x - startX) * 2;
+//         comingSoonSlider.scrollTop = scrollTop - walkY;
+//         comingSoonSlider.scrollLeft = scrollLeft - walk;
+//     });
+// };
+
+// let scrollRight = "#slider"
+// let scrollTop = "#verticalSlider";
+
+// scroll(scrollRight);
+// scroll(scrollTop);

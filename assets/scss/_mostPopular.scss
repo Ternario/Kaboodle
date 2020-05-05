@@ -1,7 +1,6 @@
 .mostPopular {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     position: relative;
-    width: 1366px;
 
     .scrollUp {
         position: absolute;
@@ -45,6 +44,10 @@
             font-family: RobotoRegular;
             font-size: 25px;
             font-weight: bold; 
+
+            @include lg-md {
+                font-size: 20px;
+            }
         }
 
         &__item {
@@ -72,6 +75,12 @@
                     background-color: $color-black;
                     -webkit-transition: background-color 0.7s, border-color 0.7s, color 0.7s;
                     transition: background-color 0.7s, border-color 0.7s, color 0.7s;
+
+                    @include lg-md {
+                        font-size: 16px;
+                        padding: 7px 0 9px 0;
+                        margin: 8px;
+                    }
                 }
                 
                 .link:hover {
@@ -182,10 +191,8 @@
     .mostPopular-slider {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
         height: 700px;
-        width: 1386px;
         padding-left: 114px;
         overflow: hidden;
-        overflow-y: scroll;
         -webkit-transition: 0.5s;
         transition: 0.5s;
 
@@ -195,14 +202,13 @@
             display: -ms-flexbox;
             display: flex;
             position: relative;   
-            margin: 0 62px 0 0;
 
             .link {
                 position: absolute;
                 height: 30px;
                 width: 100px;
-                top: 152px;
-                right: 200px;
+                top: 150px;
+                right: 15%;
                 color: $color-blue;
                 font-family:  RobotoRegular;
                 font-size: 18px;
@@ -259,7 +265,6 @@
 
             .comingItems {
                 padding-top: 16px;
-                margin-bottom: 50px;
 
                 .title {
                     padding-top: 20px;
@@ -267,7 +272,6 @@
                     font-family: RobotoRegular;
                     font-size: 14pt;
                     font-weight: bold;
-
                 }
 
                 .title:after {
@@ -275,8 +279,8 @@
                     position: absolute;
                     height: 23px;
                     width: 30px;
-                    top: 153px;
-                    left: 236px;
+                    top: 150px;
+                    left: 20%;
                     background-image: url(../../assets/svg/share.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
@@ -329,19 +333,26 @@
                     font-family: RobotoRegular;
                     font-size: 14pt;
                     overflow: hidden;
+
+                    @include lg-md {
+                        width: 700px;
+                    }
                 }
 
                 .itemsBar {
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
-                    padding-top: 25px;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 53px;
+                    width: 280px;
+                    margin-left: 40px;
 
                     .commentsCount {
                         position: relative;
                         text-align: center;
                         width: 60px;
-                        padding: 0 0 0 55px;
                         color: $color-black;
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
@@ -354,7 +365,7 @@
                         height: 22px;
                         width: 25px;
                         top: -2px;
-                        left: 110px;
+                        left: 95%;
                         background-image: url(../../assets/svg/comment.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
@@ -367,7 +378,7 @@
                         height: 13px;
                         width: 2px;
                         top: 1px;
-                        left: 100px;
+                        left: 85%;
                         background-color: $color-black;
                     }
                 
@@ -375,7 +386,6 @@
                         position: relative;
                         text-align: center;
                         width: 60px;
-                        padding-left: 35px;
                         color: $color-black;
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
@@ -388,7 +398,7 @@
                         height: 22px;
                         width: 25px;
                         top: -4px;
-                        left: 88px;
+                        left: 95%;
                         background-image: url(../../assets/svg/gradeless.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
@@ -401,7 +411,7 @@
                         height: 13px;
                         width: 2px;
                         top: 1px;
-                        left: 79px;
+                        left: 85%;
                         background-color: $color-black;
                     }
                 
@@ -409,7 +419,6 @@
                         position: relative;
                         text-align: center;
                         width: 60px;
-                        padding-left: 35px;
                         color: $color-black;
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
@@ -422,7 +431,7 @@
                         height: 22px;
                         width: 25px;
                         top: -4px;
-                        left: 88px;
+                        left: 95%;
                         background-image: url(../../assets/svg/gradeless.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
@@ -435,7 +444,7 @@
                         height: 13px;
                         width: 2px;
                         top: 1px;
-                        left: 79px;
+                        left: 85%;
                         background-color: $color-black;
                     }
                 
@@ -443,7 +452,6 @@
                         position: relative;
                         text-align: center;
                         width: 60px;
-                        padding-left: 35px;
                         color: $color-black;
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
@@ -456,7 +464,7 @@
                         height: 25px;
                         width: 25px;
                         top: -4px;
-                        right: -20px;
+                        left: 95%;
                         background-image: url(../../assets/svg/heart.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
@@ -469,7 +477,7 @@
                         height: 13px;
                         width: 2px;
                         top: 1px;
-                        left: 81px;
+                        left: 85%;
                         background-color: $color-black;
                     }    
                 }
