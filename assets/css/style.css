@@ -27,7 +27,6 @@ body {
   margin: auto;
   max-width: 1280px;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .header .header-bar {
@@ -301,8 +300,8 @@ body {
   position: absolute;
   height: 60px;
   width: 60px;
-  top: 45%;
-  left: 35%;
+  top: 189px;
+  left: 67px;
   opacity: 0.7;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   border-radius: 50%;
@@ -435,7 +434,7 @@ body {
 .comingSoon .comingSoon-slider .comingSoon-slider__item:before {
   content: '';
   position: absolute;
-  top: 99px;
+  top: 97px;
   left: 0;
   right: 0;
   bottom: 80px;
@@ -487,7 +486,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 68px;
-  padding: 0 78px 0 114px;
+  padding: 0 114px 0 114px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
@@ -544,9 +543,7 @@ body {
 }
 
 .mostPopular .mostPopular-bar__item .barItem-menu {
-  height: 23px;
-  margin: 0 18px 0 38px;
-  padding: 0 5px 0 5px;
+  padding: 0 18px 0 38px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 6px 4px 6px 4px 6px 4px 6px;
@@ -619,7 +616,6 @@ body {
 
 .mostPopular .mostPopular-bar__item .barItem-items {
   position: relative;
-  height: 23px;
   width: 40px;
 }
 
@@ -775,19 +771,41 @@ body {
 }
 
 .mostPopular .mostPopular-slider__item .comingItems .information .director {
-  padding-left: 5px;
+  position: relative;
+  padding-left: 15px;
   color: #19232A;
   font-family: RobotoRegular;
   font-weight: bold;
   font-size: 18px;
 }
 
+.mostPopular .mostPopular-slider__item .comingItems .information .director:before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 2px;
+  top: 3px;
+  left: 7px;
+  background-color: #010B13;
+}
+
 .mostPopular .mostPopular-slider__item .comingItems .information .writer {
-  padding-left: 5px;
+  position: relative;
+  padding-left: 15px;
   color: #19232A;
   font-family: RobotoRegular;
   font-size: 18px;
   font-weight: bold;
+}
+
+.mostPopular .mostPopular-slider__item .comingItems .information .writer:before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 2px;
+  top: 3px;
+  left: 7px;
+  background-color: #010B13;
 }
 
 .mostPopular .mostPopular-slider__item .comingItems .information .genres {
@@ -795,6 +813,15 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  padding-left: 15px;
+  color: #19232A;
+  font-family: RobotoRegular;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mostPopular .mostPopular-slider__item .comingItems .information .genres .genresName {
   padding-left: 5px;
   color: #19232A;
   font-family: RobotoRegular;
@@ -802,12 +829,14 @@ body {
   font-size: 18px;
 }
 
-.mostPopular .mostPopular-slider__item .comingItems .information .genresName {
-  padding-left: 5px;
-  color: #19232A;
-  font-family: RobotoRegular;
-  font-weight: bold;
-  font-size: 18px;
+.mostPopular .mostPopular-slider__item .comingItems .information .genres:before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 2px;
+  top: 3px;
+  left: 7px;
+  background-color: #010B13;
 }
 
 .mostPopular .mostPopular-slider__item .comingItems .content {
@@ -1115,19 +1144,31 @@ body {
   }
   .mostPopular .mostPopular-slider__item .comingItems .information .director {
     font-size: 15px;
-    padding-left: 3px;
+    padding-left: 10px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .director:before {
+    height: 12px;
+    left: 5px;
   }
   .mostPopular .mostPopular-slider__item .comingItems .information .writer {
     font-size: 15px;
-    padding-left: 3px;
+    padding-left: 10px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .writer:before {
+    height: 12px;
+    left: 5px;
   }
   .mostPopular .mostPopular-slider__item .comingItems .information .genres {
     font-size: 15px;
-    padding-left: 3px;
+    padding-left: 10px;
   }
-  .mostPopular .mostPopular-slider__item .comingItems .information .genresName {
+  .mostPopular .mostPopular-slider__item .comingItems .information .genres .genresName {
     font-size: 15px;
     padding-left: 3px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .genres:before {
+    height: 12px;
+    left: 5px;
   }
   .mostPopular .mostPopular-slider__item .comingItems .content {
     height: 40px;
@@ -1142,6 +1183,7 @@ body {
   }
   .header .header-bar__info .logo .logo-text {
     padding: 0 8px 0 6px;
+    font-size: 20px;
   }
   .header .header-bar__info .description .logo-text {
     padding-left: 6px;
@@ -1173,10 +1215,207 @@ body {
   }
   .header .header-logo__image {
     top: 35px;
-    left: 160px;
+    left: 150px;
   }
   .header .header-logo__name {
     top: 80px;
-    left: 230px;
+    left: 220px;
+  }
+  .comingSoon {
+    height: 390px;
+  }
+  .comingSoon .comingSoon-bar {
+    height: 45px;
+  }
+  .comingSoon .comingSoon-bar__title {
+    font-size: 20px;
+  }
+  .comingSoon .comingSoon-slider__item {
+    margin: 0 20px 0 20px;
+  }
+  .comingSoon .comingSoon-slider__item .link {
+    top: 82px;
+  }
+  .comingSoon .comingSoon-slider__item .soon {
+    top: 78px;
+    left: 107px;
+  }
+  .comingSoon .comingSoon-slider__item .title {
+    height: 35px;
+    padding-top: 10px;
+    font-size: 15px;
+  }
+  .comingSoon .comingSoon-slider__item .year {
+    padding-bottom: 7px;
+    font-size: 15px;
+  }
+  .comingSoon .comingSoon-slider__item .poster {
+    height: 200px;
+    width: 150px;
+  }
+  .comingSoon .comingSoon-slider__item .playMovie {
+    top: 147px;
+    left: 53px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .commentsCount {
+    width: 30px;
+    font-size: 15px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .commentsCount:after {
+    height: 19px;
+    width: 19px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .rank {
+    width: 30px;
+    font-size: 15px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .rank:after {
+    height: 19px;
+    width: 19px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .expectations {
+    width: 30px;
+    font-size: 15px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .expectations:before {
+    height: 19px;
+    width: 19px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .likesCount {
+    width: 30px;
+    font-size: 15px;
+  }
+  .comingSoon .comingSoon-slider__item .comingItems .likesCount:after {
+    height: 19px;
+    width: 19px;
+  }
+  .comingSoon .comingSoon-slider .comingSoon-slider__item:before {
+    top: 70px;
+  }
+  .mostPopular .scrollUp {
+    top: 88px;
+    right: 34px;
+  }
+  .mostPopular .scrollDown {
+    right: 34px;
+  }
+  .mostPopular .mostPopular-bar {
+    padding: 0 34px 0 34px;
+    height: 45px;
+  }
+  .mostPopular .mostPopular-bar__title {
+    font-size: 20px;
+  }
+  .mostPopular .mostPopular-bar__item .barItem-links .link {
+    font-size: 13px;
+    width: 90px;
+    padding: 5px 0 7px 0;
+    margin: 6px;
+  }
+  .mostPopular .mostPopular-bar__item .barItem-menu {
+    padding: 0 10px 0 18px;
+  }
+  .mostPopular .mostPopular-slider {
+    padding-left: 34px;
+  }
+  .mostPopular .mostPopular-slider__item .link {
+    top: 164px;
+    right: 10%;
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .clonSoon {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    font-size: 20px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .title {
+    font-size: 14px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .title:after {
+    height: 18px;
+    width: 25px;
+    top: 165px;
+    left: 170px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 430px;
+    height: 40px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .year {
+    font-size: 15px;
+    padding-bottom: 0;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .director {
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .writer {
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .genres {
+    font-size: 15px;
+    padding-left: 0;
+    padding-bottom: 5px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .genres .genresName {
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .genres:before {
+    display: none;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .content {
+    height: 50px;
+    width: 540px;
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar {
+    width: 210px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .commentsCount {
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .commentsCount:before {
+    height: 17px;
+    width: 17px;
+    top: 0;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .rank {
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .rank:before {
+    height: 17px;
+    width: 17px;
+    top: -2px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .expectations {
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .expectations:before {
+    height: 17px;
+    width: 17px;
+    top: -2px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount {
+    font-size: 15px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount:before {
+    height: 17px;
+    width: 17px;
+    top: 0;
+  }
+}
+
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .header .header-bar {
+    padding: 0 34px 0 34px;
+  }
+  .header .header-bar__info .description .logo-text {
+    font-size: 8px;
+  }
+  .mostPopular .mostPopular-bar {
+    padding: 0 34px 0 34px;
   }
 }

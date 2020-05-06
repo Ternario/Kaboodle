@@ -16,6 +16,11 @@
         @include lg-md {
             right: 70px;
         }
+
+        @include md-sm {
+            top: 88px;
+            right: 34px;
+        }
     }
 
     .scrollDown {
@@ -34,6 +39,10 @@
         @include lg-md {
             right: 70px;
         }
+
+        @include md-sm {
+            right: 34px;
+        }
     }
 
     .mostPopular-bar {
@@ -42,7 +51,7 @@
         display: flex;
         align-items: center;
         height: 68px;
-        padding: 0 78px 0 114px;
+        padding: 0 114px 0 114px;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
@@ -52,6 +61,15 @@
             padding: 0 74px 0 74px;
         }
 
+        @include md-sm {
+            padding: 0 34px 0 34px;
+            height: 45px;
+        }
+
+        @include sm-xs {
+            padding: 0 34px 0 34px;
+        }
+
         &__title {
             color: $color-white;
             font-family: RobotoRegular;
@@ -59,6 +77,10 @@
             font-weight: bold; 
 
             @include lg-md {
+                font-size: 20px;
+            }
+
+            @include md-sm {
                 font-size: 20px;
             }
         }
@@ -96,6 +118,13 @@
                         padding: 7px 0 9px 0;
                         margin: 8px;
                     }
+
+                    @include md-sm {
+                        font-size: 13px;
+                        width: 90px;
+                        padding: 5px 0 7px 0;
+                        margin: 6px;
+                    }
                 }
                 
                 .link:hover {
@@ -105,9 +134,7 @@
             }
 
             .barItem-menu {
-                height: 23px;
-                margin: 0 18px 0 38px;
-                padding: 0 5px 0 5px;
+                padding: 0 18px 0 38px;
                 display:-ms-grid;
                 display:grid;
                 -ms-grid-columns: 6px 4px 6px 4px 6px 4px 6px;
@@ -122,6 +149,10 @@
                     background-color: $color-gray-white;
                     -webkit-transition: background-color 0.7s;
                     transition: background-color 0.7s;
+                }
+
+                @include md-sm {
+                    padding: 0 10px 0 18px;
                 }
             }
 
@@ -176,7 +207,6 @@
 
             .barItem-items {
                 position: relative;
-                height: 23px;
                 width: 40px;
 
 
@@ -215,6 +245,10 @@
             padding-left: 74px;
         }
 
+        @include md-sm {
+            padding-left: 34px;
+        }
+
         &__item {
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
             display: -webkit-box;
@@ -235,6 +269,12 @@
                 font-weight: bold;
                 text-decoration: underline;
                 cursor: pointer;
+
+                @include md-sm {
+                    top: 164px;
+                    right: 10%;
+                    font-size: 15px;
+                }
             }
 
             .poster {
@@ -266,6 +306,14 @@
                     width: 73px;
                     margin:0 17px;
                     font-size: 20px;
+                }
+
+                @include md-sm {
+                    height: 50px;
+                    width: 50px;
+                    margin: 0 5px;
+                    font-size: 20px;
+
                 }
             }
 
@@ -302,6 +350,10 @@
                     @include lg-md {
                         font-size: 16px;
                     }
+
+                    @include md-sm {
+                        font-size: 14px;
+                    }
                 }
 
                 .title:after {
@@ -319,12 +371,25 @@
                     @include lg-md {
                         left: 218px;
                     }
+
+                    @include md-sm {
+                        height: 18px;
+                        width: 25px;
+                        top: 165px;
+                        left: 170px;
+                    }
                 }
 
                 .information {
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
+
+                    @include md-sm {
+                        flex-wrap: wrap;
+                        width: 430px;
+                        height: 40px;
+                    }
         
                     .year {
                         padding-bottom: 9px;
@@ -336,10 +401,16 @@
                         @include lg-md {
                             font-size: 17px;
                         }
+
+                        @include md-sm {
+                            font-size: 15px;
+                            padding-bottom: 0;
+                        }
                     }
 
                     .director {
-                        padding-left: 5px;
+                        position: relative;
+                        padding-left: 15px;
                         color: $color-gray; 
                         font-family: RobotoRegular;
                         font-weight: bold;
@@ -347,12 +418,32 @@
 
                         @include lg-md {
                             font-size: 15px;
-                            padding-left: 3px;
+                            padding-left: 10px;
+                        }
+
+                        @include md-sm {
+                            font-size: 15px;
+                        }
+                    }
+
+                    .director:before {
+                        content: "";
+                        position: absolute;
+                        height: 15px;
+                        width: 2px;
+                        top: 3px;
+                        left: 7px;
+                        background-color: $color-black;
+
+                        @include lg-md {
+                            height: 12px;
+                            left: 5px;
                         }
                     }
 
                     .writer {
-                        padding-left: 5px;
+                        position: relative;
+                        padding-left: 15px;
                         color: $color-gray;
                         font-family: RobotoRegular;
                         font-size: 18px;
@@ -360,13 +451,33 @@
 
                         @include lg-md {
                             font-size: 15px;
-                            padding-left: 3px;
+                            padding-left: 10px;
+                        }
+
+                        @include md-sm {
+                            font-size: 15px;
+                        }
+                    }
+
+                    .writer:before {
+                        content: "";
+                        position: absolute;
+                        height: 15px;
+                        width: 2px;
+                        top: 3px;
+                        left: 7px;
+                        background-color: $color-black;
+
+                        @include lg-md {
+                            height: 12px;
+                            left: 5px;
                         }
                     }
 
                     .genres {
                         display: flex;
-                        padding-left: 5px;
+                        position: relative;
+                        padding-left: 15px;
                         color: $color-gray;
                         font-family: RobotoRegular;
                         font-weight: bold;
@@ -374,20 +485,49 @@
 
                         @include lg-md {
                             font-size: 15px;
-                            padding-left: 3px;
+                            padding-left: 10px;
+                        }
+
+                        @include md-sm {
+                            font-size: 15px;
+                            padding-left: 0;
+                            padding-bottom: 5px;
+                        }
+
+                        .genresName {
+                            padding-left: 5px;
+                            color: $color-gray;
+                            font-family: RobotoRegular;
+                            font-weight: bold;
+                            font-size: 18px;  
+
+                            @include lg-md {
+                                font-size: 15px;
+                                padding-left: 3px;
+                            }
+
+                            @include md-sm {
+                                font-size: 15px;
+                            }
                         }
                     }
 
-                    .genresName {
-                        padding-left: 5px;
-                        color: $color-gray;
-                        font-family: RobotoRegular;
-                        font-weight: bold;
-                        font-size: 18px;  
+                    .genres:before {
+                        content: "";
+                        position: absolute;
+                        height: 15px;
+                        width: 2px;
+                        top: 3px;
+                        left: 7px;
+                        background-color: $color-black;
 
                         @include lg-md {
-                            font-size: 15px;
-                            padding-left: 3px;
+                            height: 12px;
+                            left: 5px;
+                        }
+
+                        @include md-sm {
+                            display: none;
                         }
                     }
                 }
@@ -406,6 +546,12 @@
                         width: 640px;
                         font-size: 16px;
                     }
+
+                    @include md-sm {
+                        height: 50px;
+                        width: 540px;
+                        font-size: 15px;
+                    }
                 }
 
                 .itemsBar {
@@ -417,7 +563,11 @@
                     height: 53px;
                     width: 280px;
                     margin-left: 40px;
-
+                    
+                    @include md-sm {
+                        width: 210px;
+                    }
+                    
                     .commentsCount {
                         position: relative;
                         text-align: center;
@@ -426,6 +576,10 @@
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
                         font-weight: bold;
+
+                        @include md-sm {
+                            font-size: 15px;
+                        }
                     }
 
                     .commentsCount:before {
@@ -439,6 +593,12 @@
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
+
+                        @include md-sm {
+                            height: 17px;
+                            width: 17px;
+                            top: 0;
+                        }
                     }
 
                     .commentsCount:after {
@@ -459,6 +619,10 @@
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
                         font-weight: bold;
+
+                        @include md-sm {
+                            font-size: 15px;
+                        }
                     }
                 
                     .rank:before {
@@ -472,6 +636,12 @@
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
+
+                        @include md-sm {
+                            height: 17px;
+                            width: 17px;
+                            top: -2px;
+                        }
                     }
 
                     .rank:after {
@@ -492,6 +662,10 @@
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
                         font-weight: bold;
+
+                        @include md-sm {
+                            font-size: 15px;
+                        }
                     }
 
                     .expectations:before {
@@ -505,6 +679,12 @@
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
+
+                        @include md-sm {
+                            height: 17px;
+                            width: 17px;
+                            top: -2px;
+                        }
                     }
 
                     .expectations:after {
@@ -525,6 +705,10 @@
                         font-family: "Proxima Nova Regular";
                         font-size: 18px;
                         font-weight: bold;
+
+                        @include md-sm {
+                            font-size: 15px;
+                        }
                     }
 
                     .likesCount:before {
@@ -538,6 +722,12 @@
                         background-repeat: no-repeat;
                         cursor: pointer;
                         z-index: 100;
+
+                        @include md-sm {
+                            height: 17px;
+                            width: 17px;
+                            top: 0;
+                        }
                     }
 
                     .likesCount:after {

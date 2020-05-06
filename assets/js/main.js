@@ -132,17 +132,17 @@ let renderHTML = (elem) => {
 
         let director = document.createElement("div")
         director.className = "director";
-        director.innerHTML = "| Director: " + elem[i].director;
+        director.innerHTML = "Director: " + elem[i].director;
         information.append(director);
 
         let writer = document.createElement("div")
         writer.className = "writer";
-        writer.innerHTML = "| Writer: " + elem[i].writer;
+        writer.innerHTML = "Writer: " + elem[i].writer;
         information.append(writer);
 
         let genres = document.createElement("div");
         genres.className = "genres";
-        genres.innerHTML = "| Genres: ";
+        genres.innerHTML = "Genres:";
         information.append(genres);
 
         for (j = 0; j < elem[i].genres.length; j++) {
