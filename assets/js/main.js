@@ -137,14 +137,19 @@ let renderHTML = (elem) => {
 
         let writer = document.createElement("div")
         writer.className = "writer";
-        writer.innerHTML = "| Writer: " + elem[i].writer + " | Genres: ";
+        writer.innerHTML = "| Writer: " + elem[i].writer;
         information.append(writer);
 
+        let genres = document.createElement("div");
+        genres.className = "genres";
+        genres.innerHTML = "| Genres: ";
+        information.append(genres);
+
         for (j = 0; j < elem[i].genres.length; j++) {
-            let genres = document.createElement("div")
-            genres.className = "genres";
-            genres.innerHTML = elem[i].genres[j] + ".";
-            information.append(genres);
+            let genresName = document.createElement("div")
+            genresName.className = "genresName";
+            genresName.innerHTML = elem[i].genres[j] + ";";
+            genres.append(genresName);
         }   
     }
 }

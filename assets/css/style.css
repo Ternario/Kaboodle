@@ -43,7 +43,7 @@ body {
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
-  height: 60px;
+  height: 50px;
   padding: 0 114px 0 114px;
   background-color: #389EF2;
 }
@@ -67,7 +67,7 @@ body {
   display: flex;
 }
 
-.header .header-bar__info .logo .logo-text {
+.header .header-bar__info .logo .logo-icon {
   height: 30px;
 }
 
@@ -164,6 +164,10 @@ body {
 }
 
 .header .header-logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   height: 490px;
   background-image: url(../../assets/img/screen-shot.png);
@@ -478,6 +482,11 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 68px;
   padding: 0 78px 0 114px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -487,7 +496,6 @@ body {
 }
 
 .mostPopular .mostPopular-bar__title {
-  padding-top: 15px;
   color: #FFFFFF;
   font-family: RobotoRegular;
   font-size: 25px;
@@ -499,6 +507,10 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mostPopular .mostPopular-bar__item .barItem-links {
@@ -512,7 +524,7 @@ body {
   text-align: center;
   width: 137px;
   padding: 9px 0 11px 0;
-  margin: 12px;
+  margin: 0 12px;
   color: #FFFFFF;
   font-family: Gotham;
   font-size: 19px;
@@ -533,7 +545,7 @@ body {
 
 .mostPopular .mostPopular-bar__item .barItem-menu {
   height: 23px;
-  margin: 19px 18px 0 38px;
+  margin: 0 18px 0 38px;
   padding: 0 5px 0 5px;
   display: -ms-grid;
   display: grid;
@@ -609,7 +621,6 @@ body {
   position: relative;
   height: 23px;
   width: 40px;
-  margin: 19px 32px 0 0;
 }
 
 .mostPopular .mostPopular-bar__item .barItem-items .item {
@@ -650,6 +661,10 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -657,7 +672,7 @@ body {
   position: absolute;
   height: 30px;
   width: 100px;
-  top: 150px;
+  top: 156px;
   right: 15%;
   color: #389EF2;
   font-family: RobotoRegular;
@@ -689,7 +704,7 @@ body {
           justify-content: center;
   height: 85px;
   width: 85px;
-  margin: 73px 22px 0 22px;
+  margin: 0 22px;
   font-size: 25px;
   background-image: url(../../assets/svg/gradeless.svg);
   background-repeat: no-repeat;
@@ -725,10 +740,9 @@ body {
 }
 
 .mostPopular .mostPopular-slider__item .comingItems .title {
-  padding-top: 20px;
   color: #389EF2;
   font-family: RobotoRegular;
-  font-size: 14pt;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -737,8 +751,8 @@ body {
   position: absolute;
   height: 23px;
   width: 30px;
-  top: 150px;
-  left: 20%;
+  top: 157px;
+  left: 235px;
   background-image: url(../../assets/svg/share.svg);
   background-repeat: no-repeat;
   cursor: pointer;
@@ -765,23 +779,35 @@ body {
   color: #19232A;
   font-family: RobotoRegular;
   font-weight: bold;
-  font-size: 14pt;
+  font-size: 18px;
 }
 
 .mostPopular .mostPopular-slider__item .comingItems .information .writer {
   padding-left: 5px;
   color: #19232A;
   font-family: RobotoRegular;
-  font-size: 14pt;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .mostPopular .mostPopular-slider__item .comingItems .information .genres {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-left: 5px;
   color: #19232A;
   font-family: RobotoRegular;
   font-weight: bold;
-  font-size: 14pt;
+  font-size: 18px;
+}
+
+.mostPopular .mostPopular-slider__item .comingItems .information .genresName {
+  padding-left: 5px;
+  color: #19232A;
+  font-family: RobotoRegular;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .mostPopular .mostPopular-slider__item .comingItems .content {
@@ -790,7 +816,7 @@ body {
   width: 840px;
   color: #4D5255;
   font-family: RobotoRegular;
-  font-size: 14pt;
+  font-size: 18px;
   overflow: hidden;
 }
 
@@ -924,7 +950,7 @@ body {
 .mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount:before {
   content: "";
   position: absolute;
-  height: 25px;
+  height: 22px;
   width: 25px;
   top: -4px;
   left: 95%;
@@ -1013,10 +1039,15 @@ body {
 }
 
 @media (max-width: 1199.8px) and (min-width: 992px) {
+  .header .header-bar {
+    padding: 0 74px 0 74px;
+  }
   .header .header-bar__info .logo .logo-text {
+    padding: 0 10px 0 9px;
     font-size: 20px;
   }
   .header .header-bar__info .description .logo-text {
+    padding-left: 8px;
     font-size: 12px;
   }
   .header .header-bar__links .link {
@@ -1037,18 +1068,115 @@ body {
   .header .header-bar__links .link .link-text {
     font-size: 13px;
   }
-  .header .header-bar {
-    padding: 0 90px 0 90px;
+  .header .header-logo {
+    height: 450px;
+  }
+  .header .header-logo__image {
+    left: 270px;
+  }
+  .header .header-logo__name {
+    left: 340px;
+  }
+  .mostPopular .scrollUp {
+    right: 70px;
+  }
+  .mostPopular .scrollDown {
+    right: 70px;
+  }
+  .mostPopular .mostPopular-bar {
+    padding: 0 74px 0 74px;
   }
   .mostPopular .mostPopular-bar__title {
     font-size: 20px;
   }
   .mostPopular .mostPopular-bar__item .barItem-links .link {
     font-size: 16px;
+    width: 125px;
     padding: 7px 0 9px 0;
     margin: 8px;
   }
+  .mostPopular .mostPopular-slider {
+    padding-left: 74px;
+  }
+  .mostPopular .mostPopular-slider__item .clonSoon {
+    height: 75px;
+    width: 73px;
+    margin: 0 17px;
+    font-size: 20px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .title {
+    font-size: 16px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .title:after {
+    left: 218px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .year {
+    font-size: 17px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .director {
+    font-size: 15px;
+    padding-left: 3px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .writer {
+    font-size: 15px;
+    padding-left: 3px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .genres {
+    font-size: 15px;
+    padding-left: 3px;
+  }
+  .mostPopular .mostPopular-slider__item .comingItems .information .genresName {
+    font-size: 15px;
+    padding-left: 3px;
+  }
   .mostPopular .mostPopular-slider__item .comingItems .content {
-    width: 700px;
+    height: 40px;
+    width: 640px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .header .header-bar {
+    padding: 0 34px 0 34px;
+  }
+  .header .header-bar__info .logo .logo-text {
+    padding: 0 8px 0 6px;
+  }
+  .header .header-bar__info .description .logo-text {
+    padding-left: 6px;
+    font-size: 12px;
+  }
+  .header .header-bar__links {
+    width: 290px;
+  }
+  .header .header-bar__links .link {
+    margin-left: 15px;
+  }
+  .header .header-bar__links .link .link-icon {
+    height: 18px;
+    width: 23px;
+  }
+  .header .header-bar__links .link .link-iconFirst {
+    height: 18px;
+    width: 23px;
+  }
+  .header .header-bar__links .link .link-iconSecond {
+    height: 18px;
+    width: 23px;
+  }
+  .header .header-bar__links .link .link-text {
+    font-size: 12px;
+  }
+  .header .header-logo {
+    height: 350px;
+  }
+  .header .header-logo__image {
+    top: 35px;
+    left: 160px;
+  }
+  .header .header-logo__name {
+    top: 80px;
+    left: 230px;
   }
 }

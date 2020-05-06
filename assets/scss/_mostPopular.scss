@@ -12,6 +12,10 @@
         background-repeat: no-repeat;
         cursor: pointer;
         z-index: 200;
+
+        @include lg-md {
+            right: 70px;
+        }
     }
 
     .scrollDown {
@@ -26,20 +30,29 @@
                 transform: rotate(180deg);
         cursor: pointer;
         z-index: 200;
+
+        @include lg-md {
+            right: 70px;
+        }
     }
 
     .mostPopular-bar {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        align-items: center;
+        height: 68px;
         padding: 0 78px 0 114px;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
         background-color: $color-black;
 
+        @include lg-md {
+            padding: 0 74px 0 74px;
+        }
+
         &__title {
-            padding-top: 15px;
             color: $color-white;
             font-family: RobotoRegular;
             font-size: 25px;
@@ -54,6 +67,7 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
+            align-items: center;
 
             .barItem-links {
                 display: -webkit-box;
@@ -64,7 +78,7 @@
                     text-align: center;
                     width: 137px;
                     padding: 9px 0 11px 0;
-                    margin: 12px;
+                    margin: 0 12px;
                     color: $color-white;
                     font-family: Gotham;
                     font-size: 19px;
@@ -78,6 +92,7 @@
 
                     @include lg-md {
                         font-size: 16px;
+                        width: 125px;
                         padding: 7px 0 9px 0;
                         margin: 8px;
                     }
@@ -91,7 +106,7 @@
 
             .barItem-menu {
                 height: 23px;
-                margin: 19px 18px 0 38px;
+                margin: 0 18px 0 38px;
                 padding: 0 5px 0 5px;
                 display:-ms-grid;
                 display:grid;
@@ -163,7 +178,7 @@
                 position: relative;
                 height: 23px;
                 width: 40px;
-                margin: 19px 32px 0 0;
+
 
                 .item {
                     height: 4px;
@@ -173,7 +188,7 @@
                     -webkit-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
-                
+
                 .item:before {
                     content: "";
                     position: absolute;
@@ -196,18 +211,23 @@
         -webkit-transition: 0.5s;
         transition: 0.5s;
 
+        @include lg-md {
+            padding-left: 74px;
+        }
+
         &__item {
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
+            align-items: center;
             position: relative;   
 
             .link {
                 position: absolute;
                 height: 30px;
                 width: 100px;
-                top: 150px;
+                top: 156px;
                 right: 15%;
                 color: $color-blue;
                 font-family:  RobotoRegular;
@@ -236,10 +256,17 @@
                         justify-content: center;
                 height: 85px;
                 width: 85px;
-                margin: 73px 22px 0 22px;
+                margin: 0 22px;
                 font-size: 25px;
                 background-image: url(../../assets/svg/gradeless.svg);
                 background-repeat: no-repeat;
+
+                @include lg-md {
+                    height: 75px;
+                    width: 73px;
+                    margin:0 17px;
+                    font-size: 20px;
+                }
             }
 
             .playMovie {
@@ -267,11 +294,14 @@
                 padding-top: 16px;
 
                 .title {
-                    padding-top: 20px;
                     color: $color-blue;
                     font-family: RobotoRegular;
-                    font-size: 14pt;
+                    font-size: 18px;
                     font-weight: bold;
+
+                    @include lg-md {
+                        font-size: 16px;
+                    }
                 }
 
                 .title:after {
@@ -279,12 +309,16 @@
                     position: absolute;
                     height: 23px;
                     width: 30px;
-                    top: 150px;
-                    left: 20%;
+                    top: 157px;
+                    left: 235px;
                     background-image: url(../../assets/svg/share.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                     z-index: 100;
+
+                    @include lg-md {
+                        left: 218px;
+                    }
                 }
 
                 .information {
@@ -298,6 +332,10 @@
                         font-family: RobotoRegular;
                         font-size: 20px;
                         font-weight: bold;
+
+                        @include lg-md {
+                            font-size: 17px;
+                        }
                     }
 
                     .director {
@@ -305,23 +343,52 @@
                         color: $color-gray; 
                         font-family: RobotoRegular;
                         font-weight: bold;
-                        font-size: 14pt; 
+                        font-size: 18px; 
+
+                        @include lg-md {
+                            font-size: 15px;
+                            padding-left: 3px;
+                        }
                     }
 
                     .writer {
                         padding-left: 5px;
                         color: $color-gray;
                         font-family: RobotoRegular;
-                        font-size: 14pt;
+                        font-size: 18px;
                         font-weight: bold; 
+
+                        @include lg-md {
+                            font-size: 15px;
+                            padding-left: 3px;
+                        }
                     }
 
                     .genres {
+                        display: flex;
                         padding-left: 5px;
                         color: $color-gray;
                         font-family: RobotoRegular;
                         font-weight: bold;
-                        font-size: 14pt;  
+                        font-size: 18px;  
+
+                        @include lg-md {
+                            font-size: 15px;
+                            padding-left: 3px;
+                        }
+                    }
+
+                    .genresName {
+                        padding-left: 5px;
+                        color: $color-gray;
+                        font-family: RobotoRegular;
+                        font-weight: bold;
+                        font-size: 18px;  
+
+                        @include lg-md {
+                            font-size: 15px;
+                            padding-left: 3px;
+                        }
                     }
                 }
 
@@ -331,11 +398,13 @@
                     width: 840px;
                     color: $color-gray-white;
                     font-family: RobotoRegular;
-                    font-size: 14pt;
+                    font-size: 18px;
                     overflow: hidden;
 
                     @include lg-md {
-                        width: 700px;
+                        height: 40px;
+                        width: 640px;
+                        font-size: 16px;
                     }
                 }
 
@@ -461,7 +530,7 @@
                     .likesCount:before {
                         content: "";
                         position: absolute;
-                        height: 25px;
+                        height: 22px;
                         width: 25px;
                         top: -4px;
                         left: 95%;

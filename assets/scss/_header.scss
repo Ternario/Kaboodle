@@ -8,9 +8,17 @@
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        height: 60px;
+        height: 50px;
         padding: 0 114px 0 114px;
         background-color: $color-blue;
+
+        @include lg-md {
+            padding: 0 74px 0 74px;
+        }
+
+        @include md-sm {
+            padding: 0 34px 0 34px;
+        }
 
         &__info {
             display: -webkit-box;
@@ -24,7 +32,7 @@
                 display: -ms-flexbox;
                 display: flex;
 
-                .logo-text {
+                .logo-icon {
                     height: 30px;
                 }
 
@@ -38,7 +46,12 @@
                     font-weight: bold;
 
                     @include lg-md {
+                        padding: 0 10px 0 9px;
                         font-size: 20px;
+                    }
+
+                    @include md-sm {
+                        padding: 0 8px 0 6px;
                     }
                 }
             }
@@ -59,6 +72,12 @@
                     text-transform: uppercase;
 
                     @include lg-md {
+                        padding-left: 8px;
+                        font-size: 12px;
+                    }
+
+                    @include md-sm {
+                        padding-left: 6px;
                         font-size: 12px;
                     }
                 }
@@ -69,6 +88,10 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
+
+            @include md-sm {
+                width: 290px;
+            }
 
             .link {
                 display: -webkit-box;
@@ -84,6 +107,10 @@
                     margin-left: 25px;
                 }
 
+                @include md-sm {
+                    margin-left: 15px;
+                }
+
                 .link-icon {
                     height: 25px;
                     width: 30px;
@@ -92,6 +119,11 @@
                     @include lg-md {
                         height: 20px;
                         width: 25px;
+                    }
+
+                    @include md-sm {
+                        height: 18px;
+                        width: 23px;
                     }
                 }
 
@@ -104,6 +136,11 @@
                         height: 20px;
                         width: 25px;
                     }
+
+                    @include md-sm {
+                        height: 18px;
+                        width: 23px;
+                    }
                 }
 
                 .link-iconSecond {
@@ -114,6 +151,11 @@
                     @include lg-md {
                         height: 20px;
                         width: 25px;
+                    }
+
+                    @include md-sm {
+                        height: 18px;
+                        width: 23px;
                     }
                 }
     
@@ -128,6 +170,10 @@
                     @include lg-md {
                         font-size: 13px;
                     }
+
+                    @include md-sm {
+                        font-size: 12px;
+                    }
                 }
             } 
 
@@ -138,21 +184,35 @@
                 z-index: 1000;
             }
         }
-
-        @include lg-md {
-            padding: 0 90px 0 90px;
-        }
     }
 
     .header-logo {
+        display: flex;
         position: relative;
         height: 490px;
         background-image: url(../../assets/img/screen-shot.png);
+
+        @include lg-md {
+            height: 450px;
+        }
+
+        @include md-sm {
+            height: 350px;
+        }
 
         &__image {
             position: absolute;
             left: 408px;
             top: 100px;
+
+            @include lg-md {
+                left: 270px;
+            }
+
+            @include md-sm {
+                top: 35px;
+                left: 160px;
+            }
         }
 
         &__name {
@@ -163,6 +223,15 @@
             left: 478px;
             background-image: url(../../assets/img/kaboodle-logo.png);
             background-repeat: no-repeat;
+
+            @include lg-md {
+                left: 340px;
+            }
+
+            @include md-sm {
+                top: 80px;
+                left: 230px;
+            }
         }
     }
 }
