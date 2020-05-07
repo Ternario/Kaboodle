@@ -1,5 +1,4 @@
 .mostPopular {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     position: relative;
 
     .scrollUp {
@@ -13,13 +12,18 @@
         cursor: pointer;
         z-index: 200;
 
-        @include lg-md {
+        @include xl-lg {
             right: 70px;
         }
 
-        @include md-sm {
+        @include lg-md {
             top: 88px;
             right: 34px;
+        }
+
+        @include md-sm {
+            top: 80px;
+            right: 24px;
         }
     }
 
@@ -31,43 +35,47 @@
         right: 112px;
         background-image: url(../../assets/svg/verticali-slider-arrows.svg);
         background-repeat: no-repeat;
-        -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
+        transform: rotate(180deg);
         cursor: pointer;
         z-index: 200;
 
-        @include lg-md {
+        @include xl-lg {
             right: 70px;
         }
 
-        @include md-sm {
+        @include lg-md {
             right: 34px;
+        }
+
+        @include md-sm {
+            right: 24px;
         }
     }
 
     .mostPopular-bar {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         align-items: center;
         height: 68px;
-        padding: 0 114px 0 114px;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        padding: 0 114px 0 114px; 
+        justify-content: space-between;
         background-color: $color-black;
 
-        @include lg-md {
+        @include xl-lg {
             padding: 0 74px 0 74px;
         }
 
-        @include md-sm {
+        @include lg-md {
             padding: 0 34px 0 34px;
             height: 45px;
         }
 
+        @include md-sm {
+            padding: 0 24px 0 24px;
+            height: 40px;
+        }
+
         @include sm-xs {
-            padding: 0 34px 0 34px;
+            padding: 0 10px 0 10px;
         }
 
         &__title {
@@ -76,24 +84,28 @@
             font-size: 25px;
             font-weight: bold; 
 
+            @include xl-lg {
+                font-size: 20px;
+            }
+
             @include lg-md {
                 font-size: 20px;
             }
 
             @include md-sm {
-                font-size: 20px;
+                font-size: 15px;
+            }
+
+            @include sm-xs {
+                font-size: 15px;
             }
         }
 
         &__item {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
             align-items: center;
 
             .barItem-links {
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
 
                 .link {
@@ -109,21 +121,34 @@
                     border:1px solid $color-white;
                     border-radius: 12px;
                     background-color: $color-black;
-                    -webkit-transition: background-color 0.7s, border-color 0.7s, color 0.7s;
                     transition: background-color 0.7s, border-color 0.7s, color 0.7s;
 
-                    @include lg-md {
-                        font-size: 16px;
+                    @include xl-lg {
                         width: 125px;
                         padding: 7px 0 9px 0;
                         margin: 8px;
+                        font-size: 16px; 
                     }
 
-                    @include md-sm {
-                        font-size: 13px;
+                    @include lg-md {
                         width: 90px;
                         padding: 5px 0 7px 0;
                         margin: 6px;
+                        font-size: 13px;
+                    }
+
+                    @include md-sm {
+                        width: 70px;
+                        padding: 6px 0 6px 0;
+                        margin: 5px;
+                        font-size: 12px;
+                    }
+
+                    @include sm-xs {
+                        width: 60px;
+                        padding: 6px 0 6px 0;
+                        margin: 5px;
+                        font-size: 12px;
                     }
                 }
                 
@@ -137,69 +162,65 @@
                 padding: 0 18px 0 38px;
                 display:-ms-grid;
                 display:grid;
-                -ms-grid-columns: 6px 4px 6px 4px 6px 4px 6px;
                 grid-template-columns: 6px 6px 6px 6px;
-                -ms-grid-rows: 8px 4px 8px;
                 grid-template-rows: 8px 8px;
                 grid-gap: 4px;
-                -webkit-transition: 0.5s;
                 transition: 0.5s;
 
                 .menu {
                     background-color: $color-gray-white;
-                    -webkit-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
 
-                @include md-sm {
+                @include lg-md {
                     padding: 0 10px 0 18px;
+                }
+
+                @include md-sm {
+                    padding: 0 7px 0 15px;
+                }
+
+                @include sm-xs {
+                    display: none;
                 }
             }
 
             .barItem-menu > *:nth-child(1) {
-                -ms-grid-row: 1;
-                -ms-grid-column: 1
+                
             }
 
             .barItem-menu > *:nth-child(2) {
-                -ms-grid-row: 1;
-                -ms-grid-column: 3
+                
             }
 
             .barItem-menu > *:nth-child(3) {
-                -ms-grid-row: 1;
-                -ms-grid-column: 5
+                
             }
 
             .barItem-menu > *:nth-child(4) {
-                -ms-grid-row: 1;
-                -ms-grid-column: 7
+                
             }
 
             .barItem-menu > *:nth-child(5) {
-                -ms-grid-row: 3;
-                -ms-grid-column: 1
+                
             }
 
             .barItem-menu > *:nth-child(6) {
-                -ms-grid-row: 3;
-                -ms-grid-column: 3
+                
             }
 
             .barItem-menu > *:nth-child(7) {
-                -ms-grid-row: 3;
-                -ms-grid-column: 5
+                
             }
 
             .barItem-menu > *:nth-child(8) {
-                -ms-grid-row: 3;
-                -ms-grid-column: 7
+               
             }
 
             .barItem-menu:hover {
                 cursor: pointer;
-                -webkit-transform: scale(1.2);
-                        transform: scale(1.2);
+                transform: scale(1.2);
+
                 .menu {
                     background-color: $color-white;
                 }  
@@ -209,13 +230,15 @@
                 position: relative;
                 width: 40px;
 
+                @include sm-xs {
+                    display: none;
+                }
 
                 .item {
                     height: 4px;
                     width: 3px;
                     margin: 1px 2px 0 2px;
                     background-color: $color-white;
-                    -webkit-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
 
@@ -226,7 +249,6 @@
                     width: 32px;
                     margin: 2px 0 2px 6px;
                     background-color: $color-white;
-                    -webkit-transition: background-color 0.7s;
                     transition: background-color 0.7s;
                 }
             }
@@ -234,25 +256,28 @@
     }
 
     .mostPopular-slider {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
         height: 700px;
         padding-left: 114px;
         overflow: hidden;
-        -webkit-transition: 0.5s;
         transition: 0.5s;
 
-        @include lg-md {
+        @include xl-lg {
             padding-left: 74px;
         }
 
-        @include md-sm {
+        @include lg-md {
             padding-left: 34px;
         }
 
-        &__item {
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-            display: -webkit-box;
-            display: -ms-flexbox;
+        @include md-sm {
+            padding-left: 24px;
+        }
+
+        @include sm-xs {
+            padding-left: 10px;
+        }
+
+        &__item { 
             display: flex;
             align-items: center;
             position: relative;   
@@ -270,10 +295,16 @@
                 text-decoration: underline;
                 cursor: pointer;
 
-                @include md-sm {
+                @include lg-md {
                     top: 164px;
                     right: 10%;
                     font-size: 15px;
+                }
+
+                @include md-sm {
+                    top: 160px;
+                    right: 5%;
+                    font-size: 13px;
                 }
             }
 
@@ -285,15 +316,9 @@
             }
 
             .clonSoon {
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-                -webkit-box-pack: center;
-                    -ms-flex-pack: center;
-                        justify-content: center;
+                align-items: center;
+                justify-content: center;
                 height: 85px;
                 width: 85px;
                 margin: 0 22px;
@@ -301,19 +326,25 @@
                 background-image: url(../../assets/svg/gradeless.svg);
                 background-repeat: no-repeat;
 
-                @include lg-md {
+                @include xl-lg {
                     height: 75px;
                     width: 73px;
                     margin:0 17px;
                     font-size: 20px;
                 }
 
-                @include md-sm {
+                @include lg-md {
                     height: 50px;
                     width: 50px;
                     margin: 0 5px;
                     font-size: 20px;
+                }
 
+                @include md-sm {
+                    height: 50px;
+                    width: 50px;
+                    margin: 0 7px;
+                    font-size: 20px;  
                 }
             }
 
@@ -324,7 +355,6 @@
                 top: 84px;
                 left: 25px;
                 opacity: 0.7;
-                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
                 border-radius: 50%;
                 background-color: $color-gray;
                 background-image: url(../../assets/img/play.png);
@@ -347,12 +377,16 @@
                     font-size: 18px;
                     font-weight: bold;
 
-                    @include lg-md {
+                    @include xl-lg {
                         font-size: 16px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         font-size: 14px;
+                    }
+
+                    @include md-sm {
+                        font-size: 13px;
                     }
                 }
 
@@ -368,27 +402,41 @@
                     cursor: pointer;
                     z-index: 100;
 
-                    @include lg-md {
+                    @include xl-lg {
                         left: 218px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         height: 18px;
                         width: 25px;
                         top: 165px;
                         left: 170px;
                     }
+
+                    @include md-sm {
+                        height: 16px;
+                        width: 22px;
+                        top: 160px;
+                        left: 172px;
+                    }
                 }
 
                 .information {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
                     display: flex;
 
-                    @include md-sm {
+                    @include lg-md {
                         flex-wrap: wrap;
                         width: 430px;
                         height: 40px;
+                    }
+
+                    @include md-sm {
+                        flex-wrap: wrap;
+                        width: 360px;
+                    }
+
+                    @include sm-xs {
+                        width: 200px;
                     }
         
                     .year {
@@ -398,12 +446,17 @@
                         font-size: 20px;
                         font-weight: bold;
 
-                        @include lg-md {
+                        @include xl-lg {
                             font-size: 17px;
                         }
 
-                        @include md-sm {
+                        @include lg-md {
                             font-size: 15px;
+                            padding-bottom: 0;
+                        }
+
+                        @include md-sm {
+                            font-size: 13px;
                             padding-bottom: 0;
                         }
                     }
@@ -416,13 +469,19 @@
                         font-weight: bold;
                         font-size: 18px; 
 
-                        @include lg-md {
-                            font-size: 15px;
+                        @include xl-lg {  
                             padding-left: 10px;
+                            font-size: 15px;
+                        }
+
+                        @include lg-md {
+                            padding-left: 10px;
+                            font-size: 15px;
                         }
 
                         @include md-sm {
-                            font-size: 15px;
+                            padding-left: 8px;
+                            font-size: 13px;
                         }
                     }
 
@@ -435,9 +494,14 @@
                         left: 7px;
                         background-color: $color-black;
 
-                        @include lg-md {
+                        @include xl-lg {
                             height: 12px;
                             left: 5px;
+                        }
+
+                        @include md-sm {
+                            height: 10px;
+                            left: 3px;
                         }
                     }
 
@@ -449,13 +513,19 @@
                         font-size: 18px;
                         font-weight: bold; 
 
-                        @include lg-md {
-                            font-size: 15px;
+                        @include xl-lg {
                             padding-left: 10px;
+                            font-size: 15px;
+                        }
+
+                        @include lg-md {
+                            padding-left: 10px;
+                            font-size: 15px;
                         }
 
                         @include md-sm {
-                            font-size: 15px;
+                            padding-left: 8px;
+                            font-size: 13px;
                         }
                     }
 
@@ -468,9 +538,14 @@
                         left: 7px;
                         background-color: $color-black;
 
-                        @include lg-md {
+                        @include xl-lg {
                             height: 12px;
                             left: 5px;
+                        }
+
+                        @include md-sm {
+                            height: 10px;
+                            left: 3px;
                         }
                     }
 
@@ -483,15 +558,21 @@
                         font-weight: bold;
                         font-size: 18px;  
 
-                        @include lg-md {
-                            font-size: 15px;
+                        @include xl-lg {
                             padding-left: 10px;
+                            font-size: 15px;
+                        }
+
+                        @include lg-md {
+                            padding-left: 0;
+                            padding-bottom: 5px;
+                            font-size: 15px;
                         }
 
                         @include md-sm {
-                            font-size: 15px;
                             padding-left: 0;
                             padding-bottom: 5px;
+                            font-size: 13px;
                         }
 
                         .genresName {
@@ -501,13 +582,17 @@
                             font-weight: bold;
                             font-size: 18px;  
 
+                            @include xl-lg {
+                                padding-left: 3px;
+                                font-size: 15px;
+                            }
+
                             @include lg-md {
                                 font-size: 15px;
-                                padding-left: 3px;
                             }
 
                             @include md-sm {
-                                font-size: 15px;
+                                font-size: 13px;
                             }
                         }
                     }
@@ -521,9 +606,13 @@
                         left: 7px;
                         background-color: $color-black;
 
-                        @include lg-md {
+                        @include xl-lg {
                             height: 12px;
                             left: 5px;
+                        }
+
+                        @include lg-md {
+                            display: none;
                         }
 
                         @include md-sm {
@@ -541,22 +630,29 @@
                     font-size: 18px;
                     overflow: hidden;
 
-                    @include lg-md {
+                    @include xl-lg {
                         height: 40px;
                         width: 640px;
                         font-size: 16px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         height: 50px;
                         width: 540px;
                         font-size: 15px;
                     }
+
+                    @include md-sm {
+                        width: 350px;
+                        font-size: 13px;
+                    }  
+                    
+                    @include sm-xs {
+                        width: 200px;
+                    }
                 }
 
                 .itemsBar {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -564,8 +660,13 @@
                     width: 280px;
                     margin-left: 40px;
                     
-                    @include md-sm {
+                    @include lg-md {
                         width: 210px;
+                    }
+
+                    @include md-sm {
+                        width: 190px;
+                        margin-left: 20px;
                     }
                     
                     .commentsCount {
@@ -577,8 +678,12 @@
                         font-size: 18px;
                         font-weight: bold;
 
-                        @include md-sm {
+                        @include lg-md {
                             font-size: 15px;
+                        }
+
+                        @include md-sm {
+                            font-size: 13px;
                         }
                     }
 
@@ -594,9 +699,15 @@
                         cursor: pointer;
                         z-index: 100;
 
-                        @include md-sm {
+                        @include lg-md {
                             height: 17px;
                             width: 17px;
+                            top: 0;
+                        }
+
+                        @include md-sm {
+                            height: 15px;
+                            width: 15px;
                             top: 0;
                         }
                     }
@@ -609,6 +720,10 @@
                         top: 1px;
                         left: 85%;
                         background-color: $color-black;
+
+                        @include md-sm {
+                            height: 9px;
+                        }
                     }
                 
                     .rank {
@@ -620,8 +735,12 @@
                         font-size: 18px;
                         font-weight: bold;
 
-                        @include md-sm {
+                        @include lg-md {
                             font-size: 15px;
+                        }
+
+                        @include md-sm {
+                            font-size: 13px;
                         }
                     }
                 
@@ -637,9 +756,15 @@
                         cursor: pointer;
                         z-index: 100;
 
-                        @include md-sm {
+                        @include lg-md {
                             height: 17px;
                             width: 17px;
+                            top: -2px;
+                        }
+
+                        @include md-sm {
+                            height: 15px;
+                            width: 15px;
                             top: -2px;
                         }
                     }
@@ -652,6 +777,10 @@
                         top: 1px;
                         left: 85%;
                         background-color: $color-black;
+
+                        @include md-sm {
+                            height: 9px;
+                        }
                     }
                 
                     .expectations {
@@ -663,8 +792,12 @@
                         font-size: 18px;
                         font-weight: bold;
 
-                        @include md-sm {
+                        @include lg-md {
                             font-size: 15px;
+                        }
+
+                        @include md-sm {
+                            font-size: 13px;
                         }
                     }
 
@@ -680,9 +813,15 @@
                         cursor: pointer;
                         z-index: 100;
 
-                        @include md-sm {
+                        @include lg-md {
                             height: 17px;
                             width: 17px;
+                            top: -2px;
+                        }
+
+                        @include md-sm {
+                            height: 15px;
+                            width: 15px;
                             top: -2px;
                         }
                     }
@@ -695,6 +834,10 @@
                         top: 1px;
                         left: 85%;
                         background-color: $color-black;
+
+                        @include md-sm {
+                            height: 9px;
+                        }
                     }
                 
                     .likesCount {
@@ -706,8 +849,12 @@
                         font-size: 18px;
                         font-weight: bold;
 
-                        @include md-sm {
+                        @include lg-md {
                             font-size: 15px;
+                        }
+
+                        @include md-sm {
+                            font-size: 13px;
                         }
                     }
 
@@ -723,9 +870,15 @@
                         cursor: pointer;
                         z-index: 100;
 
-                        @include md-sm {
+                        @include lg-md {
                             height: 17px;
                             width: 17px;
+                            top: 0;
+                        }
+
+                        @include md-sm {
+                            height: 15px;
+                            width: 15px;
                             top: 0;
                         }
                     }
@@ -738,6 +891,10 @@
                         top: 1px;
                         left: 85%;
                         background-color: $color-black;
+
+                        @include md-sm {
+                            height: 9px;
+                        }
                     }    
                 }
             }          

@@ -10,24 +10,44 @@
         font-family: RobotoRegular;
         font-style: italic;
         font-size: 30px;
-        font-weight: bold;    
+        font-weight: bold; 
+        
+        @include lg-md {
+            font-size: 22px;
+        }
+
+        @include sm-xs {
+            font-size: 15px;
+        }
     }
 
     .footer-info {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        display: flex; 
+        justify-content: center;
         padding: 22px 0 22px 0;
+
+        @include lg-md {
+            padding: 18px 0 18px 0;
+        }
 
         &__item {
             padding-left: 5px;
             color: $color-white;
             font-family: RobotoRegular;
             font-style: italic;
-            font-size: 25px;  
+            font-size: 25px; 
+            
+            @include lg-md {
+                font-size: 18px;
+            }
+
+            @include md-sm {
+                font-size: 15px;
+            }
+
+            @include sm-xs {
+                font-size: 15px;
+            }
         }
     }
 
@@ -37,6 +57,18 @@
         font-family: RobotoRegular;
         font-style: italic;
         font-size: 18px;
+
+        @include lg-md {
+            font-size: 15px;
+        }
+
+        @include md-sm {
+            font-size: 15px;
+        }
+
+        @include sm-xs {
+            font-size: 15px;
+        }
     }
 }
 
@@ -50,6 +82,22 @@
     background-image: url(../../assets/img/footer1.png);
     background-repeat: no-repeat;
     overflow: hidden;
+
+    @include lg-md {
+        top: 40px;
+        height: 125px;
+    }
+
+    @include md-sm {
+        top: 54px;
+        height: 125px;
+    }
+
+    @include sm-xs {
+        top: 65px;
+        height: 125px;
+        left: -30px;
+    }
 }
 
 .footer:after {
@@ -62,4 +110,16 @@
     background-image: url(../../assets/img/footer.png);
     background-repeat: no-repeat;
     overflow: hidden;
+
+    @include lg-md {
+        top: -200px;
+    }
+
+    @include md-sm {
+        top: -215px;
+    }
+
+    @include sm-xs {
+        top: -250px;
+    }
 }

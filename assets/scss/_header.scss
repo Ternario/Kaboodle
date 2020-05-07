@@ -1,43 +1,57 @@
 .header {
 
     .header-bar {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         align-items: center;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        justify-content: space-between;
         height: 50px;
         padding: 0 114px 0 114px;
         background-color: $color-blue;
 
-        @include lg-md {
+        @include xl-lg {
             padding: 0 74px 0 74px;
         }
 
-        @include md-sm {
+        @include lg-md {
             padding: 0 34px 0 34px;
+        }
+
+        @include md-sm {
+            height: 35px;
+            padding: 0 24px 0 24px;
         }
 
         @include sm-xs {
-            padding: 0 34px 0 34px;
+            height: 37px;
+            padding: 0 10px 0 10px;
         }
 
         &__info {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
             align-items: center;
             padding: 9px 0 9px 0;
+
+            @include md-sm {
+                padding: 0;
+            }
+
+            @include sm-xs {
+                padding: 0;
+            }
             
             .logo {
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
 
                 .logo-icon {
                     height: 30px;
+
+                    @include md-sm {
+                        display: none;
+                    }
+
+                    @include sm-xs {
+                        display: none;
+                    }
                 }
 
                 .logo-text {
@@ -49,23 +63,45 @@
                     font-style: italic;
                     font-weight: bold;
 
-                    @include lg-md {
+                    @include xl-lg {
                         padding: 0 10px 0 9px;
                         font-size: 20px;
                     }
 
+                    @include lg-md {
+                        display: none;
+                    }
+
                     @include md-sm {
-                        padding: 0 8px 0 6px;
-                        font-size: 20px;
+                        display: none;
+                    }
+
+                    @include sm-xs {
+                        display: none;
                     }
                 }
             }
 
-            .description {
-                display: -webkit-box;
-                display: -ms-flexbox;
+            .description { 
                 display: flex;
                 align-items: center;
+
+                .logo-icon {
+
+                    @include lg-md {
+                        height: 25px;
+                        width: 2px;
+                        padding-left: 6px;
+                    }
+
+                    @include md-sm {
+                        display: none;
+                    }
+
+                    @include sm-xs {
+                        display: none;
+                    }
+                }
 
                 .logo-text {
                     padding-left: 10px;
@@ -76,14 +112,19 @@
                     font-weight: bold;
                     text-transform: uppercase;
 
-                    @include lg-md {
+                    @include xl-lg {
                         padding-left: 8px;
                         font-size: 12px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         padding-left: 6px;
                         font-size: 12px;
+                    }
+
+                    @include md-sm {
+                        padding-left: 4px;
+                        font-size: 10px;
                     }
 
                     @include sm-xs {
@@ -94,17 +135,9 @@
         }
 
         &__links {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
 
-            @include md-sm {
-                width: 290px;
-            }
-
             .link {
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -112,12 +145,20 @@
                 -webkit-transition: 0.3s;
                 transition: 0.3s;
 
-                @include lg-md {
+                @include xl-lg {
                     margin-left: 25px;
                 }
 
-                @include md-sm {
+                @include lg-md {
                     margin-left: 15px;
+                }
+
+                @include md-sm {
+                    margin-left: 10px;
+                }
+
+                @include sm-xs {
+                    margin-left: 3px;
                 }
 
                 .link-icon {
@@ -125,15 +166,25 @@
                     width: 30px;
                     padding-right: 5px;
 
-                    @include lg-md {
+                    @include xl-lg {
                         height: 20px;
                         width: 25px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         height: 18px;
                         width: 23px;
                     }
+
+                    @include md-sm {
+                        height: 15px;
+                        width: 20px
+                    }
+
+                    @include sm-xs {
+                        height: 15px;
+                        width: 20px
+                    } 
                 }
 
                 .link-iconFirst {
@@ -141,14 +192,24 @@
                     width: 30px;
                     padding-right: 5px;
 
-                    @include lg-md {
+                    @include xl-lg {
                         height: 20px;
                         width: 25px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         height: 18px;
                         width: 23px;
+                    }
+
+                    @include md-sm {
+                        height: 15px;
+                        width: 20px
+                    }
+
+                    @include sm-xs {
+                        height: 15px;
+                        width: 20px
                     }
                 }
 
@@ -157,14 +218,24 @@
                     width: 30px;
                     padding-right: 5px;
 
-                    @include lg-md {
+                    @include xl-lg {
                         height: 20px;
                         width: 25px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         height: 18px;
                         width: 23px;
+                    }
+
+                    @include md-sm {
+                        height: 15px;
+                        width: 20px
+                    }
+
+                    @include sm-xs {
+                        height: 15px;
+                        width: 20px
                     }
                 }
     
@@ -176,19 +247,27 @@
                     font-weight: bold; 
                     text-decoration: none;
 
-                    @include lg-md {
+                    @include xl-lg {
                         font-size: 13px;
                     }
 
-                    @include md-sm {
+                    @include lg-md {
                         font-size: 12px;
+                    }
+
+                    @include md-sm {
+                        font-size: 10px;
+                    }
+
+                    @include sm-xs {
+                        width: 32px;
+                        font-size: 8px;
                     }
                 }
             } 
 
             .link:hover {
-                -webkit-transform: scale(1.1);
-                        transform: scale(1.1);
+                transform: scale(1.1);
                 cursor: pointer;
                 z-index: 1000;
             }
@@ -201,12 +280,20 @@
         height: 490px;
         background-image: url(../../assets/img/screen-shot.png);
 
-        @include lg-md {
+        @include xl-lg {
             height: 450px;
         }
 
-        @include md-sm {
+        @include lg-md {
             height: 350px;
+        }
+
+        @include md-sm {
+            height: 290px;
+        }
+
+        @include sm-xs {
+            height: 250px;
         }
 
         &__image {
@@ -214,13 +301,27 @@
             left: 408px;
             top: 100px;
 
-            @include lg-md {
+            @include xl-lg {
                 left: 270px;
             }
 
-            @include md-sm {
+            @include lg-md {
                 top: 35px;
                 left: 150px;
+            }
+
+            @include md-sm {
+                height: 250px;
+                width: 170px;
+                top: 20px;
+                left: 120px;
+            }
+
+            @include sm-xs {
+                height: 180px;
+                width: 110px;
+                top: 40px;
+                left: 70px;
             }
         }
 
@@ -230,16 +331,28 @@
             width: 500px;
             top: 145px;
             left: 478px;
-            background-image: url(../../assets/img/kaboodle-logo.png);
-            background-repeat: no-repeat;
 
-            @include lg-md {
+            @include xl-lg {
                 left: 340px;
             }
 
-            @include md-sm {
+            @include lg-md {
                 top: 80px;
                 left: 220px;
+            }
+
+            @include md-sm {
+                height: 80px;
+                width: 350px;
+                top: 60px;
+                left: 175px; 
+            }
+
+            @include sm-xs {
+                height: 60px;
+                width: 210px;
+                top: 70px;
+                left: 106px;
             }
         }
     }
