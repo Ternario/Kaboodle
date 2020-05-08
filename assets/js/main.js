@@ -2,7 +2,8 @@ let slider = document.querySelector("#slider");
 let verticalSlider = document.querySelector("#verticalSlider");
 let buttonTop = document.querySelector(".scrollUp");
 let buttonDown = document.querySelector(".scrollDown");
-
+let leftBtn = document.querySelector(".leftBtn");
+let rightBtn = document.querySelector(".rightBtn");
 
 let request = new XMLHttpRequest();
 request.open("Get", "https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json" );
@@ -152,7 +153,43 @@ let renderHTML = (elem) => {
             genres.append(genresName);
         }   
     }
+
+    let = countSlider = 2;
+    let = widthSlider = 0;
+
+    if(screen.width >= 1200) {
+        widthSlider = 254
+    } else if(screen.width >= 768) {
+        widthSlider = 190
+    } else if (screen.width >= 576) {
+        widthSlider = 150
+    } else {
+        widthSlider = 140
+    }
+
+    let position = 0; 
+    let carouselSlider = document.querySelector("#slider");
+    let listElems = document.querySelectorAll(".comingSoon-slider__item");
+
+    let nextSlide = () => {
+        position -= widthSlider * countSlider;
+        position = Math.max(position, -widthSlider * (listElems.length - countSlider)) ;
+        carouselSlider.style.marginLeft = position + "px";
+    } 
+
+    let prevSlide = () => {
+        position += widthSlider * countSlider;
+        position = Math.min(position, 0);
+        carouselSlider.style.marginLeft = position + "px";
+    }
+
+    rightBtn.addEventListener("click", nextSlide);
+    leftBtn.addEventListener("click", prevSlide);
+    
 }
+
+
+    
 
 let goToTop = () => {
     verticalSlider.scrollBy({
@@ -239,3 +276,4 @@ buttonDown.addEventListener("click", goToDown);
 
 // scroll(scrollRight);
 // scroll(scrollTop);
+

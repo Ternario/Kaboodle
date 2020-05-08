@@ -187,6 +187,7 @@ body {
 }
 
 .comingSoon {
+  position: relative;
   height: 500px;
   overflow: hidden;
 }
@@ -217,16 +218,39 @@ body {
   letter-spacing: 1.5px;
 }
 
+.comingSoon .leftBtn {
+  position: absolute;
+  height: 100px;
+  width: 20px;
+  background-color: #010B13;
+  top: 100px;
+  left: 0;
+  z-index: 1000;
+}
+
+.comingSoon .rightBtn {
+  position: absolute;
+  height: 100px;
+  width: 20px;
+  background-color: #010B13;
+  top: 100px;
+  right: 0;
+  z-index: 1000;
+}
+
 .comingSoon .comingSoon-slider {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .comingSoon .comingSoon-slider__item {
   position: relative;
-  margin: 0 32px 0 32px;
+  margin: 0 32px;
 }
 
 .comingSoon .comingSoon-slider__item .link {
@@ -423,7 +447,7 @@ body {
   cursor: pointer;
 }
 
-.comingSoon .comingSoon-slider .comingSoon-slider__item:before {
+.comingSoon .comingSoon-slider__item:before {
   content: '';
   position: absolute;
   top: 97px;
@@ -1235,7 +1259,7 @@ body {
     height: 19px;
     width: 19px;
   }
-  .comingSoon .comingSoon-slider .comingSoon-slider__item:before {
+  .comingSoon .comingSoon-slider__item:before {
     top: 70px;
   }
   .mostPopular .scrollUp {
@@ -1508,7 +1532,7 @@ body {
     top: 17px;
     right: 10%;
   }
-  .comingSoon .comingSoon-slider .comingSoon-slider__item:before {
+  .comingSoon .comingSoon-slider__item:before {
     top: 57px;
     bottom: 76px;
   }
@@ -1796,7 +1820,7 @@ body {
     top: 15px;
     right: 10%;
   }
-  .comingSoon .comingSoon-slider .comingSoon-slider__item:before {
+  .comingSoon .comingSoon-slider__item:before {
     top: 57px;
     bottom: 76px;
   }
