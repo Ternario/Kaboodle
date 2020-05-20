@@ -5,12 +5,35 @@ let buttonDown = document.querySelector(".scrollDown");
 let leftBtn = document.querySelector(".leftBtn");
 let rightBtn = document.querySelector(".rightBtn");
 
+let listElems;
+
+let position = 0; 
+let countSlider = 0;
+let widthSlider = 0;
+
+let windowWidth = () => {
+    if(document.documentElement.clientWidth >= 1200) {
+        widthSlider = 234;
+        countSlider = 5;
+    } else if(document.documentElement.clientWidth >= 768){
+        widthSlider = 190;
+        countSlider = 4;
+    } else if(document.documentElement.clientWidth >= 576){
+        widthSlider = 150;
+        countSlider = 3;
+    } else {
+        widthSlider = 140;
+        countSlider = 2;  
+    }
+}
+
+window.addEventListener("resize", windowWidth());
+
 let request = new XMLHttpRequest();
 request.open("Get", "https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json" );
 request.onloadend = function () {
     let data = JSON.parse(request.responseText);
     renderHTML(data);
-
 };
 request.send();
 
@@ -153,43 +176,22 @@ let renderHTML = (elem) => {
             genres.append(genresName);
         }   
     }
-
-    let = countSlider = 2;
-    let = widthSlider = 0;
-
-    if(screen.width >= 1200) {
-        widthSlider = 254
-    } else if(screen.width >= 768) {
-        widthSlider = 190
-    } else if (screen.width >= 576) {
-        widthSlider = 150
-    } else {
-        widthSlider = 140
-    }
-
-    let position = 0; 
-    let carouselSlider = document.querySelector("#slider");
-    let listElems = document.querySelectorAll(".comingSoon-slider__item");
+    
+    listElems = document.querySelectorAll(".comingSoon-slider__item");
 
     let nextSlide = () => {
-        position -= widthSlider * countSlider;
-        position = Math.max(position, -widthSlider * (listElems.length - countSlider)) ;
-        carouselSlider.style.marginLeft = position + "px";
+        position = Math.max(position - widthSlider * countSlider, -widthSlider * (listElems.length - countSlider)) ;
+        slider.style.marginLeft = position + "px";
     } 
 
     let prevSlide = () => {
-        position += widthSlider * countSlider;
-        position = Math.min(position, 0);
-        carouselSlider.style.marginLeft = position + "px";
+        position = Math.min(position + widthSlider * countSlider, 0);
+        slider.style.marginLeft = position + "px";
     }
 
     rightBtn.addEventListener("click", nextSlide);
     leftBtn.addEventListener("click", prevSlide);
-    
-}
-
-
-    
+}  
 
 let goToTop = () => {
     verticalSlider.scrollBy({
