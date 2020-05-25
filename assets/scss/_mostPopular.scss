@@ -1,5 +1,7 @@
 .mostPopular {
     position: relative;
+    height: 740px;
+    overflow: hidden;
 
     .scrollUp {
         position: absolute;
@@ -256,10 +258,11 @@
     }
 
     .mostPopular-slider {
-        height: 700px;
+        position: relative;
         padding-left: 114px;
         overflow: hidden;
         transition: 0.5s;
+        z-index: -50;
 
         @include xl-lg {
             padding-left: 74px;

@@ -6,23 +6,36 @@ let leftBtn = document.querySelector(".leftBtn");
 let rightBtn = document.querySelector(".rightBtn");
 
 let listElems;
+let verticalListElems;
 
 let position = 0; 
 let countSlider = 0;
 let widthSlider = 0;
+let verticalPosition = 0;
+let heightSlider = 227;
+let verticalCountSlider = 3;
 
 let windowWidth = () => {
-    if(document.documentElement.clientWidth >= 1200) {
-        widthSlider = 234;
+    if(document.documentElement.clientWidth >= 1280) {
+        widthSlider = 232;
         countSlider = 5;
-    } else if(document.documentElement.clientWidth >= 768){
-        widthSlider = 190;
+    } else if(document.documentElement.clientWidth >= 1200) {
+        widthSlider = 232;
+        countSlider = 5;
+    } else if(document.documentElement.clientWidth >= 1024) {
+        widthSlider = 226;
         countSlider = 4;
-    } else if(document.documentElement.clientWidth >= 576){
-        widthSlider = 150;
+    } else if(document.documentElement.clientWidth >= 992) {
+        widthSlider = 160;
+        countSlider = 5;
+    } else if(document.documentElement.clientWidth >= 768) {
+        widthSlider = 178;
+        countSlider = 4;
+    } else if(document.documentElement.clientWidth >= 576) {
+        widthSlider = 176;
         countSlider = 3;
-    } else {
-        widthSlider = 140;
+    } else if(document.documentElement.clientWidth >= 360) {
+        widthSlider = 156;
         countSlider = 2;  
     }
 }
@@ -47,7 +60,7 @@ let renderHTML = (elem) => {
 
         let clonComingSoon = comingSoon.cloneNode(true)
         verticalSlider.appendChild(clonComingSoon);
-        clonComingSoon.className = "mostPopular-slider__item";
+        clonComingSoon.className = "mostPopular-slider__item " + elem[i].type;
 
         let link = document.createElement("a");
         link.className = "link";
@@ -178,6 +191,7 @@ let renderHTML = (elem) => {
     }
     
     listElems = document.querySelectorAll(".comingSoon-slider__item");
+    verticalListElems = document.querySelectorAll(".mostPopular-slider__item")
 
     let nextSlide = () => {
         position = Math.max(position - widthSlider * countSlider, -widthSlider * (listElems.length - countSlider)) ;
@@ -191,26 +205,21 @@ let renderHTML = (elem) => {
 
     rightBtn.addEventListener("click", nextSlide);
     leftBtn.addEventListener("click", prevSlide);
-}  
 
-let goToTop = () => {
-    verticalSlider.scrollBy({
-        top: -450,
-        behavior: "smooth"
-    });
-};
+    let goToTop = () => {
+        verticalPosition = Math.min(verticalPosition + heightSlider * verticalCountSlider, 0);
+        verticalSlider.style.marginTop = verticalPosition + "px";
+    }
 
-let goToDown = () => {
-    verticalSlider.scrollBy({
-        top: 450,
-        behavior: "smooth"
-    });
-};
+    let goToDown = () => {
+        verticalPosition = Math.max(verticalPosition - heightSlider * verticalCountSlider, -heightSlider * (verticalListElems.length - verticalCountSlider)) ;
+        verticalSlider.style.marginTop = verticalPosition + "px";
+        
+    }
 
-buttonTop.addEventListener("click", goToTop);
-buttonDown.addEventListener("click", goToDown);
-
-
+    buttonTop.addEventListener("click", goToTop);
+    buttonDown.addEventListener("click", goToDown);
+}
 
 //Attempt to insert dynamic rating
 
@@ -232,50 +241,4 @@ buttonDown.addEventListener("click", goToDown);
 
 //         }
 //         setProgress(elem[i].rank * 10); 
-
-
-
-
-// function scroll(className) {
-//     let comingSoonSlider = document.querySelector(className);
-//     let isDown = false;
-//     let startX;
-//     let scrollLeft;
-
-//     comingSoonSlider.addEventListener('mousedown', (e) => {
-//         isDown = true;
-//         comingSoonSlider.classList.add('active');
-//         startY = e.pageY - comingSoonSlider.offsetTop;
-//         startX = e.pageX - comingSoonSlider.offsetLeft;
-//         scrollTop = comingSoonSlider.scrollTop;
-//         scrollLeft = comingSoonSlider.scrollLeft;
-//     });
-
-//     comingSoonSlider.addEventListener('mouseleave', () => {
-//         isDown = false;
-//         comingSoonSlider.classList.remove('active');
-//     });
-
-//     comingSoonSlider.addEventListener('mouseup', () => {
-//         isDown = false;
-//         comingSoonSlider.classList.remove('active');
-//     });
-
-//     comingSoonSlider.addEventListener('mousemove', (e) => {
-//         if (!isDown) return;
-//         e.preventDefault();
-//         let y = e.pageY - comingSoonSlider.offsetTop;
-//         let x = e.pageX - comingSoonSlider.offsetLeft;
-//         let walkY = (y - startY) * 2;
-//         let walk = (x - startX) * 2;
-//         comingSoonSlider.scrollTop = scrollTop - walkY;
-//         comingSoonSlider.scrollLeft = scrollLeft - walk;
-//     });
-// };
-
-// let scrollRight = "#slider"
-// let scrollTop = "#verticalSlider";
-
-// scroll(scrollRight);
-// scroll(scrollTop);
 

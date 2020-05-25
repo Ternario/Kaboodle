@@ -28,7 +28,7 @@
          "Sitcom",
          "Romantic comedy"
       ],
-      "type":"TV-Show",
+      "type":"Serial",
       "rank":9,
       "likes_count":50,
       "comments_count":50,
@@ -45,7 +45,7 @@
       "genres":[  
          "Sitcom"
       ],
-      "type":"TV-Show",
+      "type":"Serial",
       "likes_count":5,
       "comments_count":5,
       "expectations_count":10,

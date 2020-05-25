@@ -219,7 +219,7 @@ body {
 }
 
 .comingSoon .slider-bar {
-  margin: 0 45px 0 55px;
+  margin: 0 60px;
   overflow: hidden;
 }
 
@@ -228,7 +228,7 @@ body {
   height: 64px;
   width: 64px;
   top: 230px;
-  left: 0;
+  left: 5px;
   background-image: url(../img/left.png);
   background-repeat: no-repeat;
   background-position: 50 50;
@@ -251,7 +251,7 @@ body {
   height: 64px;
   width: 64px;
   top: 230px;
-  right: 0;
+  right: 5px;
   background-image: url(../img/right.png);
   background-repeat: no-repeat;
   background-position: 50 50;
@@ -274,7 +274,6 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1170px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -282,7 +281,7 @@ body {
 
 .comingSoon .slider-bar .comingSoon-slider__item {
   position: relative;
-  margin: 0 22px;
+  margin: 0 21px;
   width: 190px;
 }
 
@@ -494,6 +493,8 @@ body {
 
 .mostPopular {
   position: relative;
+  height: 740px;
+  overflow: hidden;
 }
 
 .mostPopular .scrollUp {
@@ -647,12 +648,13 @@ body {
 }
 
 .mostPopular .mostPopular-slider {
-  height: 700px;
+  position: relative;
   padding-left: 114px;
   overflow: hidden;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  z-index: -50;
 }
 
 .mostPopular .mostPopular-slider__item {
@@ -1290,7 +1292,7 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 1199.8px) and (min-width: 992px) {
+@media (max-width: 1279.8px) and (min-width: 1024px) {
   .header .header-bar {
     padding: 0 74px 0 74px;
   }
@@ -1328,6 +1330,10 @@ body {
   }
   .header .header-logo__name {
     left: 340px;
+  }
+  .comingSoon .slider-bar .comingSoon-slider__item {
+    margin: 0 18px;
+    width: 190px;
   }
   .mostPopular .scrollUp {
     right: 70px;
@@ -1400,7 +1406,7 @@ body {
   }
 }
 
-@media (max-width: 991.8px) and (min-width: 768px) {
+@media (max-width: 1023.8px) and (min-width: 768px) {
   .header .header-bar {
     padding: 0 34px 0 34px;
   }
@@ -1454,8 +1460,29 @@ body {
   .comingSoon .comingSoon-bar__title {
     font-size: 20px;
   }
+  .comingSoon .slider-bar {
+    margin: 0 30px;
+  }
+  .comingSoon .slider-bar .leftBtn {
+    height: 25px;
+    width: 25px;
+    top: 200px;
+    left: 10px;
+    background-image: url(../img/previous25.png);
+    background-repeat: no-repeat;
+    background-position: 50 50;
+  }
+  .comingSoon .slider-bar .rightBtn {
+    height: 25px;
+    width: 25px;
+    top: 200px;
+    right: 10px;
+    background-image: url(../img/next25.png);
+    background-repeat: no-repeat;
+    background-position: 50 50;
+  }
   .comingSoon .slider-bar .comingSoon-slider__item {
-    margin: 0 20px 0 20px;
+    margin: 0 14px;
     width: 150px;
   }
   .comingSoon .slider-bar .comingSoon-slider__item .link {
@@ -1779,8 +1806,29 @@ body {
   .comingSoon .comingSoon-bar__title {
     font-size: 16px;
   }
+  .comingSoon .slider-bar {
+    margin: 0 25px;
+  }
+  .comingSoon .slider-bar .leftBtn {
+    height: 25px;
+    width: 25px;
+    top: 160px;
+    left: 15px;
+    background-image: url(../img/previous25.png);
+    background-repeat: no-repeat;
+    background-position: 50 50;
+  }
+  .comingSoon .slider-bar .rightBtn {
+    height: 25px;
+    width: 25px;
+    top: 160px;
+    right: 15px;
+    background-image: url(../img/next25.png);
+    background-repeat: no-repeat;
+    background-position: 50 50;
+  }
   .comingSoon .slider-bar .comingSoon-slider__item {
-    margin: 0 15px 0 15px;
+    margin: 0 28px;
     width: 120px;
   }
   .comingSoon .slider-bar .comingSoon-slider__item .link {
@@ -2141,8 +2189,29 @@ body {
   .comingSoon .comingSoon-bar__title {
     font-size: 12px;
   }
+  .comingSoon .slider-bar {
+    margin: 0 25px;
+  }
+  .comingSoon .slider-bar .leftBtn {
+    height: 25px;
+    width: 25px;
+    top: 160px;
+    left: 5px;
+    background-image: url(../img/previous25.png);
+    background-repeat: no-repeat;
+    background-position: 50 50;
+  }
+  .comingSoon .slider-bar .rightBtn {
+    height: 25px;
+    width: 25px;
+    top: 160px;
+    right: 5px;
+    background-image: url(../img/next25.png);
+    background-repeat: no-repeat;
+    background-position: 50 50;
+  }
   .comingSoon .slider-bar .comingSoon-slider__item {
-    margin: 0 10px 0 10px;
+    margin: 0 18px;
     width: 120px;
   }
   .comingSoon .slider-bar .comingSoon-slider__item .link {
