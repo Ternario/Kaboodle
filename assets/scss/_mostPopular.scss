@@ -2,6 +2,7 @@
     position: relative;
     height: 740px;
     overflow: hidden;
+    z-index: 100;
 
     .scrollUp {
         position: absolute;
@@ -124,6 +125,7 @@
                     border-radius: 12px;
                     background-color: $color-black;
                     transition: background-color 0.7s, border-color 0.7s, color 0.7s;
+                    cursor: pointer;
 
                     @include xl-lg {
                         width: 125px;
@@ -280,10 +282,10 @@
             padding-left: 10px;
         }
 
-        &__item { 
-            display: flex;
+        &__item {
+            display: none;
             align-items: center;
-            position: relative;   
+            position: relative;
 
             .link {
                 position: absolute;
@@ -292,7 +294,7 @@
                 top: 156px;
                 right: 15%;
                 color: $color-blue;
-                font-family:  RobotoRegular;
+                font-family: RobotoRegular;
                 font-size: 18px;
                 font-weight: bold;
                 text-decoration: underline;
@@ -364,11 +366,13 @@
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 transition: 0.5s;
+                z-index: 1000;
             }
 
             .playMovie:hover {
                 transform: scale(1.2);
                 cursor: pointer;
+                
             }
 
             .comingItems {
@@ -901,6 +905,10 @@
                     }    
                 }
             }          
+        }
+
+        .active {
+            display: flex;
         }
     }
 }

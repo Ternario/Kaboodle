@@ -4,9 +4,15 @@ let buttonTop = document.querySelector(".scrollUp");
 let buttonDown = document.querySelector(".scrollDown");
 let leftBtn = document.querySelector(".leftBtn");
 let rightBtn = document.querySelector(".rightBtn");
+let btnAllMovies = document.querySelector("#btnAllMovies")
+let btnMovies = document.querySelector("#btnMovies")
+let btnSerials = document.querySelector("#btnSerials")
 
 let listElems;
 let verticalListElems;
+let listMostPopular;
+let movies;
+let serials;
 
 let position = 0; 
 let countSlider = 0;
@@ -19,10 +25,7 @@ let windowWidth = () => {
     if(document.documentElement.clientWidth >= 1280) {
         widthSlider = 232;
         countSlider = 5;
-    } else if(document.documentElement.clientWidth >= 1200) {
-        widthSlider = 232;
-        countSlider = 5;
-    } else if(document.documentElement.clientWidth >= 1024) {
+    }else if(document.documentElement.clientWidth >= 1024) {
         widthSlider = 226;
         countSlider = 4;
     } else if(document.documentElement.clientWidth >= 992) {
@@ -60,7 +63,7 @@ let renderHTML = (elem) => {
 
         let clonComingSoon = comingSoon.cloneNode(true)
         verticalSlider.appendChild(clonComingSoon);
-        clonComingSoon.className = "mostPopular-slider__item " + elem[i].type;
+        clonComingSoon.className = "mostPopular-slider__item " + elem[i].type + " active";
 
         let link = document.createElement("a");
         link.className = "link";
@@ -86,18 +89,22 @@ let renderHTML = (elem) => {
         poster.src = elem[i].poster;
         comingSoon.append(poster);
 
-        let clonPoster = poster.cloneNode(true)
+        let clonPoster = poster.cloneNode(true);
         clonComingSoon.appendChild(clonPoster);
+
+        //TODO
 
         let soon = document.createElement("div");
         soon.className = "soon";
-        soon.innerHTML = "..."
+        soon.innerHTML = "...";
         comingSoon.append(soon);
 
-        let clonSoon = soon.cloneNode(true)
+        let clonSoon = soon.cloneNode(true);
         clonSoon.className = "clonSoon";
         clonSoon.innerHTML = elem[i].rank || elem[i].expectations_count;
         clonComingSoon.append(clonSoon);
+
+        //
 
         let comingItems = document.createElement("div");
         comingItems.className = "comingItems";
@@ -106,12 +113,12 @@ let renderHTML = (elem) => {
         let clonComingItems = comingItems.cloneNode(true)
         clonComingSoon.appendChild(clonComingItems);
 
-        let clonTitle = title.cloneNode(true)
+        let clonTitle = title.cloneNode(true);
         clonComingItems.appendChild(clonTitle);
 
         let information = document.createElement("div");
         information.className = "information";
-        clonComingItems.append(information)
+        clonComingItems.append(information);
 
         let content = document.createElement("div");
         content.className = "content";
@@ -122,14 +129,14 @@ let renderHTML = (elem) => {
         itemsBar.className = "itemsBar";
         clonComingItems.append(itemsBar);
 
-        let clonYear = year.cloneNode(true)
+        let clonYear = year.cloneNode(true);
         information.appendChild(clonYear);
 
         let playMovie = document.createElement("a");
         playMovie.className = "playMovie";
         comingSoon.append(playMovie);
 
-        let clonPlayMovie = playMovie.cloneNode(true)
+        let clonPlayMovie = playMovie.cloneNode(true);
         clonComingItems.appendChild(clonPlayMovie);
 
         let commentsCount = document.createElement("div");
@@ -137,7 +144,7 @@ let renderHTML = (elem) => {
         commentsCount.innerHTML = elem[i].comments_count;
         comingItems.append(commentsCount);
 
-        let clonCommentsCount = commentsCount.cloneNode(true)
+        let clonCommentsCount = commentsCount.cloneNode(true);
         itemsBar.appendChild(clonCommentsCount);
 
         if (elem[i].rank) {
@@ -146,7 +153,7 @@ let renderHTML = (elem) => {
             rank.innerHTML = elem[i].rank;
             comingItems.append(rank);
 
-            let clonRank = rank.cloneNode(true)
+            let clonRank = rank.cloneNode(true);
             itemsBar.appendChild(clonRank);
 
         } else {
@@ -155,7 +162,7 @@ let renderHTML = (elem) => {
             circle.className = "expectations";
             comingItems.append(circle);
 
-            let clonCircle = circle.cloneNode(true)
+            let clonCircle = circle.cloneNode(true);
             itemsBar.appendChild(clonCircle);
         }
 
@@ -164,15 +171,15 @@ let renderHTML = (elem) => {
         likesCount.innerHTML = elem[i].likes_count;
         comingItems.append(likesCount);
 
-        let clonLikesCounte = likesCount.cloneNode(true)
+        let clonLikesCounte = likesCount.cloneNode(true);
         itemsBar.appendChild(clonLikesCounte);
 
-        let director = document.createElement("div")
+        let director = document.createElement("div");
         director.className = "director";
         director.innerHTML = "Director: " + elem[i].director;
         information.append(director);
 
-        let writer = document.createElement("div")
+        let writer = document.createElement("div");
         writer.className = "writer";
         writer.innerHTML = "Writer: " + elem[i].writer;
         information.append(writer);
@@ -191,7 +198,49 @@ let renderHTML = (elem) => {
     }
     
     listElems = document.querySelectorAll(".comingSoon-slider__item");
-    verticalListElems = document.querySelectorAll(".mostPopular-slider__item")
+    listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
+    verticalListElems = document.querySelectorAll(".active");
+    movies = document.querySelectorAll(".Movie");
+    serials = document.querySelectorAll(".Serial");
+
+    let showAll = () => {
+        for(let i = 0; i < listMostPopular.length; i++) {
+            listMostPopular[i].classList.add("active");
+        }
+
+        verticalListElems = document.querySelectorAll(".active");
+        verticalSlider.style.marginTop = 0;
+    }
+
+    let hiddenSerials = () => {
+        for(let i = 0; i < serials.length; i++) {
+            serials[i].classList.add("active");
+        }
+
+        for(let i = 0; i < movies.length; i++) {
+            movies[i].classList.remove("active");
+        }
+
+        verticalListElems = document.querySelectorAll(".active");
+        verticalSlider.style.marginTop = 0;
+    }
+
+    let hiddenMovies = ()=> {
+        for(let i = 0; i < movies.length; i++) {
+            movies[i].classList.add("active");
+        }
+
+        for(let i = 0; i < serials.length; i++) {
+            serials[i].classList.remove("active");
+        }
+
+        verticalListElems = document.querySelectorAll(".active");
+        verticalSlider.style.marginTop = 0;
+    }
+    
+    btnAllMovies.addEventListener("click", showAll);
+    btnMovies.addEventListener("click", hiddenMovies);
+    btnSerials.addEventListener("click", hiddenSerials);
 
     let nextSlide = () => {
         position = Math.max(position - widthSlider * countSlider, -widthSlider * (listElems.length - countSlider)) ;
@@ -214,12 +263,13 @@ let renderHTML = (elem) => {
     let goToDown = () => {
         verticalPosition = Math.max(verticalPosition - heightSlider * verticalCountSlider, -heightSlider * (verticalListElems.length - verticalCountSlider)) ;
         verticalSlider.style.marginTop = verticalPosition + "px";
-        
     }
 
     buttonTop.addEventListener("click", goToTop);
-    buttonDown.addEventListener("click", goToDown);
+    buttonDown.addEventListener("click", goToDown); 
 }
+
+
 
 //Attempt to insert dynamic rating
 
