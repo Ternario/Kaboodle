@@ -1010,7 +1010,7 @@ body {
   display: flex;
 }
 
-.mostPopular .mostpopularBlock-slider {
+.mostPopular .mostPopularBlock-slider {
   display: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1030,14 +1030,14 @@ body {
   z-index: -50;
 }
 
-.mostPopular .mostpopularBlock-slider__item {
+.mostPopular .mostPopularBlock-slider__item {
   display: none;
   position: relative;
   margin: 0 21px;
   width: 190px;
 }
 
-.mostPopular .mostpopularBlock-slider__item .link {
+.mostPopular .mostPopularBlock-slider__item .link {
   position: absolute;
   height: 30px;
   width: 40px;
@@ -1049,7 +1049,7 @@ body {
   cursor: pointer;
 }
 
-.mostPopular .mostpopularBlock-slider__item .soon {
+.mostPopular .mostPopularBlock-slider__item .soon {
   position: absolute;
   text-align: center;
   height: 40px;
@@ -1063,7 +1063,7 @@ body {
   cursor: pointer;
 }
 
-.mostPopular .mostpopularBlock-slider__item .link:before {
+.mostPopular .mostPopularBlock-slider__item .link:before {
   content: "";
   position: absolute;
   height: 20px;
@@ -1074,7 +1074,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.mostPopular .mostpopularBlock-slider__item .title {
+.mostPopular .mostPopularBlock-slider__item .title {
   height: 45px;
   padding-top: 16px;
   font-size: 20px;
@@ -1083,7 +1083,7 @@ body {
   font-weight: bold;
 }
 
-.mostPopular .mostpopularBlock-slider__item .year {
+.mostPopular .mostPopularBlock-slider__item .year {
   padding-bottom: 13px;
   font-size: 20px;
   color: #010B13;
@@ -1091,13 +1091,13 @@ body {
   font-weight: bold;
 }
 
-.mostPopular .mostpopularBlock-slider__item .poster {
+.mostPopular .mostPopularBlock-slider__item .poster {
   height: 250px;
   width: 190px;
   border-radius: 5px;
 }
 
-.mostPopular .mostpopularBlock-slider__item .playMovie {
+.mostPopular .mostPopularBlock-slider__item .playMovie {
   position: absolute;
   height: 60px;
   width: 60px;
@@ -1115,14 +1115,14 @@ body {
   z-index: 100;
 }
 
-.mostPopular .mostpopularBlock-slider__item .playMovie:hover {
+.mostPopular .mostPopularBlock-slider__item .playMovie:hover {
   cursor: pointer;
   -webkit-transform: scale(1.3);
       -ms-transform: scale(1.3);
           transform: scale(1.3);
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems {
+.mostPopular .mostPopularBlock-slider__item .comingItems {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1139,7 +1139,7 @@ body {
   margin-bottom: 50px;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount {
+.mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount {
   position: relative;
   text-align: center;
   width: 43px;
@@ -1150,7 +1150,7 @@ body {
   font-weight: bold;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount:after {
+.mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount:after {
   content: "";
   position: absolute;
   height: 22px;
@@ -1162,7 +1162,7 @@ body {
   cursor: pointer;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .rank {
+.mostPopular .mostPopularBlock-slider__item .comingItems .rank {
   position: relative;
   text-align: center;
   width: 43px;
@@ -1173,7 +1173,7 @@ body {
   font-weight: bold;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .rank:after {
+.mostPopular .mostPopularBlock-slider__item .comingItems .rank:after {
   content: "";
   position: absolute;
   height: 22px;
@@ -1185,7 +1185,7 @@ body {
   cursor: pointer;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .expectations {
+.mostPopular .mostPopularBlock-slider__item .comingItems .expectations {
   position: relative;
   text-align: center;
   width: 43px;
@@ -1196,7 +1196,7 @@ body {
   font-weight: bold;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .expectations:before {
+.mostPopular .mostPopularBlock-slider__item .comingItems .expectations:before {
   content: "";
   position: absolute;
   height: 22px;
@@ -1208,7 +1208,7 @@ body {
   cursor: pointer;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .likesCount {
+.mostPopular .mostPopularBlock-slider__item .comingItems .likesCount {
   position: relative;
   text-align: center;
   width: 43px;
@@ -1219,7 +1219,7 @@ body {
   font-weight: bold;
 }
 
-.mostPopular .mostpopularBlock-slider__item .comingItems .likesCount:after {
+.mostPopular .mostPopularBlock-slider__item .comingItems .likesCount:after {
   content: "";
   position: absolute;
   height: 25px;
@@ -1231,7 +1231,7 @@ body {
   cursor: pointer;
 }
 
-.mostPopular .mostpopularBlock-slider__item:before {
+.mostPopular .mostPopularBlock-slider__item:before {
   content: '';
   position: absolute;
   top: 97px;
@@ -1241,10 +1241,6 @@ body {
   opacity: 0.5;
   border-radius: 5px;
   background-color: #010B13;
-}
-
-.mostPopular .mostpopularBlock-slider .active {
-  display: block;
 }
 
 .footer {
@@ -1427,7 +1423,7 @@ body {
     width: 640px;
     font-size: 16px;
   }
-  .mostPopular .mostpopularBlock-slider__item {
+  .mostPopular .mostPopularBlock-slider__item {
     margin: 0 18px;
     width: 190px;
   }
@@ -1687,67 +1683,67 @@ body {
     width: 17px;
     top: 0;
   }
-  .mostPopular .mostpopularBlock-slider__item {
+  .mostPopular .mostPopularBlock-slider__item {
     margin: 0 14px;
     width: 150px;
   }
-  .mostPopular .mostpopularBlock-slider__item .link {
+  .mostPopular .mostPopularBlock-slider__item .link {
     top: 82px;
   }
-  .mostPopular .mostpopularBlock-slider__item .soon {
+  .mostPopular .mostPopularBlock-slider__item .soon {
     top: 78px;
     left: 107px;
   }
-  .mostPopular .mostpopularBlock-slider__item .title {
+  .mostPopular .mostPopularBlock-slider__item .title {
     height: 35px;
     padding-top: 10px;
     font-size: 15px;
   }
-  .mostPopular .mostpopularBlock-slider__item .year {
+  .mostPopular .mostPopularBlock-slider__item .year {
     padding-bottom: 7px;
     font-size: 15px;
   }
-  .mostPopular .mostpopularBlock-slider__item .poster {
+  .mostPopular .mostPopularBlock-slider__item .poster {
     height: 200px;
     width: 150px;
   }
-  .mostPopular .mostpopularBlock-slider__item .playMovie {
+  .mostPopular .mostPopularBlock-slider__item .playMovie {
     top: 147px;
     left: 53px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount {
     width: 30px;
     font-size: 15px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount:after {
     height: 19px;
     width: 19px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .rank {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .rank {
     width: 30px;
     font-size: 15px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .rank:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .rank:after {
     height: 19px;
     width: 19px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .expectations {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .expectations {
     width: 30px;
     font-size: 15px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .expectations:before {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .expectations:before {
     height: 19px;
     width: 19px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .likesCount {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount {
     width: 30px;
     font-size: 15px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .likesCount:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount:after {
     height: 19px;
     width: 19px;
   }
-  .mostPopular .mostpopularBlock-slider__item:before {
+  .mostPopular .mostPopularBlock-slider__item:before {
     top: 70px;
   }
   .footer .footer-logo {
@@ -2065,78 +2061,78 @@ body {
   .mostPopular .mostPopular-slider__item .comingItems .itemsBar .likesCount:after {
     height: 9px;
   }
-  .mostPopular .mostpopularBlock-slider__item {
+  .mostPopular .mostPopularBlock-slider__item {
     margin: 0 28px;
     width: 120px;
   }
-  .mostPopular .mostpopularBlock-slider__item .link {
+  .mostPopular .mostPopularBlock-slider__item .link {
     top: 66px;
     left: 5px;
   }
-  .mostPopular .mostpopularBlock-slider__item .soon {
+  .mostPopular .mostPopularBlock-slider__item .soon {
     top: 60px;
     left: 81px;
   }
-  .mostPopular .mostpopularBlock-slider__item .title {
+  .mostPopular .mostPopularBlock-slider__item .title {
     height: 30px;
     padding-top: 7px;
     font-size: 13px;
   }
-  .mostPopular .mostpopularBlock-slider__item .year {
+  .mostPopular .mostPopularBlock-slider__item .year {
     padding-bottom: 5px;
     font-size: 13px;
   }
-  .mostPopular .mostpopularBlock-slider__item .poster {
+  .mostPopular .mostPopularBlock-slider__item .poster {
     height: 170px;
     width: 120px;
   }
-  .mostPopular .mostpopularBlock-slider__item .playMovie {
+  .mostPopular .mostPopularBlock-slider__item .playMovie {
     height: 50px;
     width: 50px;
     top: 115px;
     left: 33px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount {
     width: 20px;
     font-size: 12px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount:after {
     height: 17px;
     width: 17px;
     top: 15px;
     right: 7%;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .rank {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .rank {
     width: 20px;
     font-size: 12px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .rank:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .rank:after {
     height: 17px;
     width: 17px;
     top: 15px;
     left: 13%;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .expectations {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .expectations {
     width: 20px;
     font-size: 12px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .expectations:before {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .expectations:before {
     height: 17px;
     width: 17px;
     top: 15px;
     left: 13%;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .likesCount {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount {
     width: 20px;
     font-size: 12px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .likesCount:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount:after {
     height: 17px;
     width: 17px;
     top: 17px;
     right: 10%;
   }
-  .mostPopular .mostpopularBlock-slider__item:before {
+  .mostPopular .mostPopularBlock-slider__item:before {
     top: 57px;
     bottom: 76px;
   }
@@ -2342,79 +2338,79 @@ body {
   .mostPopular .mostPopular-slider__item .comingItems .content {
     width: 200px;
   }
-  .mostPopular .mostpopularBlock-slider__item {
+  .mostPopular .mostPopularBlock-slider__item {
     margin: 0 18px;
     width: 120px;
   }
-  .mostPopular .mostpopularBlock-slider__item .link {
+  .mostPopular .mostPopularBlock-slider__item .link {
     top: 66px;
     left: 5px;
   }
-  .mostPopular .mostpopularBlock-slider__item .soon {
+  .mostPopular .mostPopularBlock-slider__item .soon {
     top: 60px;
     left: 81px;
   }
-  .mostPopular .mostpopularBlock-slider__item .title {
+  .mostPopular .mostPopularBlock-slider__item .title {
     height: 30px;
     padding-top: 7px;
     font-size: 13px;
   }
-  .mostPopular .mostpopularBlock-slider__item .year {
+  .mostPopular .mostPopularBlock-slider__item .year {
     padding-bottom: 5px;
     font-size: 13px;
   }
-  .mostPopular .mostpopularBlock-slider__item .poster {
+  .mostPopular .mostPopularBlock-slider__item .poster {
     height: 170px;
     width: 120px;
   }
-  .mostPopular .mostpopularBlock-slider__item .playMovie {
+  .mostPopular .mostPopularBlock-slider__item .playMovie {
     height: 50px;
     width: 50px;
     top: 115px;
     left: 33px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount {
     width: 23px;
     font-size: 12px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .commentsCount:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount:after {
     height: 17px;
     width: 17px;
     top: 15px;
     right: 7%;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .rank {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .rank {
     width: 23px;
     font-size: 12px;
     margin: 0 5px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .rank:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .rank:after {
     height: 17px;
     width: 17px;
     top: 13px;
     right: 13%;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .expectations {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .expectations {
     width: 23px;
     font-size: 12px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .expectations:before {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .expectations:before {
     height: 17px;
     width: 17px;
     top: 13px;
     right: 13%;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .likesCount {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount {
     width: 23px;
     font-size: 12px;
   }
-  .mostPopular .mostpopularBlock-slider__item .comingItems .likesCount:after {
+  .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount:after {
     height: 17px;
     width: 17px;
     top: 15px;
     right: 10%;
   }
-  .mostPopular .mostpopularBlock-slider__item:before {
+  .mostPopular .mostPopularBlock-slider__item:before {
     top: 57px;
     bottom: 76px;
   }

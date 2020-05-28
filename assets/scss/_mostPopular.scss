@@ -913,7 +913,7 @@
         }
     }
 
-    .mostpopularBlock-slider {
+    .mostPopularBlock-slider {
         display: none;
         display: flex;
         flex-wrap: wrap;
@@ -1389,8 +1389,8 @@
             }
         }
 
-        .active {
-            display: block;
-        }
+        // .activeBlock {
+        //     display: block;
+        // }
     }
 }

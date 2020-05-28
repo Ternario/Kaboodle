@@ -14,6 +14,7 @@ let btnSerials = document.querySelector("#btnSerials")
 let listElems;
 let verticalListElems;
 let listMostPopular;
+let listMostPopularBlock;
 let movies;
 let serials;
 
@@ -70,7 +71,7 @@ let renderHTML = (elem) => {
         clonComingSoon.className = "mostPopular-slider__item " + elem[i].type + " active";
 
         let clonComingSoonBlock = comingSoon.cloneNode(true);
-        clonComingSoonBlock.className = "mostpopularBlock-slider__item " + elem[i].type + " active";
+        clonComingSoonBlock.className = "mostPopularBlock-slider__item " + elem[i].type + " activeBlock";
 
         let link = document.createElement("a");
         link.className = "link";
@@ -200,18 +201,17 @@ let renderHTML = (elem) => {
     
     listElems = document.querySelectorAll(".comingSoon-slider__item");
     listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
-    listMostpopularBlock = document.querySelectorAll(".mostpopularBlock-slider__item")
+    listMostPopularBlock = document.querySelectorAll(".mostPopularBlock-slider__item")
     verticalListElems = document.querySelectorAll(".active");
     movies = document.querySelectorAll(".Movie");
     serials = document.querySelectorAll(".Serial");
 
     let showAll = () => {
-        for(let i = 0; i < listMostPopular.length || listMostpopularBlock.length; i++) {
+        for(let i = 0; i < listMostPopular.length || listMostPopularBlock.length; i++) {
             listMostPopular[i].classList.add("active");
-            listMostpopularBlock[i].classList.add("active");
+            listMostPopularBlock[i].classList.add("activeBlock");
         }
 
-        verticalListElems = document.querySelectorAll(".active");
         verticalSlider.style.marginTop = 0;
     }
 
@@ -224,7 +224,6 @@ let renderHTML = (elem) => {
             movies[i].classList.remove("active");
         }
 
-        verticalListElems = document.querySelectorAll(".active");
         verticalSlider.style.marginTop = 0;
     }
 
@@ -237,7 +236,6 @@ let renderHTML = (elem) => {
             serials[i].classList.remove("active");
         }
 
-        verticalListElems = document.querySelectorAll(".active");
         verticalSlider.style.marginTop = 0;
     }
     
