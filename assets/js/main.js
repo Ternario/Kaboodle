@@ -5,8 +5,8 @@ let buttonTop = document.querySelector(".scrollUp");
 let buttonDown = document.querySelector(".scrollDown");
 let leftBtn = document.querySelector(".leftBtn");
 let rightBtn = document.querySelector(".rightBtn");
-let blockItems = document.querySelector(".blockItems")
-let stringItems = document.querySelector(".stringItems")
+let blockItems = document.querySelector("#blockItems")
+let stringItems = document.querySelector("#stringItems")
 let btnAllMovies = document.querySelector("#btnAllMovies")
 let btnMovies = document.querySelector("#btnMovies")
 let btnSerials = document.querySelector("#btnSerials")
@@ -17,6 +17,8 @@ let listMostPopular;
 let listMostPopularBlock;
 let movies;
 let serials;
+let moviesBlock;
+let serialsBlock;
 
 let position = 0; 
 let countSlider = 0;
@@ -68,10 +70,10 @@ let renderHTML = (elem) => {
         comingSoon.className = "comingSoon-slider__item";
 
         let clonComingSoon = comingSoon.cloneNode(true);
-        clonComingSoon.className = "mostPopular-slider__item " + elem[i].type + " active";
+        clonComingSoon.className = "mostPopular-slider__item " + elem[i].type;
 
         let clonComingSoonBlock = comingSoon.cloneNode(true);
-        clonComingSoonBlock.className = "mostPopularBlock-slider__item " + elem[i].type + " activeBlock";
+        clonComingSoonBlock.className = "mostPopularBlock-slider__item " + elem[i].type + "block";
 
         let link = document.createElement("a");
         link.className = "link";
@@ -201,48 +203,141 @@ let renderHTML = (elem) => {
     
     listElems = document.querySelectorAll(".comingSoon-slider__item");
     listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
-    listMostPopularBlock = document.querySelectorAll(".mostPopularBlock-slider__item")
-    verticalListElems = document.querySelectorAll(".active");
+    listMostPopularBlock = document.querySelectorAll(".mostPopularBlock-slider__item");
     movies = document.querySelectorAll(".Movie");
     serials = document.querySelectorAll(".Serial");
+    moviesBlock = document.querySelectorAll(".Movieblock");
+    serialsBlock = document.querySelectorAll(".Serialblock");
+
+    let showBlockPosition = () => {
+        blockSlider.style.display = "flex";
+        verticalSlider.style.display = "none";
+    }
+
+    let showStringPosition = () => {
+        blockSlider.style.display = "none";
+        verticalSlider.style.display = "block";
+    }
+    blockItems.addEventListener("click", showBlockPosition);
+    stringItems.addEventListener("click", showStringPosition);
 
     let showAll = () => {
-        for(let i = 0; i < listMostPopular.length || listMostPopularBlock.length; i++) {
-            listMostPopular[i].classList.add("active");
-            listMostPopularBlock[i].classList.add("activeBlock");
-        }
 
-        verticalSlider.style.marginTop = 0;
+        if(verticalSlider.style.display === "block") {
+
+            for(let i = 0; i < movies.length; i++) {
+                movies[i].style.display = "flex";
+                movies[i].classList.add("mostPopular-slider__item");
+            }
+    
+            for(let i = 0; i < serials.length; i++) {
+                serials[i].style.display = "flex";
+                serials[i].classList.add("mostPopular-slider__item");
+            }
+            
+            listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
+            verticalSlider.style.marginTop = 0;
+
+        } else {
+
+            for(let i = 0; i < moviesBlock.length; i++) {
+                moviesBlock[i].style.display = "block";
+                moviesBlock[i].classList.add("mostPopularBlock-slider__item");
+            }
+    
+            for(let i = 0; i < serialsBlock.length; i++) {
+                serialsBlock[i].style.display = "block";
+                serialsBlock[i].classList.add("mostPopularBlock-slider__item");
+            }
+            
+            listMostPopularBlock = document.querySelectorAll(".mostPopularBlock-slider__item");
+            blockSlider.style.marginTop = 0;
+
+        }
     }
 
     let hiddenSerials = () => {
-        for(let i = 0; i < serials.length; i++) {
-            serials[i].classList.add("active");
-        }
 
-        for(let i = 0; i < movies.length; i++) {
-            movies[i].classList.remove("active");
-        }
+        if(verticalSlider.style.display === "block") {
 
-        verticalSlider.style.marginTop = 0;
+            for(let i = 0; i < serials.length; i++) {
+                serials[i].style.display = "none";
+                serials[i].classList.remove("mostPopular-slider__item");
+            }
+
+            for(let i = 0; i < movies.length; i++) {
+                movies[i].style.display = "flex";
+                movies[i].classList.add("mostPopular-slider__item");
+            }
+
+            listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
+            verticalSlider.style.marginTop = 0;
+
+        } else {
+
+            for(let i = 0; i < serialsBlock.length; i++) {
+                serialsBlock[i].style.display = "none";
+                serialsBlock[i].classList.remove("mostPopularBlock-slider__item");
+            }
+
+            for(let i = 0; i < movies.length; i++) {
+                moviesBlock[i].style.display = "block";
+                moviesBlock[i].classList.add("mostPopularBlock-slider__item");
+            }
+
+            listMostPopularBlock = document.querySelectorAll(".mostPopular-slider__item");
+            blockSlider.style.marginTop = 0;
+
+        }
     }
 
     let hiddenMovies = ()=> {
-        for(let i = 0; i < movies.length; i++) {
-            movies[i].classList.add("active");
-        }
 
-        for(let i = 0; i < serials.length; i++) {
-            serials[i].classList.remove("active");
-        }
+        if(verticalSlider.style.display === "block") {
 
-        verticalSlider.style.marginTop = 0;
+            for(let i = 0; i < movies.length; i++) {
+                movies[i].style.display = "none";
+                movies[i].classList.remove("mostPopular-slider__item");
+            }
+
+            for(let i = 0; i < serials.length; i++) {
+                serials[i].style.display = "flex";
+                serials[i].classList.add("mostPopular-slider__item");
+            }
+
+            listMostPopularBlock = document.querySelectorAll(".mostPopular-slider__item");
+            verticalSlider.style.marginTop = 0;
+
+        } else {
+
+            for(let i = 0; i < moviesBlock.length; i++) {
+                moviesBlock[i].style.display = "none";
+                moviesBlock[i].classList.remove("mostPopularBlock-slider__item");
+            }
+
+            for(let i = 0; i < serials.length; i++) {
+                serialsBlock[i].style.display = "block";
+                serialsBlock[i].classList.add("mostPopularBlock-slider__item");
+            }
+
+            listMostPopularBlock = document.querySelectorAll(".mostPopular-slider__item");
+            blockSlider.style.marginTop = 0; 
+
+        }
     }
+
+    // let elemLength = () => {
+    //     if(verticalSlider.style.display === "block") {
+    //         listMostPopular.length
+    //     } else {
+    //         listMostPopularBlock.length
+    //     }
+    // }
     
     btnAllMovies.addEventListener("click", showAll);
-    btnMovies.addEventListener("click", hiddenMovies);
-    btnSerials.addEventListener("click", hiddenSerials);
-
+    btnMovies.addEventListener("click", hiddenSerials);
+    btnSerials.addEventListener("click", hiddenMovies);
+    
     let nextSlide = () => {
         position = Math.max(position - widthSlider * countSlider, -widthSlider * (listElems.length - countSlider)) ;
         slider.style.marginLeft = position + "px";
@@ -262,25 +357,12 @@ let renderHTML = (elem) => {
     }
 
     let goToDown = () => {
-        verticalPosition = Math.max(verticalPosition - heightSlider * verticalCountSlider, -heightSlider * (verticalListElems.length - verticalCountSlider)) ;
+        verticalPosition = Math.max(verticalPosition - heightSlider * verticalCountSlider, -heightSlider * (listMostPopular.length - verticalCountSlider)) ;
         verticalSlider.style.marginTop = verticalPosition + "px";
     }
 
     buttonTop.addEventListener("click", goToTop);
     buttonDown.addEventListener("click", goToDown); 
-
-    let tr = () => {
-
-        for(let i = 0; i < listMostPopular.length; i++) {
-            listMostPopular[i].classList.remove("mostPopular-slider__item")
-            listMostPopular[i].classList.add("active-slider__item");
-            console.log(listMostPopular.className);
-        }
-        
-
-    }
-    
-    // tr()
 }
 
 

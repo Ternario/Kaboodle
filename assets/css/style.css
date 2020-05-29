@@ -625,31 +625,50 @@ body {
 .mostPopular .mostPopular-bar__item .barItem-items {
   position: relative;
   width: 40px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .mostPopular .mostPopular-bar__item .barItem-items .item {
   height: 4px;
   width: 3px;
   margin: 1px 2px 0 2px;
-  background-color: #FFFFFF;
+  background-color: #4D5255;
   -webkit-transition: background-color 0.7s;
   -o-transition: background-color 0.7s;
   transition: background-color 0.7s;
 }
 
-.mostPopular .mostPopular-bar__item .barItem-items .item:before {
+.mostPopular .mostPopular-bar__item .barItem-items .item::before {
   content: "";
   position: absolute;
   height: 1px;
   width: 32px;
   margin: 2px 0 2px 6px;
-  background-color: #FFFFFF;
+  background-color: #4D5255;
   -webkit-transition: background-color 0.7s;
   -o-transition: background-color 0.7s;
   transition: background-color 0.7s;
 }
 
+.mostPopular .mostPopular-bar__item .barItem-items:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.mostPopular .mostPopular-bar__item .barItem-items:hover .item {
+  background-color: #FFFFFF;
+}
+
+.mostPopular .mostPopular-bar__item .barItem-items:hover .item::before {
+  background-color: #FFFFFF;
+}
+
 .mostPopular .mostPopular-slider {
+  display: none;
   position: relative;
   padding-left: 114px;
   overflow: hidden;
@@ -660,7 +679,10 @@ body {
 }
 
 .mostPopular .mostPopular-slider__item {
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -1003,15 +1025,7 @@ body {
   background-color: #010B13;
 }
 
-.mostPopular .mostPopular-slider .active {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .mostPopular .mostPopularBlock-slider {
-  display: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1031,7 +1045,6 @@ body {
 }
 
 .mostPopular .mostPopularBlock-slider__item {
-  display: none;
   position: relative;
   margin: 0 21px;
   width: 190px;
