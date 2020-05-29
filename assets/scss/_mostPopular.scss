@@ -2,7 +2,7 @@
     position: relative;
     height: 740px;
     overflow: hidden;
-    z-index: 100;
+    z-index: 700;
 
     .scrollUp {
         position: absolute;
@@ -926,20 +926,20 @@
     .mostPopularBlock-slider {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        padding: 0  113px;
+        justify-content: start;
+        padding: 0 113px;
         transition: 0.5s;
-        z-index: -50;
+        overflow: hidden;
+        z-index: 50;
     
         &__item {
-            // display: none;
             position: relative;   
-            margin: 0 21px;
-            width: 190px;
+            margin: 0 10px;
+            width: 150px;
     
             @include xl-lg {
                 margin: 0 18px;
-                width: 190px;
+                width: 150px;
             }
     
             @include lg-md {
@@ -961,7 +961,7 @@
                 position: absolute;
                 height: 30px;
                 width: 40px;
-                top: 112px;
+                top: 82px;
                 left: 8px;
                 background-image: url(../../assets/img/movie.png);
                 background-repeat: no-repeat;
@@ -988,8 +988,8 @@
                 text-align: center;
                 height: 40px;
                 width: 35px;
-                top: 110px;
-                right: 9px;
+                top: 78px;
+                left: 107px;
                 color: $color-white;
                 font-size: 25px;
                 background-image: url(../../assets/img/grade.png);
@@ -1024,9 +1024,9 @@
             }
     
             .title {
-                height: 45px;
-                padding-top: 16px;
-                font-size: 20px;
+                height: 35px;
+                padding-top: 10px;
+                font-size: 14px;
                 color: $color-black;
                 font-family: RobotoRegular;
                 font-weight: bold;   
@@ -1034,7 +1034,7 @@
                 @include lg-md {
                     height: 35px;
                     padding-top: 10px;
-                    font-size: 15px;
+                    font-size: 14px;
                 }
     
                 @include md-sm {
@@ -1051,15 +1051,15 @@
             }
     
             .year {
-                padding-bottom: 13px;
-                font-size: 20px;
+                padding-bottom: 5px;
+                font-size: 14px;
                 color: $color-black;
                 font-family: RobotoRegular;
                 font-weight: bold;
     
                 @include lg-md {
-                    padding-bottom: 7px;
-                    font-size: 15px;
+                    padding-bottom: 5px;
+                    font-size: 14px;
                 }
     
                 @include md-sm {
@@ -1074,8 +1074,8 @@
             }
     
             .poster {
-                height: 250px;
-                width: 190px;
+                height: 200px;
+                width: 150px;
                 border-radius: 5px;
     
                 @include lg-md {
@@ -1098,8 +1098,8 @@
                 position: absolute;
                 height: 60px;
                 width: 60px;
-                top: 189px;
-                left: 67px;
+                top: 147px;
+                left: 45px;
                 opacity: 0.7;
                 border-radius: 50%;
                 background-color: $color-gray;
@@ -1111,7 +1111,7 @@
     
                 @include lg-md {
                     top: 147px;
-                    left: 53px;
+                    left: 45px;
                 }
     
                 @include md-sm {
@@ -1138,22 +1138,22 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding-top: 11px;
-                margin-bottom: 50px;
+                padding-top: 7px;
+                margin-bottom: 35px;
     
                 .commentsCount {
                     position: relative;                  
                     text-align: center;
-                    width: 43px;
+                    width: 30px;
                     margin: 0 10px;
                     color: $color-black;
                     font-family: "Proxima Nova Regular";
-                    font-size: 15px;
+                    font-size: 13px;
                     font-weight: bold;
     
                     @include lg-md {
                         width: 30px;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
     
                     @include md-sm {
@@ -1170,8 +1170,8 @@
                 .commentsCount:after {
                     content: "";
                     position: absolute;
-                    height: 22px;
-                    width: 25px;
+                    height: 19px;
+                    width: 19px;
                     top: 25px;
                     right: 17%;
                     background-image: url(../../assets/svg/comment.svg);
@@ -1201,16 +1201,16 @@
                 .rank {
                     position: relative;
                     text-align: center;
-                    width: 43px;
+                    width: 30px;
                     margin: 0 10px;
                     color: $color-black;
                     font-family: "Proxima Nova Regular";
-                    font-size: 15px;
+                    font-size: 13px;
                     font-weight: bold;
     
                     @include lg-md {
                         width: 30px;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
     
                     @include md-sm {
@@ -1228,8 +1228,8 @@
                 .rank:after {
                     content: "";
                     position: absolute;
-                    height: 22px;
-                    width: 25px;
+                    height: 19px;
+                    width: 19px;
                     top: 25px;
                     left: 28%;
                     background-image: url(../../assets/svg/gradeless.svg);
@@ -1259,16 +1259,16 @@
                 .expectations {
                     position: relative;
                     text-align: center;
-                    width: 43px;
+                    width: 30px;
                     margin: 0 10px;
                     color: $color-black;
                     font-family: "Proxima Nova Regular";
-                    font-size: 15px;
+                    font-size: 13px;
                     font-weight: bold;
     
                     @include lg-md {
                         width: 30px;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
     
                     @include md-sm {
@@ -1285,8 +1285,8 @@
                 .expectations:before {
                     content: "";
                     position: absolute;
-                    height: 22px;
-                    width: 25px;
+                    height: 19px;
+                    width: 19px;
                     top: 25px;
                     left: 28%;
                     background-image: url(../../assets/svg/gradeless.svg);
@@ -1316,16 +1316,16 @@
                 .likesCount {
                     position: relative;
                     text-align: center;
-                    width: 43px;
+                    width: 30px;
                     margin: 0 10px;
                     color: $color-black;
                     font-family: "Proxima Nova Regular";
-                    font-size: 15px;
+                    font-size: 13px;
                     font-weight: bold;
     
                     @include lg-md {
                         width: 30px;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
     
                     @include md-sm {
@@ -1342,8 +1342,8 @@
                 .likesCount:after {
                     content: "";
                     position: absolute;
-                    height: 25px;
-                    width: 25px;
+                    height: 19px;
+                    width: 19px;
                     top: 25px;
                     right: 20%;
                     background-image: url(../../assets/svg/heart.svg);
@@ -1375,10 +1375,10 @@
         &__item:before {
             content: '';
             position: absolute;
-            top: 97px;
+            top: 70px;
             left: 0;
             right: 0;
-            bottom: 80px;
+            bottom: 59px;
             opacity: 0.5; 
             border-radius: 5px;
             background-color: $color-black; 
@@ -1397,9 +1397,5 @@
                 bottom: 76px;;
             }
         }
-
-        // .activeBlock {
-        //     display: block;
-        // }
     }
 }

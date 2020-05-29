@@ -25,7 +25,9 @@ let countSlider = 0;
 let widthSlider = 0;
 let verticalPosition = 0;
 let heightSlider = 227;
+let heightSliderBlock = 326;
 let verticalCountSlider = 3;
+let verticalCountSliderBlock = 2;
 
 let windowWidth = () => {
     if(document.documentElement.clientWidth >= 1280) {
@@ -218,6 +220,7 @@ let renderHTML = (elem) => {
         blockSlider.style.display = "none";
         verticalSlider.style.display = "block";
     }
+
     blockItems.addEventListener("click", showBlockPosition);
     stringItems.addEventListener("click", showStringPosition);
 
@@ -325,14 +328,6 @@ let renderHTML = (elem) => {
 
         }
     }
-
-    // let elemLength = () => {
-    //     if(verticalSlider.style.display === "block") {
-    //         listMostPopular.length
-    //     } else {
-    //         listMostPopularBlock.length
-    //     }
-    // }
     
     btnAllMovies.addEventListener("click", showAll);
     btnMovies.addEventListener("click", hiddenSerials);
@@ -351,18 +346,39 @@ let renderHTML = (elem) => {
     rightBtn.addEventListener("click", nextSlide);
     leftBtn.addEventListener("click", prevSlide);
 
-    let goToTop = () => {
-        verticalPosition = Math.min(verticalPosition + heightSlider * verticalCountSlider, 0);
-        verticalSlider.style.marginTop = verticalPosition + "px";
+
+    let moveSliderTop = () => {
+
+        if(verticalSlider.style.display === "block") {
+
+            verticalPosition = Math.min(verticalPosition + heightSlider * verticalCountSlider, 0);
+            verticalSlider.style.marginTop = verticalPosition + "px";
+
+        } else {
+
+            verticalPosition = Math.min(verticalPosition + heightSliderBlock * verticalCountSliderBlock, 0);
+            blockSlider.style.marginTop = verticalPosition + "px";
+            
+        }
     }
 
-    let goToDown = () => {
-        verticalPosition = Math.max(verticalPosition - heightSlider * verticalCountSlider, -heightSlider * (listMostPopular.length - verticalCountSlider)) ;
-        verticalSlider.style.marginTop = verticalPosition + "px";
+    let moveSliderDown = () => {
+
+        if(verticalSlider.style.display === "block") {
+
+            verticalPosition = Math.max(verticalPosition - heightSlider * verticalCountSlider, -heightSlider * (listMostPopular.length - verticalCountSlider)) ;
+            verticalSlider.style.marginTop = verticalPosition + "px";
+
+        } else {
+
+            verticalPosition = Math.max(verticalPosition - heightSliderBlock * verticalCountSliderBlock, -heightSliderBlock * (listMostPopularBlock.length - verticalCountSliderBlock));
+            blockSlider.style.marginTop = verticalPosition + "px";
+
+        }
     }
 
-    buttonTop.addEventListener("click", goToTop);
-    buttonDown.addEventListener("click", goToDown); 
+    buttonTop.addEventListener("click", moveSliderTop);
+    buttonDown.addEventListener("click", moveSliderDown); 
 }
 
 

@@ -495,7 +495,7 @@ body {
   position: relative;
   height: 740px;
   overflow: hidden;
-  z-index: 100;
+  z-index: 700;
 }
 
 .mostPopular .scrollUp {
@@ -1033,28 +1033,29 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0  113px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 0 113px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  z-index: -50;
+  overflow: hidden;
+  z-index: 50;
 }
 
 .mostPopular .mostPopularBlock-slider__item {
   position: relative;
-  margin: 0 21px;
-  width: 190px;
+  margin: 0 10px;
+  width: 150px;
 }
 
 .mostPopular .mostPopularBlock-slider__item .link {
   position: absolute;
   height: 30px;
   width: 40px;
-  top: 112px;
+  top: 82px;
   left: 8px;
   background-image: url(../../assets/img/movie.png);
   background-repeat: no-repeat;
@@ -1067,8 +1068,8 @@ body {
   text-align: center;
   height: 40px;
   width: 35px;
-  top: 110px;
-  right: 9px;
+  top: 78px;
+  left: 107px;
   color: #FFFFFF;
   font-size: 25px;
   background-image: url(../../assets/img/grade.png);
@@ -1088,25 +1089,25 @@ body {
 }
 
 .mostPopular .mostPopularBlock-slider__item .title {
-  height: 45px;
-  padding-top: 16px;
-  font-size: 20px;
+  height: 35px;
+  padding-top: 10px;
+  font-size: 14px;
   color: #010B13;
   font-family: RobotoRegular;
   font-weight: bold;
 }
 
 .mostPopular .mostPopularBlock-slider__item .year {
-  padding-bottom: 13px;
-  font-size: 20px;
+  padding-bottom: 5px;
+  font-size: 14px;
   color: #010B13;
   font-family: RobotoRegular;
   font-weight: bold;
 }
 
 .mostPopular .mostPopularBlock-slider__item .poster {
-  height: 250px;
-  width: 190px;
+  height: 200px;
+  width: 150px;
   border-radius: 5px;
 }
 
@@ -1114,8 +1115,8 @@ body {
   position: absolute;
   height: 60px;
   width: 60px;
-  top: 189px;
-  left: 67px;
+  top: 147px;
+  left: 45px;
   opacity: 0.7;
   border-radius: 50%;
   background-color: #19232A;
@@ -1148,26 +1149,26 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 11px;
-  margin-bottom: 50px;
+  padding-top: 7px;
+  margin-bottom: 35px;
 }
 
 .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount {
   position: relative;
   text-align: center;
-  width: 43px;
+  width: 30px;
   margin: 0 10px;
   color: #010B13;
   font-family: "Proxima Nova Regular";
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
 }
 
 .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount:after {
   content: "";
   position: absolute;
-  height: 22px;
-  width: 25px;
+  height: 19px;
+  width: 19px;
   top: 25px;
   right: 17%;
   background-image: url(../../assets/svg/comment.svg);
@@ -1178,19 +1179,19 @@ body {
 .mostPopular .mostPopularBlock-slider__item .comingItems .rank {
   position: relative;
   text-align: center;
-  width: 43px;
+  width: 30px;
   margin: 0 10px;
   color: #010B13;
   font-family: "Proxima Nova Regular";
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
 }
 
 .mostPopular .mostPopularBlock-slider__item .comingItems .rank:after {
   content: "";
   position: absolute;
-  height: 22px;
-  width: 25px;
+  height: 19px;
+  width: 19px;
   top: 25px;
   left: 28%;
   background-image: url(../../assets/svg/gradeless.svg);
@@ -1201,19 +1202,19 @@ body {
 .mostPopular .mostPopularBlock-slider__item .comingItems .expectations {
   position: relative;
   text-align: center;
-  width: 43px;
+  width: 30px;
   margin: 0 10px;
   color: #010B13;
   font-family: "Proxima Nova Regular";
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
 }
 
 .mostPopular .mostPopularBlock-slider__item .comingItems .expectations:before {
   content: "";
   position: absolute;
-  height: 22px;
-  width: 25px;
+  height: 19px;
+  width: 19px;
   top: 25px;
   left: 28%;
   background-image: url(../../assets/svg/gradeless.svg);
@@ -1224,19 +1225,19 @@ body {
 .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount {
   position: relative;
   text-align: center;
-  width: 43px;
+  width: 30px;
   margin: 0 10px;
   color: #010B13;
   font-family: "Proxima Nova Regular";
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
 }
 
 .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount:after {
   content: "";
   position: absolute;
-  height: 25px;
-  width: 25px;
+  height: 19px;
+  width: 19px;
   top: 25px;
   right: 20%;
   background-image: url(../../assets/svg/heart.svg);
@@ -1247,10 +1248,10 @@ body {
 .mostPopular .mostPopularBlock-slider__item:before {
   content: '';
   position: absolute;
-  top: 97px;
+  top: 70px;
   left: 0;
   right: 0;
-  bottom: 80px;
+  bottom: 59px;
   opacity: 0.5;
   border-radius: 5px;
   background-color: #010B13;
@@ -1438,7 +1439,7 @@ body {
   }
   .mostPopular .mostPopularBlock-slider__item {
     margin: 0 18px;
-    width: 190px;
+    width: 150px;
   }
 }
 
@@ -1710,11 +1711,11 @@ body {
   .mostPopular .mostPopularBlock-slider__item .title {
     height: 35px;
     padding-top: 10px;
-    font-size: 15px;
+    font-size: 14px;
   }
   .mostPopular .mostPopularBlock-slider__item .year {
-    padding-bottom: 7px;
-    font-size: 15px;
+    padding-bottom: 5px;
+    font-size: 14px;
   }
   .mostPopular .mostPopularBlock-slider__item .poster {
     height: 200px;
@@ -1722,11 +1723,11 @@ body {
   }
   .mostPopular .mostPopularBlock-slider__item .playMovie {
     top: 147px;
-    left: 53px;
+    left: 45px;
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount {
     width: 30px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .commentsCount:after {
     height: 19px;
@@ -1734,7 +1735,7 @@ body {
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .rank {
     width: 30px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .rank:after {
     height: 19px;
@@ -1742,7 +1743,7 @@ body {
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .expectations {
     width: 30px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .expectations:before {
     height: 19px;
@@ -1750,7 +1751,7 @@ body {
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount {
     width: 30px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .mostPopular .mostPopularBlock-slider__item .comingItems .likesCount:after {
     height: 19px;
