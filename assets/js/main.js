@@ -15,6 +15,8 @@ let position = 0;
 let countSlider = 0;
 let widthSlider = 0;
 
+    //listener
+
 let windowResize = () => {
     if(document.documentElement.clientWidth >= 1280) {
         widthSlider = 232;
@@ -51,6 +53,8 @@ let windowResize = () => {
 window.addEventListener("load", windowResize);
 window.addEventListener("resize", windowResize);
 
+    //receiving data from json
+
 let request = new XMLHttpRequest();
 request.open("Get", "https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json");
 request.onloadend = function () {
@@ -58,6 +62,8 @@ request.onloadend = function () {
     renderHTML(data);
 };
 request.send();
+
+    //creating and assembly of data in blocks
 
 let renderHTML = (elem) => {
 
@@ -198,6 +204,8 @@ let renderHTML = (elem) => {
 
     }
     
+    //grid display switching
+
     listElems = document.querySelectorAll(".comingSoon-slider__item");
     movies = document.querySelectorAll(".Movie");
     serials = document.querySelectorAll(".Serial");
@@ -307,6 +315,8 @@ let renderHTML = (elem) => {
     btnAllMovies.addEventListener("click", showAll);
     btnMovies.addEventListener("click", hiddenSerials);
     btnSerials.addEventListener("click", hiddenMovies);
+
+    //slider
     
     let nextSlide = () => {
         position = Math.max(position - widthSlider * countSlider, -widthSlider * (listElems.length - countSlider)) ;
@@ -324,7 +334,7 @@ let renderHTML = (elem) => {
 
 
 
-//Attempt to insert dynamic rating
+//insert dynamic rating
 
 
 // let grade = document.createElement("div");
