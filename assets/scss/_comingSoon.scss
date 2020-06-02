@@ -254,7 +254,7 @@
                     }
                 }
 
-                .link:before {
+                .link::before {
                     content: "";
                     position: absolute;
                     height: 20px;
@@ -409,7 +409,7 @@
                         }
                     }
 
-                    .commentsCount:after {
+                    .commentsCount::after {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -467,7 +467,7 @@
                         }
                     }
 
-                    .rank:after {
+                    .rank::after {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -524,7 +524,7 @@
                         }
                     }
 
-                    .expectations:before {
+                    .expectations::before {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -581,7 +581,7 @@
                         }
                     }
 
-                    .likesCount:after {
+                    .likesCount::after {
                         content: "";
                         position: absolute;
                         height: 25px;
@@ -614,7 +614,7 @@
                 }   
             }
 
-            &__item:before {
+            &__item::before {
                 content: '';
                 position: absolute;
                 top: 97px;

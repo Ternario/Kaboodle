@@ -1,59 +1,5 @@
 .mostPopular {
     position: relative;
-    height: 740px;
-    overflow: hidden;
-    z-index: 700;
-
-    .scrollUp {
-        position: absolute;
-        height: 11px;
-        width: 28px;
-        top: 108px;
-        right: 112px;
-        background-image: url(../../assets/svg/verticali-slider-arrows.svg);
-        background-repeat: no-repeat;
-        cursor: pointer;
-        z-index: 200;
-
-        @include xl-lg {
-            right: 70px;
-        }
-
-        @include lg-md {
-            top: 88px;
-            right: 34px;
-        }
-
-        @include md-sm {
-            top: 80px;
-            right: 24px;
-        }
-    }
-
-    .scrollDown {
-        position: absolute;
-        height: 11px;
-        width: 28px;
-        bottom: 40px;
-        right: 112px;
-        background-image: url(../../assets/svg/verticali-slider-arrows.svg);
-        background-repeat: no-repeat;
-        transform: rotate(180deg);
-        cursor: pointer;
-        z-index: 200;
-
-        @include xl-lg {
-            right: 70px;
-        }
-
-        @include lg-md {
-            right: 34px;
-        }
-
-        @include md-sm {
-            right: 24px;
-        }
-    }
 
     .mostPopular-bar {
         display: flex;
@@ -277,9 +223,7 @@
         display: none;
         position: relative;
         padding-left: 114px;
-        overflow: hidden;
         transition: 0.5s;
-        z-index: -50;
 
         @include xl-lg {
             padding-left: 74px;
@@ -412,7 +356,7 @@
                     }
                 }
 
-                .title:after {
+                .title::after {
                     content: "";
                     position: absolute;
                     height: 23px;
@@ -469,7 +413,7 @@
                         font-weight: bold;
 
                         @include xl-lg {
-                            font-size: 17px;
+                            font-size: 15px;
                         }
 
                         @include lg-md {
@@ -507,7 +451,7 @@
                         }
                     }
 
-                    .director:before {
+                    .director::before {
                         content: "";
                         position: absolute;
                         height: 15px;
@@ -517,6 +461,11 @@
                         background-color: $color-black;
 
                         @include xl-lg {
+                            height: 12px;
+                            left: 5px;
+                        }
+
+                        @include lg-md {
                             height: 12px;
                             left: 5px;
                         }
@@ -542,6 +491,7 @@
 
                         @include lg-md {
                             padding-left: 10px;
+                            padding-right: 5px;
                             font-size: 15px;
                         }
 
@@ -551,7 +501,7 @@
                         }
                     }
 
-                    .writer:before {
+                    .writer::before {
                         content: "";
                         position: absolute;
                         height: 15px;
@@ -561,6 +511,11 @@
                         background-color: $color-black;
 
                         @include xl-lg {
+                            height: 12px;
+                            left: 5px;
+                        }
+
+                        @include lg-md {
                             height: 12px;
                             left: 5px;
                         }
@@ -619,7 +574,7 @@
                         }
                     }
 
-                    .genres:before {
+                    .genres::before {
                         content: "";
                         position: absolute;
                         height: 15px;
@@ -709,7 +664,7 @@
                         }
                     }
 
-                    .commentsCount:before {
+                    .commentsCount::before {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -734,7 +689,7 @@
                         }
                     }
 
-                    .commentsCount:after {
+                    .commentsCount::after {
                         content: "";
                         position: absolute;
                         height: 13px;
@@ -766,7 +721,7 @@
                         }
                     }
                 
-                    .rank:before {
+                    .rank::before {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -791,64 +746,7 @@
                         }
                     }
 
-                    .rank:after {
-                        content: "";
-                        position: absolute;
-                        height: 13px;
-                        width: 2px;
-                        top: 1px;
-                        left: 85%;
-                        background-color: $color-black;
-
-                        @include md-sm {
-                            height: 9px;
-                        }
-                    }
-                
-                    .expectations {
-                        position: relative;
-                        text-align: center;
-                        width: 60px;
-                        color: $color-black;
-                        font-family: "Proxima Nova Regular";
-                        font-size: 18px;
-                        font-weight: bold;
-
-                        @include lg-md {
-                            font-size: 15px;
-                        }
-
-                        @include md-sm {
-                            font-size: 13px;
-                        }
-                    }
-
-                    .expectations:before {
-                        content: "";
-                        position: absolute;
-                        height: 22px;
-                        width: 25px;
-                        top: -4px;
-                        left: 95%;
-                        background-image: url(../../assets/svg/gradeless.svg);
-                        background-repeat: no-repeat;
-                        cursor: pointer;
-                        z-index: 100;
-
-                        @include lg-md {
-                            height: 17px;
-                            width: 17px;
-                            top: -2px;
-                        }
-
-                        @include md-sm {
-                            height: 15px;
-                            width: 15px;
-                            top: -2px;
-                        }
-                    }
-
-                    .expectations:after {
+                    .rank::after {
                         content: "";
                         position: absolute;
                         height: 13px;
@@ -880,7 +778,7 @@
                         }
                     }
 
-                    .likesCount:before {
+                    .likesCount::before {
                         content: "";
                         position: absolute;
                         height: 22px;
@@ -905,7 +803,7 @@
                         }
                     }
 
-                    .likesCount:after {
+                    .likesCount::after {
                         content: "";
                         position: absolute;
                         height: 13px;
@@ -926,11 +824,25 @@
     .mostPopularBlock-slider {
         display: flex;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: center;
         padding: 0 113px;
         transition: 0.5s;
-        overflow: hidden;
-        z-index: 50;
+
+        @include xl-lg {
+            padding: 0 45px;
+        }
+
+        @include lg-md {
+            padding: 0 25px;
+        }
+
+        @include md-sm {
+            padding: 0 25px;
+        }
+
+        @include sm-xs {
+            padding: 0 15px;
+        }
     
         &__item {
             position: relative;   
@@ -948,12 +860,12 @@
             }
     
             @include md-sm {
-                margin: 0 28px;
+                margin: 0 20px;
                 width: 120px;
             }
     
             @include sm-xs {
-                margin: 0 18px;
+                margin: 0 12px;
                 width: 120px;
             }
     
@@ -1012,7 +924,7 @@
                 }
             }
     
-            .link:before {
+            .link::before {
                 content: "";
                 position: absolute;
                 height: 20px;
@@ -1139,7 +1051,7 @@
                 align-items: center;
                 justify-content: space-between;
                 padding-top: 7px;
-                margin-bottom: 35px;
+                margin-bottom: 45px;
     
                 .commentsCount {
                     position: relative;                  
@@ -1167,7 +1079,7 @@
                     }
                 }
     
-                .commentsCount:after {
+                .commentsCount::after {
                     content: "";
                     position: absolute;
                     height: 19px;
@@ -1225,64 +1137,7 @@
                     }
                 }
     
-                .rank:after {
-                    content: "";
-                    position: absolute;
-                    height: 19px;
-                    width: 19px;
-                    top: 25px;
-                    left: 28%;
-                    background-image: url(../../assets/svg/gradeless.svg);
-                    background-repeat: no-repeat;
-                    cursor: pointer;
-    
-                    @include lg-md {
-                        height: 19px;
-                        width: 19px;
-                    }
-    
-                    @include md-sm {
-                        height: 17px;
-                        width: 17px;
-                        top: 15px;
-                        left: 13%;
-                    }
-    
-                    @include sm-xs {
-                        height: 17px;
-                        width: 17px;
-                        top: 13px;
-                        right: 13%;
-                    }
-                }
-    
-                .expectations {
-                    position: relative;
-                    text-align: center;
-                    width: 30px;
-                    margin: 0 10px;
-                    color: $color-black;
-                    font-family: "Proxima Nova Regular";
-                    font-size: 13px;
-                    font-weight: bold;
-    
-                    @include lg-md {
-                        width: 30px;
-                        font-size: 13px;
-                    }
-    
-                    @include md-sm {
-                        width: 20px;
-                        font-size: 12px;
-                    }
-    
-                    @include sm-xs {
-                        width: 23px;
-                        font-size: 12px;
-                    }
-                }
-    
-                .expectations:before {
+                .rank::after {
                     content: "";
                     position: absolute;
                     height: 19px;
@@ -1339,7 +1194,7 @@
                     }
                 }
     
-                .likesCount:after {
+                .likesCount::after {
                     content: "";
                     position: absolute;
                     height: 19px;
@@ -1372,29 +1227,29 @@
             }   
         }
     
-        &__item:before {
+        &__item::before {
             content: '';
             position: absolute;
-            top: 70px;
+            top: 66px;
             left: 0;
             right: 0;
-            bottom: 59px;
+            bottom: 69px;
             opacity: 0.5; 
             border-radius: 5px;
             background-color: $color-black; 
             
             @include lg-md {
-                top: 70px;
+                top: 66px;
             }
     
             @include md-sm {
                 top: 57px;
-                bottom: 76px;
+                bottom: 68px;
             }
     
             @include sm-xs {
                 top: 57px;
-                bottom: 76px;;
+                bottom: 68px;;
             }
         }
     }

@@ -1,8 +1,4 @@
 let slider = document.querySelector("#slider");
-let verticalSlider = document.querySelector("#verticalSlider");
-let blockSlider = document.querySelector("#blockSlider")
-let buttonTop = document.querySelector(".scrollUp");
-let buttonDown = document.querySelector(".scrollDown");
 let leftBtn = document.querySelector(".leftBtn");
 let rightBtn = document.querySelector(".rightBtn");
 let blockItems = document.querySelector("#blockItems")
@@ -12,52 +8,51 @@ let btnMovies = document.querySelector("#btnMovies")
 let btnSerials = document.querySelector("#btnSerials")
 
 let listElems;
-let verticalListElems;
-let listMostPopular;
-let listMostPopularBlock;
 let movies;
 let serials;
-let moviesBlock;
-let serialsBlock;
 
 let position = 0; 
 let countSlider = 0;
 let widthSlider = 0;
-let verticalPosition = 0;
-let heightSlider = 227;
-let heightSliderBlock = 326;
-let verticalCountSlider = 3;
-let verticalCountSliderBlock = 2;
 
-let windowWidth = () => {
+let windowResize = () => {
     if(document.documentElement.clientWidth >= 1280) {
         widthSlider = 232;
         countSlider = 5;
+        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 1200) {
         widthSlider = 232;
         countSlider = 5;
+        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 1024) {
         widthSlider = 226;
         countSlider = 4;
+        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 992) {
-        widthSlider = 160;
+        widthSlider = 173;
         countSlider = 5;
+        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 768) {
         widthSlider = 178;
         countSlider = 4;
+        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 576) {
         widthSlider = 176;
         countSlider = 3;
+        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 360) {
+        blockSlider.style.display = "flex";
+        verticalSlider.style.display = "none";
         widthSlider = 156;
-        countSlider = 2;  
+        countSlider = 2; 
     }
 }
 
-window.addEventListener("resize", windowWidth());
+window.addEventListener("load", windowResize);
+window.addEventListener("resize", windowResize);
 
 let request = new XMLHttpRequest();
-request.open("Get", "https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json" );
+request.open("Get", "https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json");
 request.onloadend = function () {
     let data = JSON.parse(request.responseText);
     renderHTML(data);
@@ -204,8 +199,6 @@ let renderHTML = (elem) => {
     }
     
     listElems = document.querySelectorAll(".comingSoon-slider__item");
-    listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
-    listMostPopularBlock = document.querySelectorAll(".mostPopularBlock-slider__item");
     movies = document.querySelectorAll(".Movie");
     serials = document.querySelectorAll(".Serial");
     moviesBlock = document.querySelectorAll(".Movieblock");
@@ -236,10 +229,7 @@ let renderHTML = (elem) => {
             for(let i = 0; i < serials.length; i++) {
                 serials[i].style.display = "flex";
                 serials[i].classList.add("mostPopular-slider__item");
-            }
-            
-            listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
-            verticalSlider.style.marginTop = 0;
+            } 
 
         } else {
 
@@ -252,9 +242,6 @@ let renderHTML = (elem) => {
                 serialsBlock[i].style.display = "block";
                 serialsBlock[i].classList.add("mostPopularBlock-slider__item");
             }
-            
-            listMostPopularBlock = document.querySelectorAll(".mostPopularBlock-slider__item");
-            blockSlider.style.marginTop = 0;
 
         }
     }
@@ -273,9 +260,6 @@ let renderHTML = (elem) => {
                 movies[i].classList.add("mostPopular-slider__item");
             }
 
-            listMostPopular = document.querySelectorAll(".mostPopular-slider__item");
-            verticalSlider.style.marginTop = 0;
-
         } else {
 
             for(let i = 0; i < serialsBlock.length; i++) {
@@ -287,9 +271,6 @@ let renderHTML = (elem) => {
                 moviesBlock[i].style.display = "block";
                 moviesBlock[i].classList.add("mostPopularBlock-slider__item");
             }
-
-            listMostPopularBlock = document.querySelectorAll(".mostPopular-slider__item");
-            blockSlider.style.marginTop = 0;
 
         }
     }
@@ -308,9 +289,6 @@ let renderHTML = (elem) => {
                 serials[i].classList.add("mostPopular-slider__item");
             }
 
-            listMostPopularBlock = document.querySelectorAll(".mostPopular-slider__item");
-            verticalSlider.style.marginTop = 0;
-
         } else {
 
             for(let i = 0; i < moviesBlock.length; i++) {
@@ -322,9 +300,6 @@ let renderHTML = (elem) => {
                 serialsBlock[i].style.display = "block";
                 serialsBlock[i].classList.add("mostPopularBlock-slider__item");
             }
-
-            listMostPopularBlock = document.querySelectorAll(".mostPopular-slider__item");
-            blockSlider.style.marginTop = 0; 
 
         }
     }
@@ -345,43 +320,7 @@ let renderHTML = (elem) => {
 
     rightBtn.addEventListener("click", nextSlide);
     leftBtn.addEventListener("click", prevSlide);
-
-
-    let moveSliderTop = () => {
-
-        if(verticalSlider.style.display === "block") {
-
-            verticalPosition = Math.min(verticalPosition + heightSlider * verticalCountSlider, 0);
-            verticalSlider.style.marginTop = verticalPosition + "px";
-
-        } else {
-
-            verticalPosition = Math.min(verticalPosition + heightSliderBlock * verticalCountSliderBlock, 0);
-            blockSlider.style.marginTop = verticalPosition + "px";
-            
-        }
-    }
-
-    let moveSliderDown = () => {
-
-        if(verticalSlider.style.display === "block") {
-
-            verticalPosition = Math.max(verticalPosition - heightSlider * verticalCountSlider, -heightSlider * (listMostPopular.length - verticalCountSlider)) ;
-            verticalSlider.style.marginTop = verticalPosition + "px";
-
-        } else {
-
-            verticalPosition = Math.max(verticalPosition - heightSliderBlock * verticalCountSliderBlock, -heightSliderBlock * (listMostPopularBlock.length - verticalCountSliderBlock));
-            blockSlider.style.marginTop = verticalPosition + "px";
-
-        }
-    }
-
-    buttonTop.addEventListener("click", moveSliderTop);
-    buttonDown.addEventListener("click", moveSliderDown); 
 }
-
-
 
 
 
@@ -405,4 +344,3 @@ let renderHTML = (elem) => {
 
 //         }
 //         setProgress(elem[i].rank * 10); 
-
