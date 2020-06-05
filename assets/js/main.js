@@ -21,27 +21,21 @@ let windowResize = () => {
     if(document.documentElement.clientWidth >= 1280) {
         widthSlider = 232;
         countSlider = 5;
-        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 1200) {
         widthSlider = 232;
         countSlider = 5;
-        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 1024) {
         widthSlider = 226;
         countSlider = 4;
-        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 992) {
         widthSlider = 173;
         countSlider = 5;
-        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 768) {
         widthSlider = 178;
         countSlider = 4;
-        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 576) {
         widthSlider = 176;
         countSlider = 3;
-        console.log(widthSlider, countSlider)
     } else if(document.documentElement.clientWidth >= 360) {
         blockSlider.style.display = "flex";
         verticalSlider.style.display = "none";
@@ -58,9 +52,10 @@ window.addEventListener("resize", windowResize);
 let request = new XMLHttpRequest();
 request.open("Get", "https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json");
 request.onloadend = function () {
-    let data = JSON.parse(request.responseText);
+    let data = JSON.parse(request.response);
     renderHTML(data);
 };
+
 request.send();
 
     //creating and assembly of data in blocks
