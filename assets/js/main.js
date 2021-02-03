@@ -7,6 +7,19 @@ const slider = document.querySelector("#slider"),
       itemsPlaceBlock = document.querySelector("#itemsPlaceBlock"),
       itemsPlaceString = document.querySelector("#itemsPlaceString");
 
+window.addEventListener("resize", () => {
+    if(document.documentElement.clientWidth <= 576 && flag !== true) {
+        flag = true;
+        updateData(itemsPlaceString);
+
+        if(type === "") {
+            renderSlider(movies, itemsPlaceBlock);
+        } else {
+            filterItems(movies, type);
+        }
+    };
+});
+
 fetch("https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json")
     .then(response => response.json())
     .then(data => getData(data))
@@ -26,7 +39,7 @@ let getData = (data) => {
 
     $(".responsive").slick({
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 3,
@@ -35,9 +48,7 @@ let getData = (data) => {
             breakpoint: 1111,
             settings: {
               slidesToShow: 4,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+              slidesToScroll: 3
             }
           },
           {
@@ -68,7 +79,7 @@ let renderSlider = (elem, placeAppend) => {
 
     elem.map(elem => {
         let comingSoon = document.createElement("div");
-            comingSoon.className = "comingSoon-slider__item ";
+            comingSoon.className = place;
             comingSoon.innerHTML = `
             <a class="link" href=${elem.link}></a>
             <div class="title">${elem.title}</div>
@@ -110,7 +121,7 @@ let renderElementsRow = (elem) => {
                 <div class="title">${elem.title}</div>
                 <div class="information">
                     <div class="year">${elem.year}</div>
-                    <div class="director">"Director: ${elem.director}"</div>
+                    <div class="director">Director: ${elem.director}</div>
                     <div class="writer">Writer: ${elem.writer}</div>
                     <div class="genres">Genres: ${genresName}</div>
                 </div>

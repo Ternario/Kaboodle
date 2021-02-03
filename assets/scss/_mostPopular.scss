@@ -222,11 +222,25 @@
     .mostPopular-block {
         display: flex;
         flex-wrap: wrap;
+        width: 1160px;
+        margin: 0 auto;
         transition: 0.5s;
-        
-        .comingSoon-slider { 
-            
-            
+
+        @include xl-lg {
+            width: 905px;
+        }
+
+        @include lg-md {
+            width: 713px;
+        }
+
+        @include md-sm {
+            width: 568px;
+        }
+
+        @include sm-xs {
+            width: 360px;
+        }
 
             &__item {
                 position: relative;   
@@ -244,13 +258,13 @@
                 }
 
                 @include md-sm {
-                    margin: 0 28px;
+                    margin: 0 11px;
                     width: 120px;
                 }
 
                 @include sm-xs {
-                    margin: 0 18px;
-                    width: 120px;
+                    margin: 0 10px;
+                    width: 100px;
                 }
 
                 .link {
@@ -299,12 +313,12 @@
 
                     @include md-sm {
                         top: 60px;
-                        left: 81px;
+                        left: 81px
                     }
 
                     @include sm-xs {
                         top: 60px;
-                        left: 81px
+                        left: 61px
                     }
                 }
 
@@ -342,7 +356,7 @@
                     @include sm-xs {
                         height: 30px;
                         padding-top: 7px;
-                        font-size: 13px;
+                        font-size: 12px;
                     }
                 }
 
@@ -385,8 +399,8 @@
                     }
 
                     @include sm-xs {
-                        height: 170px;
-                        width: 120px;
+                        height: 150px;
+                        width: 100px;
                     }
                 }
 
@@ -421,7 +435,7 @@
                         height: 50px;
                         width: 50px;
                         top: 115px;
-                        left: 33px;
+                        left: 27px;
                     }
                 }
 
@@ -436,6 +450,14 @@
                     justify-content: space-between;
                     padding-top: 11px;
                     margin-bottom: 50px;
+
+                    @include md-sm {
+                        margin-bottom: 30px;
+                    }
+
+                    @include sm-xs {
+                        margin-bottom: 30px;
+                    }
 
                     .commentsCount {
                         position: relative;                  
@@ -453,12 +475,13 @@
                         }
 
                         @include md-sm {
-                            width: 20px;
+                            width: 23px;
                             font-size: 12px;
                         }
 
                         @include sm-xs {
                             width: 23px;
+                            margin: 0 2px;
                             font-size: 12px;
                         }
                     }
@@ -510,14 +533,15 @@
                         }
 
                         @include md-sm {
-                            width: 20px;
+                            width: 23px;
                             font-size: 12px;
+                            margin: 0 5px;
                         }
 
                         @include sm-xs {
                             width: 23px;
                             font-size: 12px;
-                            margin: 0 5px;
+                            margin: 0 2px;
                         }
                     }
 
@@ -540,8 +564,8 @@
                         @include md-sm {
                             height: 17px;
                             width: 17px;
-                            top: 15px;
-                            left: 13%;
+                            top: 13px;
+                            right: 13%;
                         }
 
                         @include sm-xs {
@@ -568,12 +592,13 @@
                         }
 
                         @include md-sm {
-                            width: 20px;
+                            width: 23px;
                             font-size: 12px;
                         }
 
                         @include sm-xs {
                             width: 23px;
+                            margin: 0 2px;
                             font-size: 12px;
                         }
                     }
@@ -597,8 +622,8 @@
                         @include md-sm {
                             height: 17px;
                             width: 17px;
-                            top: 15px;
-                            left: 13%;
+                            top: 13px;
+                            right: 13%;
                         }
 
                         @include sm-xs {
@@ -625,12 +650,13 @@
                         }
 
                         @include md-sm {
-                            width: 20px;
+                            width: 23px;
                             font-size: 12px;
                         }
 
                         @include sm-xs {
                             width: 23px;
+                            margin: 0 2px;
                             font-size: 12px;
                         }
                     }
@@ -654,7 +680,7 @@
                         @include md-sm {
                             height: 17px;
                             width: 17px;
-                            top: 17px;
+                            top: 15px;
                             right: 10%;
                         }
 
@@ -685,38 +711,33 @@
 
                 @include md-sm {
                     top: 57px;
-                    bottom: 76px;
+                    bottom: 57px;
                 }
 
                 @include sm-xs {
                     top: 57px;
-                    bottom: 76px;;
+                    bottom: 57px;
                 }
             }
-        }
     }
 
     .mostPopular-string {
         position: relative;
-        padding-left: 114px;
+        width: 1100px;
+        margin: 0 auto;
         transition: 0.5s;
 
         @include xl-lg {
-            margin: 0 auto;
+            width: 900px;
         }
 
         @include lg-md {
-            margin:  0 auto;
+            width: 720px;
         }
 
         @include md-sm {
-            margin: 0 25px;
-        }
-
-        @include sm-xs {
-            margin: 0 25px;
-        }
-        
+            width: 550px;
+        }     
 
         &__item {
             display: flex;
@@ -728,7 +749,7 @@
                 height: 30px;
                 width: 100px;
                 top: 156px;
-                right: 15%;
+                right: 0;
                 color: $color-blue;
                 font-family: RobotoRegular;
                 font-size: 18px;
@@ -737,14 +758,16 @@
                 cursor: pointer;
 
                 @include lg-md {
+                    width: 85px;
                     top: 164px;
-                    right: 10%;
+                    right: 0;
                     font-size: 15px;
                 }
 
                 @include md-sm {
-                    top: 160px;
-                    right: 5%;
+                    width: 65px;
+                    top: 178px;
+                    right: 0;
                     font-size: 13px;
                 }
             }
@@ -839,15 +862,15 @@
                     height: 23px;
                     width: 30px;
                     top: 157px;
-                    left: 255px;
+                    left: 238px;
                     background-image: url(../../assets/svg/share.svg);
                     background-repeat: no-repeat;
                     cursor: pointer;
                     z-index: 100;
 
                     @include xl-lg {
-                        left: 238px;
-                        top: 153px;
+                        left: 218px;
+                        top: 150px;
                     }
 
                     @include lg-md {
@@ -860,7 +883,7 @@
                     @include md-sm {
                         height: 16px;
                         width: 22px;
-                        top: 160px;
+                        top: 178px;
                         left: 172px;
                     }
                 }
@@ -870,17 +893,13 @@
 
                     @include lg-md {
                         flex-wrap: wrap;
-                        width: 430px;
+                        width: 450px;
                         height: 40px;
                     }
 
                     @include md-sm {
-                        flex-wrap: wrap;
+                        display: block;
                         width: 360px;
-                    }
-
-                    @include sm-xs {
-                        width: 200px;
                     }
         
                     .year {
@@ -924,7 +943,7 @@
                         }
 
                         @include md-sm {
-                            padding-left: 8px;
+                            padding-left: 0;
                             font-size: 13px;
                         }
                     }
@@ -949,8 +968,7 @@
                         }
 
                         @include md-sm {
-                            height: 10px;
-                            left: 3px;
+                            display: none;
                         }
                     }
 
@@ -974,7 +992,7 @@
                         }
 
                         @include md-sm {
-                            padding-left: 8px;
+                            padding-left: 0;
                             font-size: 13px;
                         }
                     }
@@ -999,8 +1017,7 @@
                         }
 
                         @include md-sm {
-                            height: 10px;
-                            left: 3px;
+                            display: none;
                         }
                     }
 
@@ -1028,27 +1045,6 @@
                             padding-left: 0;
                             padding-bottom: 5px;
                             font-size: 13px;
-                        }
-
-                        .genresName {
-                            padding-left: 5px;
-                            color: $color-gray;
-                            font-family: RobotoRegular;
-                            font-weight: bold;
-                            font-size: 18px;  
-
-                            @include xl-lg {
-                                padding-left: 3px;
-                                font-size: 15px;
-                            }
-
-                            @include lg-md {
-                                font-size: 15px;
-                            }
-
-                            @include md-sm {
-                                font-size: 13px;
-                            }
                         }
                     }
 
@@ -1078,7 +1074,7 @@
 
                 .content {
                     position: relative;
-                    height: 45px;
+                    height: 48px;
                     width: 840px;
                     color: $color-gray-white;
                     font-family: RobotoRegular;
@@ -1098,13 +1094,9 @@
                     }
 
                     @include md-sm {
-                        width: 350px;
+                        width: 380px;
                         font-size: 13px;
                     }  
-                    
-                    @include sm-xs {
-                        width: 200px;
-                    }
                 }
 
                 .itemsBar {
@@ -1112,16 +1104,23 @@
                     align-items: center;
                     justify-content: space-between;
                     height: 53px;
-                    width: 280px;
-                    margin-left: 40px;
+                    width: 480px;
+                    margin-left: 90px;
+
+                    @include xl-lg {
+                        width: 400px;
+                        margin-left: 50px;
+                    }
                     
                     @include lg-md {
-                        width: 210px;
+                        width: 300px;
+                        margin-left: 50px;
                     }
 
                     @include md-sm {
-                        width: 190px;
-                        margin-left: 20px;
+                        height: 33px;
+                        width: 240px;
+                        margin-left: 30px;
                     }
                     
                     .commentsCount {
