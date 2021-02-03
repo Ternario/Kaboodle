@@ -1,7 +1,11 @@
 .comingSoon {
     position: relative;
-    height: 550px;
+    height: 500px;
     overflow: hidden;
+
+    @include xl-lg {
+        height: 480px;
+    }
 
     @include lg-md {
         height: 390px;
@@ -57,118 +61,131 @@
     }
 
     .slider-bar {
-        margin: 0 60px;
+        display: block;
+        margin: 0 auto;
+        width: 1280px;
+
+        @include xl-lg {
+            width: 1024px;
+        }
 
         @include lg-md {
-            margin: 0 30px;
+            width: 768px;
         }
 
         @include md-sm {
-            margin: 0 25px;
+            width: 576px;
         }
 
         @include sm-xs {
-            margin: 0 25px;
+            width: 360px;
         }
 
         .comingSoon-slider { 
-            display: flex;
             transition: 0.5s;
+            margin: 0 70px;
+
+            @include lg-md {
+                margin: 0 60px;
+            }
+
+            @include md-sm {
+                margin: 0 25px;
+            }
+
+            @include sm-xs {
+                margin: 0 30px;
+            }
 
             .slick-prev {
                 position: absolute;
                 height: 64px;
                 width: 64px;
-                top: 230px;
-                left: -50px;
+                top: 220px;
+                left: -60px;
                 background-image: url(../img/left.png);
-                background-repeat: no-repeat;
-                background-position: 50 50;
                 opacity: 0.5;
-                z-index: 10;
-                transition: 0.5s;
     
-                @include lg-md {
-                    height: 25px;
-                    width: 25px;
+                @include xl-lg {
+                    height: 64px;
+                    width: 64px;
                     top: 200px;
-                    left: 10px;
-                    background-image: url(../img/previous25.png);
-                    background-repeat: no-repeat;
-                    background-position: 50 50;
+                    left: -64px;
+                    background-image: url(../img/left.png);
+                }
+
+                @include lg-md {
+                    height: 64px;
+                    width: 64px;
+                    top: 160px;
+                    left: -64px;
+                    background-image: url(../img/left.png);
                 }
     
                 @include md-sm {
                     height: 25px;
                     width: 25px;
-                    top: 160px;
-                    left: 15px;
+                    top: 140px;
+                    left: -30px;
                     background-image: url(../img/previous25.png);
-                    background-repeat: no-repeat;
-                    background-position: 50 50;
                 }
     
                 @include sm-xs {
                     height: 25px;
                     width: 25px;
-                    top: 160px;
-                    left: 5px;
+                    top: 140px;
+                    left: -22px;
                     background-image: url(../img/previous25.png);
-                    background-repeat: no-repeat;
-                    background-position: 50 50;
                 }
             }
 
             .slick-prev::before {
                 content: "";
             }
-    
-            .leftBtn:hover {
-                opacity: 0.8;
-                transform: scale(1.1);
+
+            .slick-prev:hover {
+                opacity: 1;
             }
     
             .slick-next {
                 position: absolute;
                 height: 64px;
                 width: 64px;
-                top: 230px;
-                right: -50px;
+                top: 220px;
+                right: -60px;
                 background-image: url(../img/right.png);
-                background-repeat: no-repeat;
-                background-position: 50 50;
                 opacity: 0.5;
-                z-index: 10;
-                transition: 0.5s;
     
-                @include lg-md {
-                    height: 25px;
-                    width: 25px;
+                @include xl-lg {
+                    height: 64px;
+                    width: 64px;
                     top: 200px;
-                    right: 10px;
-                    background-image: url(../img/next25.png);
-                    background-repeat: no-repeat;
-                    background-position: 50 50;
+                    right: -64px;
+                    background-image: url(../img/right.png);
+                }
+
+                @include lg-md {
+                    height: 64px;
+                    width: 64px;
+                    top: 160px;
+                    right: -64px;
+                    background-image: url(../img/right.png);
                 }
     
                 @include md-sm {
                     height: 25px;
                     width: 25px;
-                    top: 160px;
-                    right: 15px;
+                    top: 140px;
+                    right: -30px;
                     background-image: url(../img/next25.png);
-                    background-repeat: no-repeat;
-                    background-position: 50 50;
                 }
     
                 @include sm-xs {
                     height: 25px;
                     width: 25px;
-                    top: 160px;
-                    right: 5px;
+                    top: 140px;
+                    right: -22px;
                     background-image: url(../img/next25.png);
-                    background-repeat: no-repeat;
-                    background-position: 50 50;
                 }
             }
 
@@ -176,35 +193,17 @@
             .slick-next::before {
                 content: "";
             }
-    
-            .rightBtn:hover {
-                opacity: 0.8;
-                transform: scale(1.1);
+
+            .slick-next:hover {
+                opacity: 1;
             }
 
             &__item {
                 position: relative;   
-                margin: 0 21px;
-                width: 190px;
+                margin: 0 10px;
 
-                @include xl-lg {
-                    margin: 0 18px;
-                    width: 190px;
-                }
-
-                @include lg-md {
-                    margin: 0 14px;
-                    width: 150px;
-                }
-
-                @include md-sm {
-                    margin: 0 28px;
-                    width: 120px;
-                }
-
-                @include sm-xs {
-                    margin: 0 18px;
-                    width: 120px;
+                @include xl-sm {
+                    margin: 0 5px;
                 }
 
                 .link {
@@ -215,7 +214,6 @@
                     left: 8px;
                     background-image: url(../../assets/img/movie.png);
                     background-repeat: no-repeat;
-                    z-index: 100;
                     cursor: pointer;
 
                     @include lg-md {
@@ -325,22 +323,23 @@
 
                 .poster {
                     height: 250px;
-                    width: 190px;
+                    width: 100%;
                     border-radius: 5px;
+
+                    @include xl-lg {
+                        height: 220px;
+                    }
 
                     @include lg-md {
                         height: 200px;
-                        width: 150px;
                     }
 
                     @include md-sm {
                         height: 170px;
-                        width: 120px;
                     }
 
                     @include sm-xs {
                         height: 170px;
-                        width: 120px;
                     }
                 }
 
@@ -386,7 +385,6 @@
 
                 .comingItems {
                     display: flex;
-                    align-items: center;
                     justify-content: space-between;
                     padding-top: 11px;
                     margin-bottom: 50px;
@@ -506,63 +504,6 @@
                         }
                     }
 
-                    .expectations {
-                        position: relative;
-                        text-align: center;
-                        width: 43px;
-                        margin: 0 10px;
-                        color: $color-black;
-                        font-family: "Proxima Nova Regular";
-                        font-size: 15px;
-                        font-weight: bold;
-
-                        @include lg-md {
-                            width: 30px;
-                            font-size: 15px;
-                        }
-
-                        @include md-sm {
-                            width: 20px;
-                            font-size: 12px;
-                        }
-
-                        @include sm-xs {
-                            width: 23px;
-                            font-size: 12px;
-                        }
-                    }
-
-                    .expectations::before {
-                        content: "";
-                        position: absolute;
-                        height: 22px;
-                        width: 25px;
-                        top: 25px;
-                        left: 28%;
-                        background-image: url(../../assets/svg/gradeless.svg);
-                        background-repeat: no-repeat;
-                        cursor: pointer;
-
-                        @include lg-md {
-                            height: 19px;
-                            width: 19px;
-                        }
-
-                        @include md-sm {
-                            height: 17px;
-                            width: 17px;
-                            top: 15px;
-                            left: 13%;
-                        }
-
-                        @include sm-xs {
-                            height: 17px;
-                            width: 17px;
-                            top: 13px;
-                            right: 13%;
-                        }
-                    }
-
                     .likesCount {
                         position: relative;
                         text-align: center;
@@ -628,23 +569,28 @@
                 top: 97px;
                 left: 0;
                 right: 0;
-                bottom: 80px;
+                bottom: 76px;
                 opacity: 0.5; 
                 border-radius: 5px;
                 background-color: $color-black;  
 
+                @include xl-lg {
+                    top: 97px;
+                    bottom: 76px;
+                }
                 @include lg-md {
                     top: 70px;
+                    bottom: 76px;
                 }
 
                 @include md-sm {
                     top: 57px;
-                    bottom: 76px;
+                    bottom: 73px;
                 }
 
                 @include sm-xs {
                     top: 57px;
-                    bottom: 76px;;
+                    bottom: 73px;
                 }
             }
         }

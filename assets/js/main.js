@@ -1,18 +1,18 @@
 const slider = document.querySelector("#slider"),
-      blockItems = document.querySelector("#blockItems"),
-      stringItems = document.querySelector("#stringItems"),
-      btnAllMovies = document.querySelector("#btnAllMovies"),
-      btnMovies = document.querySelector("#btnMovies"),
-      btnSerials = document.querySelector("#btnSerials"),
-      itemsPlaceBlock = document.querySelector("#itemsPlaceBlock"),
-      itemsPlaceString = document.querySelector("#itemsPlaceString");
+    blockItems = document.querySelector("#blockItems"),
+    stringItems = document.querySelector("#stringItems"),
+    btnAllMovies = document.querySelector("#btnAllMovies"),
+    btnMovies = document.querySelector("#btnMovies"),
+    btnSerials = document.querySelector("#btnSerials"),
+    itemsPlaceBlock = document.querySelector("#itemsPlaceBlock"),
+    itemsPlaceString = document.querySelector("#itemsPlaceString");
 
 window.addEventListener("resize", () => {
-    if(document.documentElement.clientWidth <= 576 && flag !== true) {
+    if (document.documentElement.clientWidth <= 576 && flag !== true) {
         flag = true;
         updateData(itemsPlaceString);
 
-        if(type === "") {
+        if (type === "") {
             renderSlider(movies, itemsPlaceBlock);
         } else {
             filterItems(movies, type);
@@ -37,34 +37,46 @@ let getData = (data) => {
     renderSlider(movies, slider);
     renderSlider(movies, itemsPlaceBlock);
 
-    $(".responsive").slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
+    $('.multiple-items').slick({
+        infinite: false,
         slidesToShow: 5,
         slidesToScroll: 3,
         responsive: [
-          {
-            breakpoint: 1111,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 3
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
             }
-          },
-          {
-            breakpoint: 900,
-            settings: {
-              slidesToShow: 5,
-              slidesToScroll: 3
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 2
-            }
-          }
         ]
     });
 };
@@ -72,15 +84,15 @@ let getData = (data) => {
 let renderSlider = (elem, placeAppend) => {
     let place = "comingSoon-slider__item ";
 
-    if(placeAppend == itemsPlaceBlock) {
+    if (placeAppend == itemsPlaceBlock) {
         updateData(itemsPlaceBlock);
         place = "mostPopular-block__item ";
     };
 
     elem.map(elem => {
         let comingSoon = document.createElement("div");
-            comingSoon.className = place;
-            comingSoon.innerHTML = `
+        comingSoon.className = place;
+        comingSoon.innerHTML = `
             <a class="link" href=${elem.link}></a>
             <div class="title">${elem.title}</div>
             <div class="year">${elem.year}</div>
@@ -98,7 +110,7 @@ let renderSlider = (elem, placeAppend) => {
 };
 
 let renderElementsRow = (elem) => {
-    
+
     updateData(itemsPlaceString);
 
     elem.map(elem => {
@@ -112,8 +124,8 @@ let renderElementsRow = (elem) => {
         genresName = genresName.slice(0, -2);
 
         let clonComingSoonBlock = document.createElement("div");
-            clonComingSoonBlock.className = "mostPopular-string__item ";
-            clonComingSoonBlock.innerHTML = `
+        clonComingSoonBlock.className = "mostPopular-string__item ";
+        clonComingSoonBlock.innerHTML = `
             <a class="link" href=${elem.link}>Read more</a>
             <img class="poster" src=${elem.poster}>
             <div class="soon">${elem.rank}</div>
@@ -136,10 +148,10 @@ let renderElementsRow = (elem) => {
             `
         itemsPlaceString.append(clonComingSoonBlock);
     });
-} ;
+};
 
 let updateData = (place) => {
-    while(place.firstChild) {
+    while (place.firstChild) {
         place.removeChild(place.firstChild);
     };
 };
@@ -148,7 +160,7 @@ let filterItems = (movies, type) => {
     let item = [];
     item = movies.filter(movie => movie.type === type);
 
-    if(flag) {
+    if (flag) {
         renderSlider(item, itemsPlaceBlock);
     } else {
         renderElementsRow(item);
@@ -178,7 +190,7 @@ blockItems.addEventListener("click", () => {
     flag = true;
     updateData(itemsPlaceString);
 
-    if(type === "") {
+    if (type === "") {
         renderSlider(movies, itemsPlaceBlock);
     } else {
         filterItems(movies, type);
@@ -189,7 +201,7 @@ stringItems.addEventListener("click", () => {
     flag = false;
     updateData(itemsPlaceBlock);
 
-    if(type === "") {
+    if (type === "") {
         renderElementsRow(movies);
     } else {
         filterItems(movies, type);

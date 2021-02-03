@@ -576,64 +576,6 @@
                         }
                     }
 
-                    .expectations {
-                        position: relative;
-                        text-align: center;
-                        width: 43px;
-                        margin: 0 10px;
-                        color: $color-black;
-                        font-family: "Proxima Nova Regular";
-                        font-size: 15px;
-                        font-weight: bold;
-
-                        @include lg-md {
-                            width: 30px;
-                            font-size: 15px;
-                        }
-
-                        @include md-sm {
-                            width: 23px;
-                            font-size: 12px;
-                        }
-
-                        @include sm-xs {
-                            width: 23px;
-                            margin: 0 2px;
-                            font-size: 12px;
-                        }
-                    }
-
-                    .expectations::before {
-                        content: "";
-                        position: absolute;
-                        height: 22px;
-                        width: 25px;
-                        top: 25px;
-                        left: 28%;
-                        background-image: url(../../assets/svg/gradeless.svg);
-                        background-repeat: no-repeat;
-                        cursor: pointer;
-
-                        @include lg-md {
-                            height: 19px;
-                            width: 19px;
-                        }
-
-                        @include md-sm {
-                            height: 17px;
-                            width: 17px;
-                            top: 13px;
-                            right: 13%;
-                        }
-
-                        @include sm-xs {
-                            height: 17px;
-                            width: 17px;
-                            top: 13px;
-                            right: 13%;
-                        }
-                    }
-
                     .likesCount {
                         position: relative;
                         text-align: center;
