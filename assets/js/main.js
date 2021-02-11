@@ -7,6 +7,15 @@ const slider = document.querySelector("#slider"),
     itemsPlaceBlock = document.querySelector("#itemsPlaceBlock"),
     itemsPlaceString = document.querySelector("#itemsPlaceString");
 
+const movies = [];
+let flag = true;
+let type = ""; 
+
+fetch("https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json")
+    .then(response => response.json())
+    .then(data => getData(data))
+    .catch(err => console.error(err));
+
 window.addEventListener("resize", () => {
     if (document.documentElement.clientWidth <= 576 && flag !== true) {
         flag = true;
@@ -19,15 +28,6 @@ window.addEventListener("resize", () => {
         }
     };
 });
-
-fetch("https://raw.githubusercontent.com/Ternario/Kaboodle/master/data.json")
-    .then(response => response.json())
-    .then(data => getData(data))
-    .catch(err => console.error(err));
-
-const movies = [];
-let flag = true;
-let type = "";
 
 let getData = (data) => {
     data.forEach(data => {
@@ -123,9 +123,9 @@ let renderElementsRow = (elem) => {
 
         genresName = genresName.slice(0, -2);
 
-        let clonComingSoonBlock = document.createElement("div");
-        clonComingSoonBlock.className = "mostPopular-string__item ";
-        clonComingSoonBlock.innerHTML = `
+        let mostPopular = document.createElement("div");
+        mostPopular.className = "mostPopular-string__item ";
+        mostPopular.innerHTML = `
             <a class="link" href=${elem.link}>Read more</a>
             <img class="poster" src=${elem.poster}>
             <div class="soon">${elem.rank}</div>
@@ -146,7 +146,7 @@ let renderElementsRow = (elem) => {
                 <a class="playMovie"></a>
             </div>
             `
-        itemsPlaceString.append(clonComingSoonBlock);
+        itemsPlaceString.append(mostPopular);
     });
 };
 
@@ -207,25 +207,3 @@ stringItems.addEventListener("click", () => {
         filterItems(movies, type);
     }
 });
-
-
-//insert dynamic rating
-
-
-// let grade = document.createElement("div");
-//         grade.className = "grade";
-//         grade.innerHTML = '<svg class="progress-ring">'  + '<circle class="progress-ring__circle" stroke="#22CA71" stroke-width="8" cx="40" cy="40" r="32" fill="transparent" />' + '</svg>';
-//         clonComingSoon.append(grade);
-
-// let circle = document.querySelector(".progress-ring__circle");
-//         let radius = circle.r.baseVal.value;
-//         let circumference = 2 * Math.PI * radius;
-
-//         circle.style.strokeDasharray = `${circumference} ${circumference}`;
-//         circle.style.strokeDashoffset = circumference;
-//         let setProgress = (percent) => {
-//             let offset = circumference - percent / 100 * circumference;
-//             circle.style.strokeDashoffset = offset;
-
-//         }
-//         setProgress(elem[i].rank * 10); 
